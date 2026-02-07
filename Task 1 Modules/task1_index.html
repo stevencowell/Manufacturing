@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Task 1: Welcome to the Industry - Manufacturing and Engineering" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 | Welcome to the Industry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+    a { text-decoration: none; color: inherit; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.35rem 0 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.55rem;
+    }
+    .top-nav a {
+      color: #0f766e;
+      font-weight: 500;
+      padding: 0.2rem 0.45rem;
+    }
+    .top-nav a:hover {
+      color: #115e59;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #0f766e;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      color: #115e59;
+      text-decoration: underline;
+    }
+    .task-summary {
+      background: #fff;
+      border-left: 5px solid #0f766e;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .task-summary h3 {
+      margin: 0 0 0.8rem;
+      color: #0f766e;
+      font-size: 1.5rem;
+    }
+    .task-summary p,
+    .task-summary ul {
+      margin: 0.65rem 0;
+      line-height: 1.65;
+      color: #374151;
+    }
+    .task-summary ul { padding-left: 1.2rem; }
+    .modules-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+      font-size: 2rem;
+      position: relative;
+    }
+    .modules-section h2::after {
+      content: '';
+      width: 72px;
+      height: 4px;
+      background: #1e3a8a;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -0.7rem;
+      border-radius: 2px;
+    }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .module-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e5e7eb;
+    }
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(30, 58, 138, 0.18);
+    }
+    .thumb-container {
+      background: #dbeafe;
+      min-height: 115px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .thumb-container span {
+      font-size: 2.7rem;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+    .module-title {
+      padding: 1rem;
+      font-weight: 500;
+      color: #1f2937;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tutorial-card {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      border: 2px solid #1e40af;
+    }
+    .tutorial-card:hover {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    }
+    .checklist-card {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      border: 2px solid #1e40af;
+    }
+    .checklist-card:hover {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    }
+    .tutorial-thumb,
+    .checklist-thumb {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    .tutorial-thumb span,
+    .checklist-thumb span {
+      color: #1e40af;
+      font-size: 2.2rem;
+    }
+    .tutorial-card .module-title,
+    .checklist-card .module-title,
+    .tutorial-card .card-subtitle,
+    .checklist-card .card-subtitle {
+      color: #fff;
+    }
+    .card-subtitle {
+      font-size: 0.86rem;
+      color: #e5e7eb;
+      margin-top: 0.2rem;
+    }
+    .task-gallery {
+      margin: 2rem 0 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .gallery-card {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      background: #f8fafc;
+    }
+    .gallery-card .caption {
+      padding: 0.85rem 1rem;
+      color: #374151;
+    }
+    .gallery-card .caption h3 {
+      margin: 0 0 0.35rem;
+      color: #0f766e;
+      font-size: 1.05rem;
+    }
+    .gallery-card .caption p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Task 1: Welcome to the Industry</h1>
+    <p>MEM13015 + MEM16006 + MEM11011 | Manufacturing and Engineering Introduction</p>
+  </header>
+
+  <nav class="top-nav">
+    <a href="../index.html">Manufacturing Home</a>
+    <a href="task1_index.html">Task 1</a>
+    <a href="../index.html">Task 2</a>
+    <a href="../index.html">Task 3</a>
+    <a href="../index.html">Task 4</a>
+    <a href="../index.html">Task 5</a>
+    <a href="../index.html">Task 6</a>
+  </nav>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Back to Manufacturing Hub</a>
+    <div class="task-summary">
+      <h3>Overview of Requirements</h3>
+      <p>This task builds foundation capability for working in a manufacturing environment across three units.</p>
+      <ul>
+        <li><strong>MEM13015:</strong> Work safely and effectively in manufacturing and engineering.</li>
+        <li><strong>MEM16006:</strong> Organise and communicate information.</li>
+        <li><strong>MEM11011:</strong> Undertake manual handling.</li>
+      </ul>
+      <p>Evidence for competency is collected through knowledge checks, structured activities, and practical observation. You are expected to show safe work habits, correct workplace communication, and quality-focused task planning.</p>
+    </div>
+
+    <section class="task-gallery">
+      <div class="gallery-card">
+        <img src="../Construction Pictures/Bench Grinder.jpeg" alt="Bench grinder in a workshop" />
+        <div class="caption">
+          <h3>Workshop Safety</h3>
+          <p>Know your tools, follow SOPs, and wear the right PPE.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="../Construction Pictures/Hard Hat.jpeg" alt="Hard hat used for PPE" />
+        <div class="caption">
+          <h3>Personal Protective Equipment</h3>
+          <p>Correct PPE is required before you start any task.</p>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img src="../Construction Pictures/Digital distance reader.jpeg" alt="Digital distance reader for accurate measurement and planning" />
+        <div class="caption">
+          <h3>Planning and Communication</h3>
+          <p>Use accurate measurement and clear instructions before you start.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="modules-section">
+      <h2>Modules</h2>
+      <div class="modules-grid">
+        <a href="module1.html" class="module-card">
+          <div class="thumb-container"><span>1</span></div>
+          <div class="module-title">Workplace Communication, Roles and Planning</div>
+        </a>
+        <a href="module2.html" class="module-card">
+          <div class="thumb-container"><span>2</span></div>
+          <div class="module-title">WHS, Hazards, Emergency and Manual Handling</div>
+        </a>
+        <a href="module3.html" class="module-card">
+          <div class="thumb-container"><span>3</span></div>
+          <div class="module-title">Quality Systems, Conformance and Improvement</div>
+        </a>
+        <a href="Task1%20tutorial%20-%20Manufacturing.html" class="module-card tutorial-card">
+          <div class="thumb-container tutorial-thumb"><span>LEARN</span></div>
+          <div class="module-title">Task 1 Tutorial</div>
+          <div class="card-subtitle">Interactive Learning Guide</div>
+        </a>
+        <a href="Observation%20Checklist%20Task%201%20-%20Manufacturing.html" class="module-card checklist-card">
+          <div class="thumb-container checklist-thumb"><span>CHECK</span></div>
+          <div class="module-title">Observation Checklists</div>
+          <div class="card-subtitle">Interactive Assessment Tool</div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

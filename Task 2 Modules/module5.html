@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 5: Maintenance, Tag-Out, Consumables" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 5: Maintenance, Tag-Out, Consumables</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1.2rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .quiz-input {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.35rem 0.5rem;
+      font-size: 0.95rem;
+    }
+    .match-table {
+      table-layout: fixed;
+    }
+    .match-table th:first-child,
+    .match-table td:first-child {
+      width: 22%;
+      white-space: nowrap;
+    }
+    .match-table .quiz-input {
+      font-size: 0.9rem;
+      min-width: 0;
+    }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      background: #f8fffd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: #0f766e;
+    }
+    .card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .stepper {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .step p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .mcq-options label {
+      display: block;
+      margin: 0.35rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 5: Maintenance, Tag-Out, Consumables</h1>
+    <p>Task 2 - Tools and Equipment (MEM18001, MEM18002)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task2_index.html" class="back-link">&larr; Back to Task 2 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module focuses on maintaining tools, identifying faults, and replacing consumables safely.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> Good maintenance prevents injuries, improves quality, and extends tool life.
+    </div>
+
+    <h2>Assessment Focus (Task 2)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Prevent failure</h3>
+        <p>Maintenance reduces tool breakdown, overheating, and unsafe operation.</p>
+      </div>
+      <div class="card">
+        <h3>Protect quality</h3>
+        <p>Sharp, aligned, and clean tools improve finish and dimensional accuracy.</p>
+      </div>
+      <div class="card">
+        <h3>Replace consumables safely</h3>
+        <p>Correct accessory selection and fitting prevent damage and injury.</p>
+      </div>
+      <div class="card">
+        <h3>Escalate defects</h3>
+        <p>Unsafe tools must be tagged out and reported immediately.</p>
+      </div>
+    </div>
+
+    <h2>Maintenance Rules That Matter</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Heat and wear</h3>
+        <p>Friction creates heat. Cleaning and lubrication reduce wear.</p>
+      </div>
+      <div class="card">
+        <h3>Sharpness</h3>
+        <p>Dull bits/discs force the tool and increase overheating risk.</p>
+      </div>
+      <div class="card">
+        <h3>Structural condition</h3>
+        <p>Cracks, chips, and looseness increase likelihood of failure.</p>
+      </div>
+      <div class="card">
+        <h3>Alignment</h3>
+        <p>Tool rests, guards, and vices must be set correctly for safe control.</p>
+      </div>
+    </div>
+
+    <h2>Daily Tool Care Routine</h2>
+    <div class="stepper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Clean after use</strong>
+          <p>Remove swarf, dust, and residue from tool and work area.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Check cooling and movement</strong>
+          <p>Keep ventilation slots clear and moving parts free.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Protect against corrosion</strong>
+          <p>Apply light oil to exposed metal surfaces when required.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Reset safe adjustments</strong>
+          <p>Leave guards, rests, and clamps in a safe condition for next use.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Consumable Change Procedure</h2>
+    <div class="stepper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Isolate power</strong>
+          <p>Disconnect power before changing any disc, bit, or belt.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Select the correct accessory</strong>
+          <p>Match type, size, and RPM rating to the tool and job.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Fit and secure</strong>
+          <p>Check direction arrows, seat correctly, and remove fitting keys/tools.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Final safety check</strong>
+          <p>Reposition guards and confirm clearance before restart.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Reporting and Tag-Out</h2>
+    <div class="callout">
+      <strong>Rule:</strong> If a defect can affect safety, stop use, tag out, and report.
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Tag immediately</h3>
+        <p>Do not leave unsafe tools in circulation.</p>
+      </div>
+      <div class="card">
+        <h3>Record accurately</h3>
+        <p>Log faults and consumable changes if required by workshop procedure.</p>
+      </div>
+      <div class="card">
+        <h3>No continued use</h3>
+        <p>Never keep operating a tool with known defects or damage.</p>
+      </div>
+    </div>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li>No additional external links are listed in the Student Guide for this section.</li>
+    </ul>
+
+    <h2>Quiz Part A: Maintenance and Consumables Matching</h2>
+    <div class="qa-card">
+      <p class="qa-question">Match each tool category with the best inspection focus, maintenance action, and replacement trigger.</p>
+      <table class="match-table">
+        <thead>
+          <tr>
+            <th>Tool Group</th>
+            <th>Q1 Inspection Focus</th>
+            <th>Q2 Maintenance Action</th>
+            <th>Q3 Replace/Tag Trigger</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Angle grinder</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Disc cracks/chips and guard condition</option>
+                <option>2 - Chuck runout and bit wear</option>
+                <option>3 - Blade tooth condition and vice alignment</option>
+                <option>4 - Punch/die edge wear and sheet guide condition</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Dress wheels and set tool rest clearance</option>
+                <option>6 - Replace worn disc and clear ventilation slots</option>
+                <option>7 - Lubricate punch and clean slug pathway</option>
+                <option>8 - Maintain coolant/lubrication and clean swarf tray</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Burning smell or failed switch function</option>
+                <option>10 - Cracked abrasive disc or missing guard</option>
+                <option>11 - Blade missing teeth or vice cannot clamp securely</option>
+                <option>12 - Punch chipped and repeated jamming of slugs</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Portable drill</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Disc cracks/chips and guard condition</option>
+                <option>2 - Chuck runout and bit wear</option>
+                <option>3 - Blade tooth condition and vice alignment</option>
+                <option>4 - Punch/die edge wear and sheet guide condition</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Dress wheels and set tool rest clearance</option>
+                <option>6 - Replace worn disc and clear ventilation slots</option>
+                <option>7 - Lubricate punch and clean slug pathway</option>
+                <option>8 - Maintain coolant/lubrication and clean swarf tray</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Burning smell or failed switch function</option>
+                <option>10 - Cracked abrasive disc or missing guard</option>
+                <option>11 - Blade missing teeth or vice cannot clamp securely</option>
+                <option>12 - Punch chipped and repeated jamming of slugs</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Cold saw</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Disc cracks/chips and guard condition</option>
+                <option>2 - Chuck runout and bit wear</option>
+                <option>3 - Blade tooth condition and vice alignment</option>
+                <option>4 - Punch/die edge wear and sheet guide condition</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Dress wheels and set tool rest clearance</option>
+                <option>6 - Replace worn disc and clear ventilation slots</option>
+                <option>7 - Lubricate punch and clean slug pathway</option>
+                <option>8 - Maintain coolant/lubrication and clean swarf tray</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Burning smell or failed switch function</option>
+                <option>10 - Cracked abrasive disc or missing guard</option>
+                <option>11 - Blade missing teeth or vice cannot clamp securely</option>
+                <option>12 - Punch chipped and repeated jamming of slugs</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Nibbler/shears</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Disc cracks/chips and guard condition</option>
+                <option>2 - Chuck runout and bit wear</option>
+                <option>3 - Blade tooth condition and vice alignment</option>
+                <option>4 - Punch/die edge wear and sheet guide condition</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Dress wheels and set tool rest clearance</option>
+                <option>6 - Replace worn disc and clear ventilation slots</option>
+                <option>7 - Lubricate punch and clean slug pathway</option>
+                <option>8 - Maintain coolant/lubrication and clean swarf tray</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Burning smell or failed switch function</option>
+                <option>10 - Cracked abrasive disc or missing guard</option>
+                <option>11 - Blade missing teeth or vice cannot clamp securely</option>
+                <option>12 - Punch chipped and repeated jamming of slugs</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="reveal-btn" data-target="m5a1">Reveal answers</button>
+      <div class="answer" id="m5a1">
+        <strong>Answer key - Maintenance Matching</strong>
+        <ul>
+          <li>Angle grinder: Q1=1, Q2=6, Q3=10</li>
+          <li>Portable drill: Q1=2, Q2=6, Q3=9</li>
+          <li>Cold saw: Q1=3, Q2=8, Q3=11</li>
+          <li>Nibbler/shears: Q1=4, Q2=7, Q3=12</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) When changing a grinder disc, which step is mandatory first?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q1" /> Check spark direction</label>
+        <label><input type="radio" name="m5q1" /> Isolate/disconnect the power</label>
+        <label><input type="radio" name="m5q1" /> Tighten the side handle</label>
+        <label><input type="radio" name="m5q1" /> Wipe down the tool body</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a2">Reveal answer</button>
+      <div class="answer" id="m5a2">Isolate/disconnect the power.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) Which condition requires immediate tag-out?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q2" /> Light surface rust on non-critical area</label>
+        <label><input type="radio" name="m5q2" /> Missing guard on a power tool</label>
+        <label><input type="radio" name="m5q2" /> Dust on the cord</label>
+        <label><input type="radio" name="m5q2" /> Slightly dull hand file</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a3">Reveal answer</button>
+      <div class="answer" id="m5a3">Missing guard on a power tool.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) Why must replacement discs/blades match tool RPM limits?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q3" /> To reduce battery charging time</label>
+        <label><input type="radio" name="m5q3" /> To prevent overspeed failure and breakage</label>
+        <label><input type="radio" name="m5q3" /> To reduce cutting noise only</label>
+        <label><input type="radio" name="m5q3" /> To make setup faster</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a4">Reveal answer</button>
+      <div class="answer" id="m5a4">To prevent overspeed failure and breakage.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) A tool is overheating repeatedly during normal use. Best action?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q4" /> Keep operating and monitor it</label>
+        <label><input type="radio" name="m5q4" /> Reduce pressure but continue</label>
+        <label><input type="radio" name="m5q4" /> Stop, inspect, and report/tag as required</label>
+        <label><input type="radio" name="m5q4" /> Switch operators</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a5">Reveal answer</button>
+      <div class="answer" id="m5a5">Stop, inspect, and report/tag as required.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">5) Which statement about maintenance records is correct?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q5" /> Records are optional if no fault is visible</label>
+        <label><input type="radio" name="m5q5" /> Records help track condition and replacement timing</label>
+        <label><input type="radio" name="m5q5" /> Records are only for major machines</label>
+        <label><input type="radio" name="m5q5" /> Records are only completed at term end</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a6">Reveal answer</button>
+      <div class="answer" id="m5a6">Records help track condition and replacement timing.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">6) Before restarting after consumable replacement, you must:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q6" /> Remove guards for visibility</label>
+        <label><input type="radio" name="m5q6" /> Confirm guard position and clear all tools/keys</label>
+        <label><input type="radio" name="m5q6" /> Start tool at full load immediately</label>
+        <label><input type="radio" name="m5q6" /> Ask someone else to test it</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a7">Reveal answer</button>
+      <div class="answer" id="m5a7">Confirm guard position and clear all tools/keys.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: Why is regular maintenance important in a workshop?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s1">Reveal example answer</button>
+      <div class="answer" id="m5s1">It keeps tools safe and accurate, and reduces failures that can injure users or damage work.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: Why does a dull drill bit cause overheating?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s2">Reveal example answer</button>
+      <div class="answer" id="m5s2">It increases friction instead of cutting cleanly, generating heat in the bit, tool, and workpiece.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: What must you check before fitting a new grinder disc?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s3">Reveal example answer</button>
+      <div class="answer" id="m5s3">Check the disc type, diameter, RPM rating, and condition, then confirm guard and flange fit.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 4: A saw blade has missing teeth but still cuts. What should you do?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s4">Reveal example answer</button>
+      <div class="answer" id="m5s4">Stop using it and report/replace it; damaged blades can grab, wander, or fail under load.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 5: Why should ventilation slots on a power tool be kept clean?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s5">Reveal example answer</button>
+      <div class="answer" id="m5s5">Blocked airflow causes overheating, reducing motor life and increasing electrical risk.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 6: Why must consumable changes be recorded?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s6">Reveal example answer</button>
+      <div class="answer" id="m5s6">Records support traceability, planned replacement, and evidence that safety procedures were followed.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 7: What information should be included when tagging out a faulty tool?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s7">Reveal example answer</button>
+      <div class="answer" id="m5s7">Tool ID, fault description, date/time, and the person reporting so repair action can be tracked.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module4.html">&larr; Previous Module</a>
+      <a href="module6.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      if (!answer) return;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? button.dataset.revealText : 'Hide answer';
+    };
+
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.dataset.revealText = button.textContent;
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>

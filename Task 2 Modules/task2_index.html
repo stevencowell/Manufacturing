@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Task 2: Right Tool, Right Job - Manufacturing and Engineering" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 | Right Tool, Right Job</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+    }
+    a { text-decoration: none; color: inherit; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.35rem 0 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0.55rem;
+    }
+    .top-nav a {
+      color: #0f766e;
+      font-weight: 500;
+      padding: 0.2rem 0.45rem;
+    }
+    .top-nav a:hover {
+      color: #115e59;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #0f766e;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      color: #115e59;
+      text-decoration: underline;
+    }
+    .task-summary {
+      background: #fff;
+      border-left: 5px solid #0f766e;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      padding: 1.4rem;
+      margin-bottom: 2rem;
+    }
+    .task-summary h3 {
+      margin: 0 0 0.8rem;
+      color: #0f766e;
+      font-size: 1.5rem;
+    }
+    .task-summary p,
+    .task-summary ul {
+      margin: 0.65rem 0;
+      line-height: 1.65;
+      color: #374151;
+    }
+    .task-summary ul { padding-left: 1.2rem; }
+    .modules-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+      font-size: 2rem;
+      position: relative;
+    }
+    .modules-section h2::after {
+      content: '';
+      width: 72px;
+      height: 4px;
+      background: #1e3a8a;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -0.7rem;
+      border-radius: 2px;
+    }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+    .module-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e5e7eb;
+    }
+    .module-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(30, 58, 138, 0.18);
+    }
+    .thumb-container {
+      background: #dbeafe;
+      min-height: 115px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .thumb-container span {
+      font-size: 2.3rem;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+    .module-title {
+      padding: 1rem;
+      font-weight: 500;
+      color: #1f2937;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tutorial-card {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      border: 2px solid #1e40af;
+    }
+    .tutorial-card:hover {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    }
+    .checklist-card {
+      background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+      border: 2px solid #1e40af;
+    }
+    .checklist-card:hover {
+      background: linear-gradient(135deg, #1e3a8a 0%, #172554 100%);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+    }
+    .tutorial-thumb,
+    .checklist-thumb {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    .tutorial-thumb span,
+    .checklist-thumb span {
+      color: #1e40af;
+      font-size: 2.2rem;
+    }
+    .tutorial-card .module-title,
+    .checklist-card .module-title {
+      color: #fff;
+    }
+    .card-subtitle {
+      font-size: 0.86rem;
+      color: #e5e7eb;
+      margin-top: 0.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Task 2: Right Tool, Right Job</h1>
+    <p>MEM18001 + MEM18002 | Tools and Equipment</p>
+  </header>
+
+  <nav class="top-nav">
+    <a href="../index.html">Manufacturing Home</a>
+    <a href="../Task%201%20Modules/task1_index.html">Task 1</a>
+    <a href="task2_index.html">Task 2</a>
+    <a href="../index.html">Task 3</a>
+    <a href="../index.html">Task 4</a>
+    <a href="../index.html">Task 5</a>
+    <a href="../index.html">Task 6</a>
+  </nav>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Back to Manufacturing Hub</a>
+    <div class="task-summary">
+      <h3>Overview of Requirements</h3>
+      <p>This task develops safe, accurate tool selection and use across hand tools and power tools.</p>
+      <ul>
+        <li><strong>MEM18001:</strong> Use hand tools.</li>
+        <li><strong>MEM18002:</strong> Use power tools/hand held operations.</li>
+      </ul>
+      <p><strong>Evidence collection:</strong> Section 1 knowledge quizzes (Parts A, B, C) and Section 2 direct observation (Observations 1-4).</p>
+    </div>
+
+    <div class="task-summary">
+      <h3>Training and Assessment Schedule</h3>
+      <p><strong>Delivery period:</strong> 40 hours scheduled in Term 1–3 (Year 11, Preliminary).</p>
+      <p><strong>Assessment timing:</strong> Assessments can occur at any point after relevant teaching and learning has occurred and when the student and trainer agree readiness.</p>
+      <p><strong>Continuation note:</strong> Task 2 can continue during Task 4 and Task 5 if students have not yet been deemed Achieved.</p>
+    </div>
+
+    <section class="modules-section">
+      <h2>Modules</h2>
+      <div class="modules-grid">
+        <a href="module1.html" class="module-card">
+          <div class="thumb-container"><span>1</span></div>
+          <div class="module-title">Right Tool, Right Job Foundations</div>
+        </a>
+        <a href="module2.html" class="module-card">
+          <div class="thumb-container"><span>2</span></div>
+          <div class="module-title">WHS Requirements for Tool Use</div>
+        </a>
+        <a href="module3.html" class="module-card">
+          <div class="thumb-container"><span>3</span></div>
+          <div class="module-title">Hand Tools: Selection and Safe Use</div>
+        </a>
+        <a href="module4.html" class="module-card">
+          <div class="thumb-container"><span>4</span></div>
+          <div class="module-title">Power Tools: Setup and Operation</div>
+        </a>
+        <a href="module5.html" class="module-card">
+          <div class="thumb-container"><span>5</span></div>
+          <div class="module-title">Maintenance, Tag-Out, Consumables</div>
+        </a>
+        <a href="module6.html" class="module-card">
+          <div class="thumb-container"><span>6</span></div>
+          <div class="module-title">Shutdown, Storage, Housekeeping</div>
+        </a>
+        <a href="Task2%20tutorial%20-%20Manufacturing.html" class="module-card tutorial-card">
+          <div class="thumb-container tutorial-thumb"><span>LEARN</span></div>
+          <div class="module-title">Task 2 Tutorial</div>
+          <div class="card-subtitle">Interactive Learning Guide</div>
+        </a>
+        <a href="Observation%20Checklist%20Task%202%20-%20Manufacturing.html" class="module-card checklist-card">
+          <div class="thumb-container checklist-thumb"><span>CHECK</span></div>
+          <div class="module-title">Observation Checklists</div>
+          <div class="card-subtitle">Self-Assessment Tool</div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

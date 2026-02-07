@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task 2 - Manufacturing Tutorial</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body { background:#f3f4f6; font-family:system-ui,Roboto,sans-serif; }
+  .card{ max-width:80rem; margin:auto; background:#fff; border-radius:12px;
+         box-shadow:0 8px 24px rgba(0,0,0,.07); overflow:hidden; }
+  .btn { padding:.45rem 1rem; font-weight:600; border-radius:6px; transition:.2s; }
+  .btn-blue { background:#2563eb; color:#fff; }
+  .btn-blue:hover { background:#1e40e9; }
+  .btn-grey { background:#6b7280; color:#fff; }
+  .btn-grey:hover { background:#4b5563; }
+  .btn[disabled] { background:#cbd5e1 !important; cursor:not-allowed; }
+  .progress-bg { height:6px; background:#e5e7eb; border-radius:3px; }
+  .progress-fill { height:100%; background:#2563eb; width:0; transition:width .3s; }
+  .teach li::marker  { content:"- "; }
+  .method li::marker { content:"- "; }
+
+  .copyright-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 3px solid #28a745;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+  .copyright-content { max-width: 1200px; margin: 0 auto; }
+  .copyright-notice {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .copyright-notice p { margin: 0.75rem 0; line-height: 1.6; color: #333; }
+  .copyright-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem !important;
+    color: #856404 !important;
+  }
+  .footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #28a745, transparent);
+    margin: 1.5rem 0;
+  }
+  .footer-info { text-align: center; color: #6c757d; font-size: 0.85rem; }
+  .footer-info p { margin: 0; font-weight: 500; }
+</style>
+</head>
+<body class="p-4">
+
+<div class="card">
+  <div class="p-8" id="panel"></div>
+
+  <div class="bg-slate-50 border-t px-8 py-4 flex flex-col gap-4">
+    <div class="flex justify-between items-center">
+      <button id="prev" class="btn btn-grey">Prev</button>
+      <div class="font-semibold text-blue-700">Topic <span id="now"></span>/<span id="tot"></span></div>
+      <button id="next" class="btn btn-blue">Next</button>
+    </div>
+    <div class="progress-bg"><div id="bar" class="progress-fill"></div></div>
+    <div class="flex justify-center gap-4 mt-2">
+      <button id="finishBtn" class="btn btn-blue hidden">Finish and Return to Modules</button>
+      <a href="task2_index.html" class="btn btn-grey">Back to Modules</a>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="data">
+[
+  {
+    "title": "Topic 1 - Right Tool, Right Job Foundations",
+    "scenario": "<strong>Scenario:</strong> You need to trim light sheet metal with a clean edge and minimal distortion.",
+    "teach": [
+      "Correct tool selection affects safety, finish quality, and job time.",
+      "Hand tools and power tools have different limits and hazards.",
+      "Choosing the wrong tool increases force, heat, and defect risk."
+    ],
+    "method": [
+      "Read the job requirement and material type/thickness.",
+      "Select the tool that matches cut type, tolerance, and finish.",
+      "Confirm controls, guarding, and PPE before starting."
+    ],
+    "tip": "If you need to force the tool, it is often the wrong tool or setup.",
+    "qs": [
+      { "q": "What should drive tool selection first?", "a": "Job requirement, material type, and expected finish." },
+      { "q": "Name one risk of wrong tool choice.", "a": "Loss of control, poor finish, overheating, or damage." }
+    ],
+    "stretch": { "q": "Why can the right tool improve quality and safety at the same time?", "a": "It reduces force, improves control, and lowers defect/rework risk." }
+  },
+  {
+    "title": "Topic 2 - WHS Requirements for Tool Use",
+    "scenario": "<strong>Scenario:</strong> You are ready to start work but notice a damaged lead on a power tool.",
+    "teach": [
+      "WHS controls must be applied before and during task work.",
+      "Pre-start checks include condition, guarding, test-and-tag, and workspace setup.",
+      "Unsafe tools are isolated, tagged out, and reported."
+    ],
+    "method": [
+      "Stop and isolate the equipment immediately.",
+      "Apply out-of-service/tag-out process.",
+      "Report fault details to the teacher/supervisor."
+    ],
+    "tip": "Never continue with a known fault, even for a short cut.",
+    "qs": [
+      { "q": "What is the first action when a tool is unsafe?", "a": "Stop use and isolate it." },
+      { "q": "Why is tag-out required?", "a": "To prevent someone else using unsafe equipment." }
+    ],
+    "stretch": { "q": "How does reporting faults support team safety?", "a": "It creates visibility and ensures repair action is taken." }
+  },
+  {
+    "title": "Topic 3 - Hand Tools: Selection and Safe Use",
+    "scenario": "<strong>Scenario:</strong> You need to deburr a cut edge and prepare a clean fit-up.",
+    "teach": [
+      "Hand tools require correct grip, body position, and tool condition.",
+      "Sharpness and handle integrity directly affect control.",
+      "Clamping work improves accuracy and reduces hand injury risk."
+    ],
+    "method": [
+      "Check tool condition before use (handle, edge, alignment).",
+      "Secure workpiece with vice/clamp where appropriate.",
+      "Use controlled strokes and maintain hand clearance from cutting paths."
+    ],
+    "tip": "Control starts with setup: secure the work and hold the tool correctly.",
+    "qs": [
+      { "q": "Why should work be clamped for many hand-tool tasks?", "a": "To improve control and reduce slip/cut risk." },
+      { "q": "What must be checked on a file before use?", "a": "Handle fit and tooth condition." }
+    ],
+    "stretch": { "q": "How does poor hand-tool maintenance affect quality?", "a": "It increases marks, burrs, and dimensional inaccuracy." }
+  },
+  {
+    "title": "Topic 4 - Power Tools: Setup and Operation",
+    "scenario": "<strong>Scenario:</strong> You are preparing to cut stock on a cold saw for repeat lengths.",
+    "teach": [
+      "Power tool setup determines safety and repeatability.",
+      "Guards, vice/fence alignment, and correct consumables are critical.",
+      "Stable stance and controlled feed reduce kickback and blade loading."
+    ],
+    "method": [
+      "Complete full pre-start checks and confirm guarding.",
+      "Set clamp/vice/fence and verify clear cutting path.",
+      "Operate at controlled feed rate and stop if vibration/noise changes."
+    ],
+    "tip": "If tool behavior changes, stop and inspect before continuing.",
+    "qs": [
+      { "q": "Name two setup checks before operation.", "a": "Guarding and secure clamping/alignment." },
+      { "q": "What should you do if vibration increases suddenly?", "a": "Stop, isolate, and inspect/report." }
+    ],
+    "stretch": { "q": "Why is feed control a safety factor?", "a": "Forcing feed increases binding, heat, and loss-of-control risk." }
+  },
+  {
+    "title": "Topic 5 - Maintenance, Tag-Out, Consumables",
+    "scenario": "<strong>Scenario:</strong> A grinder disc is worn and due for replacement.",
+    "teach": [
+      "Consumables must match tool specification and RPM limits.",
+      "Maintenance records help track wear and planned replacement.",
+      "Defects that affect safety trigger immediate tag-out."
+    ],
+    "method": [
+      "Isolate power before any changeover.",
+      "Fit correct replacement and re-check guard/clearance.",
+      "Record change/defect details according to workshop procedure."
+    ],
+    "tip": "Correct consumable plus correct fitment equals safe performance.",
+    "qs": [
+      { "q": "Why must disc RPM rating match the tool?", "a": "To avoid overspeed failure and disc breakage." },
+      { "q": "When is tag-out required?", "a": "When a defect can compromise safety." }
+    ],
+    "stretch": { "q": "How do maintenance logs improve reliability?", "a": "They reveal wear trends and support proactive servicing." }
+  },
+  {
+    "title": "Topic 6 - Shutdown, Storage, Housekeeping",
+    "scenario": "<strong>Scenario:</strong> End of lesson: multiple tools used, swarf and offcuts on floor.",
+    "teach": [
+      "Safe shutdown includes stopping, isolation, and verification of safe state.",
+      "Storage protects tools and prevents next-user hazards.",
+      "Good housekeeping reduces slips, trips, cuts, and contamination."
+    ],
+    "method": [
+      "Shut down and isolate all equipment used.",
+      "Clean area and dispose of waste correctly.",
+      "Store tools and PPE in designated locations and report faults."
+    ],
+    "tip": "Leave the workshop safer than you found it.",
+    "qs": [
+      { "q": "What is the first step before cleaning a machine?", "a": "Stop and isolate power." },
+      { "q": "Why is end-of-shift reporting important?", "a": "It passes fault and status information to the next user." }
+    ],
+    "stretch": { "q": "How does housekeeping support product quality?", "a": "A clean area reduces contamination and handling errors." }
+  }
+]
+</script>
+
+<template id="tpl">
+<section>
+  <h2 class="text-3xl font-bold mb-3 title"></h2>
+  <p class="scenario bg-yellow-50 p-3 rounded mb-4"></p>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Why it matters</h3>
+  <ul class="teach list-disc pl-6 mb-4"></ul>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Method</h3>
+  <ol class="method list-disc pl-6 mb-4"></ol>
+
+  <p class="tip bg-blue-50 p-3 rounded mb-4"></p>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Check-ins</h3>
+  <div class="checks space-y-3 mb-4"></div>
+
+  <details class="stretch hidden">
+    <summary class="cursor-pointer text-blue-700">Stretch activity</summary>
+    <p class="stretchQ mt-2"></p>
+    <button class="btn btn-grey mt-1 reveal">Reveal</button>
+    <p class="stretchA hidden mt-2 text-green-700 bg-green-100 p-2 rounded"></p>
+  </details>
+</section>
+</template>
+
+<template id="qtpl">
+<div class="bg-indigo-50 p-3 rounded">
+  <p class="q font-medium"></p>
+  <button class="btn btn-grey mt-1 reveal">Reveal</button>
+  <p class="a hidden mt-1 text-green-700"></p>
+</div>
+</template>
+
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const panel=document.getElementById('panel'),
+      prev=document.getElementById('prev'),
+      next=document.getElementById('next'),
+      bar =document.getElementById('bar'),
+      now =document.getElementById('now'),
+      tot =document.getElementById('tot'),
+      finishBtn = document.getElementById('finishBtn');
+
+let idx=0; tot.textContent=data.length;
+
+function render(){
+  const m=data[idx];
+  const f=document.importNode(document.getElementById('tpl').content,true);
+
+  f.querySelector('.title').textContent=m.title;
+  f.querySelector('.scenario').innerHTML=m.scenario;
+
+  const teach=f.querySelector('.teach');
+  m.teach.forEach(t=>{const li=document.createElement('li');li.innerHTML=t;teach.appendChild(li);});
+
+  const meth=f.querySelector('.method');
+  m.method.forEach(t=>{const li=document.createElement('li');li.textContent=t;meth.appendChild(li);});
+
+  f.querySelector('.tip').innerHTML=m.tip;
+
+  const checks=f.querySelector('.checks');
+  m.qs.forEach(o=>{
+    const q=document.importNode(document.getElementById('qtpl').content,true);
+    q.querySelector('.q').textContent=o.q;
+    q.querySelector('.a').textContent="Answer: "+o.a;
+    checks.appendChild(q);
+  });
+
+  if(m.stretch){
+    const st=f.querySelector('.stretch');
+    st.classList.remove('hidden');
+    st.querySelector('.stretchQ').textContent=m.stretch.q;
+    st.querySelector('.stretchA').textContent=m.stretch.a;
+  }
+
+  panel.innerHTML=''; panel.appendChild(f);
+  prev.disabled=idx===0;
+  next.disabled=idx===data.length-1;
+  next.textContent=idx===data.length-1?'Finish':'Next';
+
+  if(idx===data.length-1){
+    finishBtn.classList.remove('hidden');
+  } else {
+    finishBtn.classList.add('hidden');
+  }
+
+  now.textContent=idx+1;
+  bar.style.width=((idx+1)/data.length*100)+'%';
+}
+
+prev.onclick=()=>{if(idx>0){idx--;render();}};
+next.onclick=()=>{if(idx<data.length-1){idx++;render();}};
+finishBtn.onclick=()=>{window.location.href='task2_index.html';};
+
+render();
+
+panel.addEventListener('click', e=>{
+  if(e.target.classList.contains('reveal')){
+    const ans=e.target.nextElementSibling;
+    if(ans) ans.classList.toggle('hidden');
+  }
+});
+</script>
+<script src="../search.js"></script>
+
+<footer class="copyright-footer">
+  <div class="copyright-content">
+    <div class="copyright-notice">
+      <p><strong>Notice:</strong> All images found throughout this site are provided solely for teaching and learning with our enrolled students.</p>
+      <p class="copyright-warning"><strong>WARNING:</strong> This material has been reproduced and communicated to you by or on behalf of Wagga Wagga High School pursuant to Part VB of the Copyright Act 1968 (Cth). This material may be subject to copyright. Any further copying or communication may be the subject of copyright protection under the Act.</p>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-info">
+      <p>&copy; 2025 Wagga Wagga High School - Manufacturing VET Resources</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

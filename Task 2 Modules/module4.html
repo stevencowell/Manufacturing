@@ -1,0 +1,973 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 4: Power Tools Setup and Operation" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 4: Power Tools Setup and Operation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1.2rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .quiz-input {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.35rem 0.5rem;
+      font-size: 0.95rem;
+    }
+    .match-table {
+      table-layout: fixed;
+    }
+    .match-table th:first-child,
+    .match-table td:first-child {
+      width: 16%;
+      white-space: nowrap;
+    }
+    .match-table .quiz-input {
+      font-size: 0.9rem;
+      min-width: 0;
+    }
+    .tool-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tool-table th,
+    .tool-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .tool-table th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .tool-image-cell {
+      width: 200px;
+      text-align: center;
+      background: #f8fafc;
+    }
+    .tool-image {
+      width: 160px;
+      height: 140px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    .tool-placeholder {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .tool-table,
+      .tool-table tbody,
+      .tool-table tr,
+      .tool-table td,
+      .tool-table th {
+        display: block;
+        width: 100%;
+      }
+      .tool-image-cell {
+        width: 100%;
+      }
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .mcq-options label {
+      display: block;
+      margin: 0.35rem 0;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      background: #f8fffd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: #0f766e;
+    }
+    .card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .stepper {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .step p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.6rem 1.2rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .check-item {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+    .check-box {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #0f766e;
+      border-radius: 4px;
+      margin-top: 0.1rem;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 4: Power Tools Setup and Operation</h1>
+    <p>Task 2 - Tools and Equipment (MEM18002)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task2_index.html" class="back-link">&larr; Back to Task 2 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module covers safe setup, pre-start checks, guarding, and correct operation of power tools.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> Power tools increase risk. Correct setup, guarding, and technique keep everyone safe.
+    </div>
+
+    <h2>Assessment Focus (Task 2)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Safe setup first</h3>
+        <p>Confirm electrical safety, guarding, and correct accessories before operation.</p>
+      </div>
+      <div class="card">
+        <h3>Controlled operation</h3>
+        <p>Use stable stance, correct grip, and steady technique to reduce kickback risk.</p>
+      </div>
+      <div class="card">
+        <h3>Hazard control in action</h3>
+        <p>Manage sparks, noise, vibration, swarf, and hot material during the task.</p>
+      </div>
+      <div class="card">
+        <h3>Stop and escalate</h3>
+        <p>Isolate and report immediately if a guard, accessory, or tool is unsafe.</p>
+      </div>
+    </div>
+
+    <h2>Power Tool Pre-Start Checklist</h2>
+    <div class="checklist-grid">
+      <div class="check-item"><span class="check-box"></span>Electrical: cord intact, plug secure, test-and-tag valid, RCD used if required.</div>
+      <div class="check-item"><span class="check-box"></span>Mechanical: guards secure, no cracks in discs/wheels, moving parts stable.</div>
+      <div class="check-item"><span class="check-box"></span>Setup: correct speed, correct accessory, correct fit for material/task.</div>
+      <div class="check-item"><span class="check-box"></span>Workspace: workpiece clamped, bench clear, PPE worn.</div>
+    </div>
+
+    <h2>Safe Operation Sequence</h2>
+    <div class="stepper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Set your stance and grip</strong>
+          <p>Two hands on portable tools and body balanced before start-up.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Bring tool to operating speed</strong>
+          <p>Allow full speed before contact with material.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Cut/drill with control</strong>
+          <p>Use steady pressure and avoid twisting discs or forcing bits.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Maintain hazard controls</strong>
+          <p>Keep hands behind cutting path and control spark/swarf direction.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Common Hazards and Controls</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Kickback</h3>
+        <p>Clamp work, avoid sideways force, and maintain firm two-hand control.</p>
+      </div>
+      <div class="card">
+        <h3>Sparks and hot material</h3>
+        <p>Use eye protection and direct sparks away from people and flammables.</p>
+      </div>
+      <div class="card">
+        <h3>Noise and vibration</h3>
+        <p>Use hearing protection and operate tools within safe usage limits.</p>
+      </div>
+      <div class="card">
+        <h3>Swarf and dust</h3>
+        <p>Clean regularly and use extraction/ventilation where required.</p>
+      </div>
+    </div>
+
+    <h2>Guarding and Adjustments</h2>
+    <div class="stepper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Never bypass guards</strong>
+          <p>Do not operate any power tool with missing or damaged guards.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Set critical clearances</strong>
+          <p>Adjust tool rests, spark deflectors, and vice/fence positions correctly.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Adjust drill press safely</strong>
+          <p>Set table height and depth stops before operation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Stop if unsafe</strong>
+          <p>Isolate and report immediately when guarding cannot be made safe.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Power Tool Visuals</h2>
+    <p>Examples of common power tools used in Task 2 practicals.</p>
+    <table class="tool-table">
+      <thead>
+        <tr>
+          <th>Tool and Use</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Angle grinder</strong><br />
+            Cutting and grinding metal with discs.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../Construction Pictures/Angle Grinder.jpeg" alt="Angle grinder" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Bench grinder</strong><br />
+            Sharpening and grinding with fixed wheels.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../Construction Pictures/Bench Grinder.jpeg" alt="Bench grinder" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Portable drill</strong><br />
+            General drilling and fastening tasks.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../Construction Pictures/Battery Drill.jpeg" alt="Battery drill" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Cold saw</strong><br />
+            Cold cutting metal to length at set angles.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="images/cold-saw.jpg" alt="Cold saw cutting metal stock" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Pedestal drill (drill press)</strong><br />
+            Precise, vertical drilling in fixed position.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="images/pedestal-drill.jpg" alt="Pedestal drill drill press" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Nibbler / sheet metal shears</strong><br />
+            Cutting sheet metal for trims, curves, and profiling.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="images/nibbler-sheet-shears.jpg" alt="Bench shears for sheet metal cutting" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li>Working safely with power tools</li>
+      <li><a href="https://www.safework.nsw.gov.au/hazards-a-z/machinery-and-equipment" target="_blank" rel="noopener noreferrer">SafeWork NSW - Machinery and equipment</a></li>
+      <li><a href="https://safework.sa.gov.au/workplaces/plant-tools-and-vehicles/guarding" target="_blank" rel="noopener noreferrer">SafeWork SA - Guarding</a></li>
+      <li><a href="https://create.kahoot.it/details/8250bc94-459c-494b-a736-a71aa6acf287?drawer=" target="_blank" rel="noopener noreferrer">Power tools Kahoot</a></li>
+    </ul>
+
+    <h2>Quiz Part B: Power Tools Matching</h2>
+
+    <div class="qa-card">
+      <p class="qa-question">Select the best code for each tool. Codes describe function, safety, maintenance, and setup.</p>
+      <table class="match-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Q1 Features and applications</th>
+            <th>Q2 Safety measures and PPE</th>
+            <th>Q3 Maintenance requirements</th>
+            <th>Q4 Adjustments and alignments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drill</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Angle grinder</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Bench grinder</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Nibblers</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Cold saw</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Pedestal drill</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Abrasive disc cutting and grinding</option>
+                <option>2 - Fixed-wheel grinding/sharpening</option>
+                <option>3 - Vertical precision drilling with depth control</option>
+                <option>4 - Sheet metal profiling with punch action</option>
+                <option>5 - Portable drilling/driver tasks</option>
+                <option>6 - Cut-off of section/stock at set angles</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>7 - Bit secure, clamp work, eye protection</option>
+                <option>8 - Guard/handle set, glasses and hearing protection</option>
+                <option>9 - Support sheet, fingers clear, eye protection</option>
+                <option>10 - Work clamped in vice/fence, eye and hearing PPE</option>
+                <option>11 - Clamp job, secure clothing/hair, eye and hearing PPE</option>
+                <option>12 - Correct rest/guard clearance, eye and hearing PPE</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>13 - Inspect punch/die and lubricate moving parts</option>
+                <option>14 - Replace damaged discs and clean vents</option>
+                <option>15 - Inspect blade/guard and maintain coolant</option>
+                <option>16 - Dress wheel and clean debris</option>
+                <option>17 - Check chuck, battery/lead and clean intake</option>
+                <option>18 - Check chuck/belts/quill and lubricate</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>19 - Set cutting tip clearance and guide alignment</option>
+                <option>20 - Set tool rest and spark deflector clearance</option>
+                <option>21 - Align fence/vice and guard position</option>
+                <option>22 - Orient guard/handle to work direction</option>
+                <option>23 - Set table height, speed and depth stop</option>
+                <option>24 - Set mode/clutch/torque for material</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="reveal-btn" data-target="m4a1">Reveal answers</button>
+      <div class="answer" id="m4a1">
+        <strong>Answer key - Power Tools</strong>
+        <ul>
+          <li>Drill: Q1=5, Q2=7, Q3=17, Q4=24</li>
+          <li>Angle grinder: Q1=1, Q2=8, Q3=14, Q4=22</li>
+          <li>Bench grinder: Q1=2, Q2=12, Q3=16, Q4=20</li>
+          <li>Nibblers: Q1=4, Q2=9, Q3=13, Q4=19</li>
+          <li>Cold saw: Q1=6, Q2=10, Q3=15, Q4=21</li>
+          <li>Pedestal drill: Q1=3, Q2=11, Q3=18, Q4=23</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Quiz Part C: Power Tool Safety Questions</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) Common defects in power tools include:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q1" /> Missing guards only</label>
+        <label><input type="radio" name="m4q1" /> Cracked wheels only</label>
+        <label><input type="radio" name="m4q1" /> Malfunctioning switches only</label>
+        <label><input type="radio" name="m4q1" /> All of the above</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a2">Reveal answer</button>
+      <div class="answer" id="m4a2">All of the above.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) An angle grinder has severe vibration. Most likely cause?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q2" /> Damage to the grinding disc</label>
+        <label><input type="radio" name="m4q2" /> Damage to the electrical lead</label>
+        <label><input type="radio" name="m4q2" /> Incorrect PPE</label>
+        <label><input type="radio" name="m4q2" /> A loose safety guard</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a3">Reveal answer</button>
+      <div class="answer" id="m4a3">Damage to the grinding disc.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) A portable power drill smells like burning. First action?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q3" /> Keep using it to finish the task</label>
+        <label><input type="radio" name="m4q3" /> Check the job is clamped</label>
+        <label><input type="radio" name="m4q3" /> Return it and get another drill</label>
+        <label><input type="radio" name="m4q3" /> Tag it out of use and report the fault</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a4">Reveal answer</button>
+      <div class="answer" id="m4a4">Tag it out of use and report the fault.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) Which activity relating to power tool use is correct?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q4" /> Inspect the power lead for faults after use</label>
+        <label><input type="radio" name="m4q4" /> Have any fault repaired when it is first noticed</label>
+        <label><input type="radio" name="m4q4" /> Spray with lubricant after each use</label>
+        <label><input type="radio" name="m4q4" /> Leave it to store staff to find faults</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a5">Reveal answer</button>
+      <div class="answer" id="m4a5">Have any fault repaired when it is first noticed.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">5) When storing power tools, it is important that:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q5" /> Power leads are not kinked or knotted</label>
+        <label><input type="radio" name="m4q5" /> Power leads are tightly wound</label>
+        <label><input type="radio" name="m4q5" /> Only the next user checks faults</label>
+        <label><input type="radio" name="m4q5" /> A note is left if parts are broken</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a6">Reveal answer</button>
+      <div class="answer" id="m4a6">Power leads are not kinked or knotted.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">6) When devising a work holding method, consider:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q6" /> Material type and tool forces</label>
+        <label><input type="radio" name="m4q6" /> Workpiece size and weight</label>
+        <label><input type="radio" name="m4q6" /> The power tool being used</label>
+        <label><input type="radio" name="m4q6" /> All of the above</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a7">Reveal answer</button>
+      <div class="answer" id="m4a7">All of the above.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">7) Which method does NOT follow WHS for holding a small workpiece?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q7" /> Clamp to the bench top</label>
+        <label><input type="radio" name="m4q7" /> Hold the workpiece with one hand</label>
+        <label><input type="radio" name="m4q7" /> Hold in an engineer's vice</label>
+        <label><input type="radio" name="m4q7" /> Hold in a woodworker's vice</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a8">Reveal answer</button>
+      <div class="answer" id="m4a8">Hold the workpiece on the bench top with one hand.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">8) Holding equipment includes:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q8" /> Multigrips</label>
+        <label><input type="radio" name="m4q8" /> Vices</label>
+        <label><input type="radio" name="m4q8" /> Jigs</label>
+        <label><input type="radio" name="m4q8" /> Clamps</label>
+        <label><input type="radio" name="m4q8" /> These are all examples of holding equipment</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a9">Reveal answer</button>
+      <div class="answer" id="m4a9">These are all examples of holding equipment.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: What power tool is best for drilling precise, vertical holes?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s1">Reveal example answer</button>
+      <div class="answer" id="m4s1">The pedestal drill - it provides accuracy and stability.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: Why must you never use a grinder disc with a chip or crack in it?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s2">Reveal example answer</button>
+      <div class="answer" id="m4s2">It may shatter at high speed and cause serious injury.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: Why do you need two hands on the grinder?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s3">Reveal example answer</button>
+      <div class="answer" id="m4s3">To maintain control and prevent the tool kicking back.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 4: Why must the grinder guard be positioned between you and the disc?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s4">Reveal example answer</button>
+      <div class="answer" id="m4s4">To protect your hands and face from sparks or disc fragments.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 5: What adjustment can you safely make on a pedestal drill?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s5">Reveal example answer</button>
+      <div class="answer" id="m4s5">Adjust the depth stop or ensure the table is level.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 6: Why must the chuck key never be left in a drill chuck?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s6">Reveal example answer</button>
+      <div class="answer" id="m4s6">It can be ejected at high speed and cause injury.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 7: What is “kickback” when using a grinder?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s7">Reveal example answer</button>
+      <div class="answer" id="m4s7">A sudden, forceful movement when the disc catches, which can cause loss of control.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module3.html">&larr; Previous Module</a>
+      <a href="module5.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Reveal answer' : 'Hide answer';
+    };
+
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>
+

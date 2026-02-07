@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 3: Quality Systems and Improvement" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3: Quality Systems and Improvement</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .reveal-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      filter: none;
+    }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .mcq-options label {
+      display: block;
+      margin: 0.35rem 0;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .image-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+      padding: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .image-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+      background: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+    }
+    .image-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      color: #0f766e;
+    }
+    .image-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .focus-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 0.95rem;
+      background: #f8fffd;
+    }
+    .focus-card h3 {
+      margin: 0 0 0.35rem;
+      color: #0f766e;
+      font-size: 1.02rem;
+    }
+    .focus-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0 1.4rem;
+      font-size: 0.95rem;
+    }
+    .info-table th,
+    .info-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.7rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .info-table th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .step-flow {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.85rem 0 1.45rem;
+    }
+    .step-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #fff;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+    .step-item p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 3: Quality Systems and Improvement</h1>
+    <p>Task 1 - Welcome to the Industry (MEM16006, MEM13015)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task1_index.html" class="back-link">&larr; Back to Task 1 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module builds the quality habits expected in manufacturing: work to specification, check as you go, and report non-conformance early.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> Quality is built through the whole process, not just checked at the end.
+    </div>
+
+    <h2>Assessment Focus (Task 1)</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Plan to specification</h3>
+        <p>Start with drawings, tolerances, finish requirements, and required process steps.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Check in process</h3>
+        <p>Use checkpoints during the task so defects are found early.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Record and report</h3>
+        <p>Capture measurements, defects, and corrective actions clearly.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Improve next run</h3>
+        <p>Identify what caused variation and how the process can be improved.</p>
+      </div>
+    </div>
+
+    <h2>Quality Terms in Practice</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Term</th>
+          <th>Meaning in workshop context</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Quality planning</td>
+          <td>Define standard before work: dimension, tolerance, finish, due time.</td>
+        </tr>
+        <tr>
+          <td>Quality assurance (QA)</td>
+          <td>Set up processes that prevent defects before they happen.</td>
+        </tr>
+        <tr>
+          <td>Quality control (QC)</td>
+          <td>Measure and verify outputs against specification.</td>
+        </tr>
+        <tr>
+          <td>Conformance</td>
+          <td>Result matches approved specification and acceptance criteria.</td>
+        </tr>
+        <tr>
+          <td>Non-conformance</td>
+          <td>Result outside requirement; must be contained, reported, and corrected.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Quality Workflow for Practical Tasks</h2>
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Confirm specification</strong>
+          <p>Read drawing notes, tolerances, and process requirements before setup.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Prepare tools and checks</strong>
+          <p>Confirm measuring equipment and fixtures are suitable and serviceable.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Run in-process verification</strong>
+          <p>Use checkpoints through the task instead of waiting for final inspection.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Record evidence</strong>
+          <p>Capture measurements, observations, and any corrective action taken.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div>
+          <strong>Escalate non-conformance</strong>
+          <p>Report out-of-spec results early to reduce rework and waste.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Quality Inspection Tools</h2>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="../Construction Pictures/steel rule.jpeg" alt="Steel rule used for accurate measurement" />
+        <h3>Steel Rule</h3>
+        <p>Basic measurement tool for checking dimensions against plans.</p>
+      </div>
+      <div class="image-card">
+        <img src="../Construction Pictures/Tape measure.jpeg" alt="Tape measure used for layout and checks" />
+        <h3>Tape Measure</h3>
+        <p>Quick checks for layout and length before cutting.</p>
+      </div>
+      <div class="image-card">
+        <img src="../additional tools/Metal vice.jpg" alt="Metal vice for clamping work during measurement" />
+        <h3>Metal Vice</h3>
+        <p>Secures workpieces for safer, more accurate checks.</p>
+      </div>
+    </div>
+
+    <h2>Improvement and Team Communication</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Report facts, not opinions</h3>
+        <p>State what was found, where, and measured evidence.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Fix the process, not the person</h3>
+        <p>Focus on steps, controls, sequencing, and tool condition.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Close the loop</h3>
+        <p>Trial improvements and share outcomes in handover/toolbox communication.</p>
+      </div>
+    </div>
+
+    <h2>Quality Form Requirements (Task 1 Evidence)</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Form section</th>
+          <th>What to include</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Conformance statement</td>
+          <td>How the project met plan/specification: dimensions, finish, and required process steps.</td>
+        </tr>
+        <tr>
+          <td>Non-conformance details</td>
+          <td>Defect type, likely cause, and where it occurred.</td>
+        </tr>
+        <tr>
+          <td>Efficiency reflection</td>
+          <td>How teamwork/process could be run more efficiently next time.</td>
+        </tr>
+        <tr>
+          <td>Improvement actions</td>
+          <td>At least two practical strategies for the next project.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=r9V-uM-cINQ" target="_blank" rel="noopener noreferrer">Quality planning, QA and QC</a></li>
+      <li><a href="https://www.youtube.com/watch?v=J_cv461J5Ek" target="_blank" rel="noopener noreferrer">Quality control in metal parts manufacture</a></li>
+      <li><a href="https://safetyculture.com/topics/non-conformance/" target="_blank" rel="noopener noreferrer">Non-conformance overview</a></li>
+      <li><a href="https://asana.com/resources/process-improvement-methodologies" target="_blank" rel="noopener noreferrer">Process improvement methods</a></li>
+    </ul>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) Which option correctly defines QA, QC, and quality improvement?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q1" /> QA checks outputs, QC improves processes, QI ignores defects</label>
+        <label><input type="radio" name="m3q1" /> QA prevents defects through systems, QC checks outputs, QI improves processes</label>
+        <label><input type="radio" name="m3q1" /> QA is final inspection only, QC is training, QI is paperwork</label>
+        <label><input type="radio" name="m3q1" /> QA and QC mean the same thing</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a1">Reveal answer</button>
+      <div class="answer" id="m3a1">QA sets the process to prevent defects. QC checks outputs against the standard. Quality improvement changes the process to improve outcomes.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) Why are in-process checks important?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q2" /> They slow the job down</label>
+        <label><input type="radio" name="m3q2" /> They detect errors early and reduce rework</label>
+        <label><input type="radio" name="m3q2" /> They replace final inspection</label>
+        <label><input type="radio" name="m3q2" /> They are only for large projects</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a2">Reveal answer</button>
+      <div class="answer" id="m3a2">They detect drift or mistakes early, reducing scrap, rework, and delays compared with finding problems only at final inspection.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) Which is an example of non-conformance?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q3" /> Dimension within tolerance</label>
+        <label><input type="radio" name="m3q3" /> Correct material grade</label>
+        <label><input type="radio" name="m3q3" /> Wrong hole size outside tolerance</label>
+        <label><input type="radio" name="m3q3" /> Completed documentation</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a3">Reveal answer</button>
+      <div class="answer" id="m3a3">Examples include incorrect dimensions outside tolerance, poor surface finish, wrong material grade, or missing required documentation.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) What should be included when reporting a quality issue?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q4" /> General comments only</label>
+        <label><input type="radio" name="m3q4" /> Exact issue, evidence, location/part ID, and action taken</label>
+        <label><input type="radio" name="m3q4" /> Only the time of day</label>
+        <label><input type="radio" name="m3q4" /> The name of the person who made the part</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a4">Reveal answer</button>
+      <div class="answer" id="m3a4">Include the exact issue, location or part ID, measured evidence, possible impact, and immediate actions taken to contain the problem.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">5) What are two consequences of poor quality work?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q5" /> Lower costs and faster completion</label>
+        <label><input type="radio" name="m3q5" /> Increased rework time and material waste</label>
+        <label><input type="radio" name="m3q5" /> Fewer hazards and better flow</label>
+        <label><input type="radio" name="m3q5" /> No impact on production</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a5">Reveal answer</button>
+      <div class="answer" id="m3a5">Increased project costs, longer completion time, and wasted materials.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">6) What must you compare to decide if your project conforms?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q6" /> Your personal preference</label>
+        <label><input type="radio" name="m3q6" /> The assigned project plans/specifications</label>
+        <label><input type="radio" name="m3q6" /> Another student's project</label>
+        <label><input type="radio" name="m3q6" /> The tool manual only</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a6">Reveal answer</button>
+      <div class="answer" id="m3a6">Compare finished work against the assigned project plans/specifications, including dimensions, finish, and required process steps.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">7) Which evidence should be included when reporting non-conformance?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q7" /> Defect description, measured variance, affected part/step, action taken</label>
+        <label><input type="radio" name="m3q7" /> Only a photo</label>
+        <label><input type="radio" name="m3q7" /> Only the supervisor's name</label>
+        <label><input type="radio" name="m3q7" /> Only the date</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a7">Reveal answer</button>
+      <div class="answer" id="m3a7">Specific defect description, measured variance from spec, affected part/step, and action taken (containment/correction/reporting).</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: During an in-process check, a hole is 0.6 mm out of tolerance. What do you do and what do you record?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s1">Reveal example answer</button>
+      <div class="answer" id="m3s1">Stop and contain the issue, report it, and record the defect, measured variance, affected step/part, and any corrective action taken.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: A teammate wants to skip a measurement step to save time. How do you respond?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s2">Reveal example answer</button>
+      <div class="answer" id="m3s2">Explain that in-process checks prevent defects and rework, and the step must be completed to meet the specification.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: Identify two quality-improvement strategies you would use on your next project.</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s3">Reveal example answer</button>
+      <div class="answer" id="m3s3">Examples: add in-process measurement checkpoints, verify tool condition before cutting, improve sequencing/role allocation, and use clearer handover notes.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 4: How would you explain that your project conforms to specifications?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s4">Reveal example answer</button>
+      <div class="answer" id="m3s4">Compare the finished dimensions and finish to the project plans/specs, confirm required process steps were followed, and note any checks completed.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module2.html">&larr; Previous Module</a>
+      <a href="task1_index.html">Task 1 Modules &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Reveal answer' : 'Hide answer';
+    };
+
+    document.querySelectorAll('.mcq-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+
+    document.querySelectorAll('.scenario-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>

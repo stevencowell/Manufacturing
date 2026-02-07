@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 2: WHS and Manual Handling Foundations" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 2: WHS and Manual Handling Foundations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .reveal-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      filter: none;
+    }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .mcq-options label {
+      display: block;
+      margin: 0.35rem 0;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .ppe-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+    }
+    .ppe-table td {
+      border: 1px solid #e5e7eb;
+      padding: 1rem;
+      vertical-align: top;
+      background: #fff;
+    }
+    .ppe-table h3 {
+      margin: 0 0 0.25rem 0;
+      color: #0f766e;
+    }
+    .ppe-image {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      background: transparent;
+    }
+    .ppe-image-cell {
+      width: 200px;
+      text-align: center;
+      background: #f8fafc;
+    }
+    @media (max-width: 640px) {
+      .ppe-table,
+      .ppe-table tbody,
+      .ppe-table tr,
+      .ppe-table td {
+        display: block;
+        width: 100%;
+      }
+      .ppe-image-cell {
+        width: 100%;
+      }
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .image-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+      padding: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .image-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: contain;
+      background: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+    }
+    .image-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      color: #0f766e;
+    }
+    .image-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .focus-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 0.95rem;
+      background: #f8fffd;
+    }
+    .focus-card h3 {
+      margin: 0 0 0.35rem;
+      color: #0f766e;
+      font-size: 1.02rem;
+    }
+    .focus-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .step-flow {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.85rem 0 1.45rem;
+    }
+    .step-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #fff;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+    .step-item p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.6rem 1rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .check-item {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+    .check-box {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #0f766e;
+      border-radius: 4px;
+      margin-top: 0.1rem;
+      background: #fff;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0 1.4rem;
+      font-size: 0.95rem;
+    }
+    .info-table th,
+    .info-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.7rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .info-table th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 2: WHS and Manual Handling Foundations</h1>
+    <p>Task 1 - Welcome to the Industry (MEM13015, MEM11011)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task1_index.html" class="back-link">&larr; Back to Task 1 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module explains how students apply WHS duties in a manufacturing workshop and complete manual handling tasks without creating risks for themselves or others.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> Identify hazards early, control the risk, then complete the task using safe body mechanics and approved procedures.
+    </div>
+
+    <h2>Assessment Focus (Task 1)</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Recognise hazards early</h3>
+        <p>Identify hazards before starting and continue scanning during the task.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Apply the right controls</h3>
+        <p>Use hierarchy of control, SOP requirements, and pre-start checks.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Handle materials safely</h3>
+        <p>Use correct posture, handling aids, and team lifts to reduce injury risk.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Report and respond</h3>
+        <p>Record incidents and near misses clearly so controls can be improved.</p>
+      </div>
+    </div>
+
+    <h2>WHS Foundations in Plain Language</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Concept</th>
+          <th>What it means in practice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Duty of care</td>
+          <td>Follow procedures, use PPE, report hazards, and do not put others at risk.</td>
+        </tr>
+        <tr>
+          <td>Hazard vs risk</td>
+          <td>Hazard is the source of harm; risk is the likelihood and consequence.</td>
+        </tr>
+        <tr>
+          <td>Hierarchy of control</td>
+          <td>Eliminate, substitute, isolate, engineer, administer, PPE (last line only).</td>
+        </tr>
+        <tr>
+          <td>Manual handling risk factors</td>
+          <td>Force, awkward posture, repetition, vibration, and long duration.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Machine Safety and SOP Rules</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Follow the SOP</h3>
+        <p>The SOP defines machine-specific PPE and safe operating sequence.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Pre-start checks every time</h3>
+        <p>Do not operate until checks are complete and controls are in place.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Respect tags and isolation</h3>
+        <p>Out of Service means unsafe to use until cleared by supervisor/teacher.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Manage noise exposure</h3>
+        <p>Tasks like grinding require hearing protection and awareness of exposure time.</p>
+      </div>
+    </div>
+
+    <h2>Workshop PPE Examples</h2>
+    <table class="ppe-table">
+      <tbody>
+        <tr>
+          <td>
+            <h3>Eye Protection</h3>
+            <p>Safety glasses protect against flying chips and dust during cutting, drilling, and grinding.</p>
+          </td>
+          <td class="ppe-image-cell">
+            <img class="ppe-image" src="../additional tools/safety glasses.jpg" alt="Safety glasses for eye protection" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Hearing Protection</h3>
+            <p>Ear muffs reduce the risk of hearing damage from grinders and other loud tools.</p>
+          </td>
+          <td class="ppe-image-cell">
+            <img class="ppe-image" src="../Construction Pictures/ear muffs.jpeg" alt="Ear muffs for hearing protection" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Hand Protection</h3>
+            <p>Work gloves protect against cuts, abrasions, and hot material handling.</p>
+          </td>
+          <td class="ppe-image-cell">
+            <img class="ppe-image" src="../Construction Pictures/Work gloves.jpeg" alt="Work gloves for hand protection" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Foot Protection</h3>
+            <p>Work boots protect against dropped material and sharp objects on the workshop floor.</p>
+          </td>
+          <td class="ppe-image-cell">
+            <img class="ppe-image" src="../Construction Pictures/work boots.jpeg" alt="Work boots for foot protection" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Pre-Start WHS Checklist</h2>
+    <div class="checklist-grid">
+      <div class="check-item"><span class="check-box"></span>PPE selected for the task and fitted correctly.</div>
+      <div class="check-item"><span class="check-box"></span>Machine guard and emergency controls checked.</div>
+      <div class="check-item"><span class="check-box"></span>Work area clear of trip and slip hazards.</div>
+      <div class="check-item"><span class="check-box"></span>Workpiece clamped or secured before operation.</div>
+      <div class="check-item"><span class="check-box"></span>Out of Service / unsafe tools reported immediately.</div>
+      <div class="check-item"><span class="check-box"></span>Supervisor/teacher informed of any uncertainty.</div>
+    </div>
+
+    <h2>Safe Manual Handling Method</h2>
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Plan the move</strong>
+          <p>Check weight, shape, path, destination, and need for assistance.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Set controls</strong>
+          <p>Clear obstructions and use trolley, wheelbarrow, or team lift where needed.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Lift with control</strong>
+          <p>Feet stable, load close, neutral spine, knees bent, no jerking.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Move and place</strong>
+          <p>Avoid twisting, keep vision clear, and set down in a stable position.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Manual Handling Essentials for Task 1 Evidence</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Highest injury area</h3>
+        <p>Back injuries are the most common outcome of poor manual handling.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Correct stance</h3>
+        <p>Feet slightly apart, knees bent, and load held close to the body.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Equipment to reduce strain</h3>
+        <p>Material trolley, wheelbarrow, and pallet jack where suitable.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Worker obligation</h3>
+        <p>Use approved safe systems of work and required training procedures.</p>
+      </div>
+    </div>
+
+    <h2>Manual Handling Equipment</h2>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="../additional tools/pallet trolley.jpg" alt="Pallet trolley for moving heavy loads" />
+        <h3>Pallet Trolley</h3>
+        <p>Reduces lift strain and improves load control.</p>
+      </div>
+      <div class="image-card">
+        <img src="../additional tools/wheel barrow.jpg" alt="Wheelbarrow for moving materials" />
+        <h3>Wheelbarrow</h3>
+        <p>Useful for moving materials over short distances.</p>
+      </div>
+    </div>
+
+    <h2>JSA and Risk Matrix Workflow</h2>
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <strong>List hazards by task step</strong>
+          <p>Break the job into steps and identify the hazard at each stage.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Rate pre-risk</strong>
+          <p>Assess likelihood and consequence before controls are applied.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Apply controls</strong>
+          <p>Use hierarchy of control, then confirm PPE and supervision needs.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Rate post-risk</strong>
+          <p>Record residual risk and confirm controls are effective.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Typical Task Hazards and Controls</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Task Step</th>
+          <th>Main Hazard</th>
+          <th>Key Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cold saw / hacksaw cutting</td>
+          <td>Contact with blade, unsecured workpiece</td>
+          <td>Guard fitted, work clamped, hands clear, eye and hearing protection.</td>
+        </tr>
+        <tr>
+          <td>Measuring and marking</td>
+          <td>Sharp points and edges</td>
+          <td>Keep hands clear, stable surface, controlled marking technique.</td>
+        </tr>
+        <tr>
+          <td>Drilling / tapping</td>
+          <td>Entanglement, heat, moving workpiece</td>
+          <td>Use vice, secure clothing/hair, check tagged cord, allow cooling.</td>
+        </tr>
+        <tr>
+          <td>Stamping / filing / cleanup</td>
+          <td>Flying particles, sharp edges, chemical contact</td>
+          <td>Clamp work, use file handle, wear eye protection and gloves as required, follow SDS.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Emergency and Incident Response</h2>
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Stop and isolate</strong>
+          <p>Cease work for uncontrolled hazards and make area safe.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Escalate immediately</strong>
+          <p>Notify supervisor/teacher and follow emergency procedures.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Treat and secure</strong>
+          <p>First aid or emergency response, then isolate unsafe equipment.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Record evidence</strong>
+          <p>Who, when, where, what happened, injury details, actions taken, and witnesses.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li><a href="https://www.safeworkaustralia.gov.au/safety-topic/industry-and-business/manufacturing" target="_blank" rel="noopener noreferrer">Manufacturing WHS guidance</a></li>
+      <li><a href="https://www.safework.nsw.gov.au/hazards-a-z/hazardous-manual-tasks" target="_blank" rel="noopener noreferrer">Hazardous manual tasks (NSW)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=zss9jRW4oWw" target="_blank" rel="noopener noreferrer">Lifting in the workplace</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Xk7hKrL-03U" target="_blank" rel="noopener noreferrer">Machine guarding in manufacturing</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Ct4-6nLU-_M" target="_blank" rel="noopener noreferrer">Responding to workplace injuries</a></li>
+    </ul>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) What is the best way to minimise a hazard?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q1" /> Use PPE only</label>
+        <label><input type="radio" name="m2q1" /> Eliminate (remove) the hazard</label>
+        <label><input type="radio" name="m2q1" /> Add warning signs only</label>
+        <label><input type="radio" name="m2q1" /> Increase supervision</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a1">Reveal answer</button>
+      <div class="answer" id="m2a1">Eliminate (remove) the hazard.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) When should pre-operational checks be completed?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q2" /> Only when the machine is new</label>
+        <label><input type="radio" name="m2q2" /> Each time, before the machine is used</label>
+        <label><input type="radio" name="m2q2" /> Only after an incident</label>
+        <label><input type="radio" name="m2q2" /> At the end of the day</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a2">Reveal answer</button>
+      <div class="answer" id="m2a2">Each time, before the machine is used.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) What does an "Out of Service" tag indicate?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q3" /> The item is safe but not booked</label>
+        <label><input type="radio" name="m2q3" /> The item is unsafe to operate and must not be used</label>
+        <label><input type="radio" name="m2q3" /> The item is reserved for teachers only</label>
+        <label><input type="radio" name="m2q3" /> The item is due for cleaning</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a3">Reveal answer</button>
+      <div class="answer" id="m2a3">The item is unsafe to operate and must not be used.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) Grinding a number of welds for most of a shift: what hazard is most likely?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q4" /> Excessive noise</label>
+        <label><input type="radio" name="m2q4" /> Cold stress</label>
+        <label><input type="radio" name="m2q4" /> Low lighting</label>
+        <label><input type="radio" name="m2q4" /> Wet floor</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a4">Reveal answer</button>
+      <div class="answer" id="m2a4">Excessive noise.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">5) What PPE is required when using a pedestal drill?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q5" /> Safety glasses only</label>
+        <label><input type="radio" name="m2q5" /> Ear plugs only</label>
+        <label><input type="radio" name="m2q5" /> Workshop apron only</label>
+        <label><input type="radio" name="m2q5" /> Safety glasses, ear protection, and a workshop apron</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a5">Reveal answer</button>
+      <div class="answer" id="m2a5">Safety glasses, ear protection, and a workshop apron (all required).</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">6) Which body area is most likely to be injured when lifting a heavy load?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q6" /> Feet</label>
+        <label><input type="radio" name="m2q6" /> Back</label>
+        <label><input type="radio" name="m2q6" /> Elbows</label>
+        <label><input type="radio" name="m2q6" /> Shoulders</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a6">Reveal answer</button>
+      <div class="answer" id="m2a6">The back.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">7) What is the correct stance to lift a load from the floor?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q7" /> Feet together, knees straight</label>
+        <label><input type="radio" name="m2q7" /> Feet wider apart, legs straight</label>
+        <label><input type="radio" name="m2q7" /> Feet slightly apart, knees bent, load close</label>
+        <label><input type="radio" name="m2q7" /> Feet staggered, back rounded</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a7">Reveal answer</button>
+      <div class="answer" id="m2a7">Feet slightly apart, knees bent, load close to the body.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">8) Under manual handling regulations, employees must:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q8" /> Lift any size load once a risk assessment is done</label>
+        <label><input type="radio" name="m2q8" /> Make full use of the employer's safe systems of work</label>
+        <label><input type="radio" name="m2q8" /> Wear back support belts for all lifts</label>
+        <label><input type="radio" name="m2q8" /> Report only major injuries</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a8">Reveal answer</button>
+      <div class="answer" id="m2a8">Make full use of the employer's safe systems of work.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">9) Which item is an example of manual handling equipment?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m2q9" /> Material trolley</label>
+        <label><input type="radio" name="m2q9" /> Wheelbarrow</label>
+        <label><input type="radio" name="m2q9" /> Pallet jack</label>
+        <label><input type="radio" name="m2q9" /> All of the above</label>
+      </div>
+      <button class="reveal-btn" data-target="m2a9">Reveal answer</button>
+      <div class="answer" id="m2a9">All of the above.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: A student is cut while using an angle grinder. What key details must be recorded in the incident report?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m2s1">Reveal example answer</button>
+      <div class="answer" id="m2s1">Record who was injured, date/time, exact location, activity being performed, description of the incident and injury, immediate treatment, witnesses, and who the incident was reported to.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: You need to lift a heavy piece of steel from the floor. What steps do you take before and during the lift?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m2s2">Reveal example answer</button>
+      <div class="answer" id="m2s2">Assess weight and path, use a trolley or team lift if needed, keep the load close, feet slightly apart, knees bent, neutral spine, and lift smoothly without twisting.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: A machine guard is missing before use. What is the correct response?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m2s3">Reveal example answer</button>
+      <div class="answer" id="m2s3">Stop work, isolate or tag out the equipment according to site procedure, and report the issue immediately.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 4: You identify a sharp-edge hazard during a task. How do you record and control the risk in the JSA?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m2s4">Reveal example answer</button>
+      <div class="answer" id="m2s4">Record the hazard, assess likelihood and consequence (pre-risk), apply controls such as clamping work and wearing eye protection, then record the post-risk rating.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module1.html">&larr; Previous Module</a>
+      <a href="module3.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Reveal answer' : 'Hide answer';
+    };
+
+    document.querySelectorAll('.mcq-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+
+    document.querySelectorAll('.scenario-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>

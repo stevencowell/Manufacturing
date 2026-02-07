@@ -1,0 +1,894 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 3: Hand Tools Selection and Safe Use" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3: Hand Tools Selection and Safe Use</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1.2rem;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .match-table {
+      table-layout: fixed;
+    }
+    .match-table th:first-child,
+    .match-table td:first-child {
+      width: 16%;
+      white-space: nowrap;
+    }
+    .match-table .quiz-input {
+      width: 100%;
+      min-width: 0;
+      font-size: 0.9rem;
+    }
+    .quiz-input {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.35rem 0.5rem;
+      font-size: 0.95rem;
+    }
+    .tool-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+    .tool-table th,
+    .tool-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .tool-table th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .tool-image-cell {
+      width: 200px;
+      text-align: center;
+      background: #f8fafc;
+    }
+    .tool-image {
+      width: 160px;
+      height: 140px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    .tool-placeholder {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .tool-table,
+      .tool-table tbody,
+      .tool-table tr,
+      .tool-table td,
+      .tool-table th {
+        display: block;
+        width: 100%;
+      }
+      .tool-image-cell {
+        width: 100%;
+      }
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.9rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      background: #f8fffd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.05rem;
+      color: #0f766e;
+    }
+    .card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0.6rem 1.2rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .check-item {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 0.6rem;
+      align-items: start;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+    .check-box {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #0f766e;
+      border-radius: 4px;
+      margin-top: 0.1rem;
+      background: #fff;
+    }
+    .stepper {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.75rem 0.9rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #0f766e;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .step p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 3: Hand Tools Selection and Safe Use</h1>
+    <p>Task 2 - Tools and Equipment (MEM18001)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task2_index.html" class="back-link">&larr; Back to Task 2 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module covers how to select, inspect, use, and maintain hand tools safely.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> The right hand tool and a safe technique reduce damage, errors, and injuries.
+    </div>
+
+    <h2>Assessment Focus (Task 2)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Select the right hand tool</h3>
+        <p>Match tool type to material, shape, and finish requirements.</p>
+      </div>
+      <div class="card">
+        <h3>Inspect before use</h3>
+        <p>Check handles, edges, heads, and moving joints before starting work.</p>
+      </div>
+      <div class="card">
+        <h3>Apply safe technique</h3>
+        <p>Secure the work, control force, and keep hands clear of strike/cut zones.</p>
+      </div>
+      <div class="card">
+        <h3>Maintain and tag correctly</h3>
+        <p>Perform minor safe adjustments and tag out unsafe tools immediately.</p>
+      </div>
+    </div>
+
+    <h2>Hand Tool Quick Reference</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Typical Use</th>
+          <th>Key Safety Focus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hacksaw</td>
+          <td>Cutting metal by hand</td>
+          <td>Secure workpiece, correct blade tension</td>
+        </tr>
+        <tr>
+          <td>Punch</td>
+          <td>Marking drill points</td>
+          <td>Secure work, keep fingers clear</td>
+        </tr>
+        <tr>
+          <td>File</td>
+          <td>Smoothing edges, removing burrs</td>
+          <td>Use a handle, apply pressure on forward stroke</td>
+        </tr>
+        <tr>
+          <td>Tin snips</td>
+          <td>Cutting thin sheet metal</td>
+          <td>Keep fingers clear of blades, wear eye protection</td>
+        </tr>
+        <tr>
+          <td>Vernier calipers</td>
+          <td>Measuring internal, external, and depth dimensions</td>
+          <td>Keep jaws clean, avoid forcing, store in protective case</td>
+        </tr>
+        <tr>
+          <td>Taps and dies</td>
+          <td>Cutting internal/external threads</td>
+          <td>Clamp work, use correct lubricant</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Hand Tool Visuals</h2>
+    <p>Examples of common hand tools used in Task 2 practicals.</p>
+    <table class="tool-table">
+      <thead>
+        <tr>
+          <th>Tool and Use</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Vernier calipers</strong><br />
+            Precision measurement of internal, external, and depth dimensions.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../metal tools/vernier calipers.jpg" alt="Vernier calipers" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Combination square</strong><br />
+            Checking 90 degree layout and marking lines before cutting/drilling.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../additional tools/combination square.jpg" alt="Combination square" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>F-clamp</strong><br />
+            Holding work securely for cutting or drilling.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../Construction Pictures/F-Clamps.jpeg" alt="F-clamp" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Metal vice</strong><br />
+            Holding workpieces steady during hand-tool use.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../additional tools/Metal vice.jpg" alt="Metal vice" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Tin snips</strong><br />
+            Cutting thin sheet metal.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../additional tools/Tin_Snips.jpg" alt="Tin snips" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Steel rule</strong><br />
+            Measuring and marking out work.
+          </td>
+          <td class="tool-image-cell">
+            <img class="tool-image" src="../Construction Pictures/steel rule.jpeg" alt="Steel rule" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Pre-Use Inspection Snapshot</h2>
+    <div class="checklist-grid">
+      <div class="check-item"><span class="check-box"></span>Handles secure with no cracks or splinters.</div>
+      <div class="check-item"><span class="check-box"></span>Cutting edges sharp and undamaged.</div>
+      <div class="check-item"><span class="check-box"></span>Files fitted with a proper handle.</div>
+      <div class="check-item"><span class="check-box"></span>No bent shafts, loose joints, or mushroomed heads.</div>
+    </div>
+
+    <h2>Safe Use by Tool Type</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Cutting tools</h3>
+        <p>Clamp the work, cut with steady strokes, and keep hands clear of the cutting path.</p>
+      </div>
+      <div class="card">
+        <h3>Striking tools</h3>
+        <p>Strike squarely, watch the workpiece, and keep others clear of the swing zone.</p>
+      </div>
+      <div class="card">
+        <h3>Filing</h3>
+        <p>Apply pressure on the forward stroke only and lift on return.</p>
+      </div>
+      <div class="card">
+        <h3>Marking and measuring</h3>
+        <p>Scribe lightly and confirm measurements before cutting.</p>
+      </div>
+      <div class="card">
+        <h3>Holding tools</h3>
+        <p>Use vices or clamps to stabilise work before cutting or striking.</p>
+      </div>
+    </div>
+
+    <h2>Tool-Specific Checks</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Vernier calipers</h3>
+        <p>Jaws clean, slide smooth, lock screw working, and scale readable.</p>
+      </div>
+      <div class="card">
+        <h3>Files</h3>
+        <p>Handle fitted, teeth clear, no bending.</p>
+      </div>
+      <div class="card">
+        <h3>Screwdrivers</h3>
+        <p>Correct tip size, no twisting or rounding.</p>
+      </div>
+      <div class="card">
+        <h3>Snips / shears</h3>
+        <p>Pivot secure, blades sharp, smooth action.</p>
+      </div>
+      <div class="card">
+        <h3>Clamps / vice</h3>
+        <p>Screw thread smooth, jaw faces undamaged, and secure clamping action.</p>
+      </div>
+    </div>
+
+    <h2>Safe Use Essentials</h2>
+    <div class="stepper">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Secure the work</strong>
+          <p>Clamp or vice the workpiece before cutting or striking.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Keep hands clear</strong>
+          <p>Stay behind cutting edges and away from strike points.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Use controlled force</strong>
+          <p>Let the tool do the work - avoid excessive pressure.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Clean and store</strong>
+          <p>Wipe tools down and store them correctly after use.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Fix Now vs Tag Out</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Fix now (if safe)</h3>
+        <p>Tighten loose handles or screws, tension hacksaw blades, and oil hinges for smooth movement.</p>
+      </div>
+      <div class="card">
+        <h3>Tag out immediately</h3>
+        <p>Cracked handles, bent shafts, missing handles, mushroomed heads, or chipped cutting edges.</p>
+      </div>
+    </div>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li>Hand Tool Inspection - Tips for Safety</li>
+      <li><a href="https://www.youtube.com/watch?v=CBxM489zDr4" target="_blank" rel="noopener noreferrer">Using basic metal hand tools (video)</a></li>
+      <li>How to use Basic Metal Hand Tools!</li>
+      <li><a href="https://create.kahoot.it/details/metalwork-tools/db3ba552-4bfc-48c8-aa5f-9f667b18f3fc" target="_blank" rel="noopener noreferrer">Metalwork tools Kahoot</a></li>
+      <li><a href="https://www.youtube.com/watch?v=yGuEWCrj7Cs" target="_blank" rel="noopener noreferrer">Sharpening hand tools (video)</a></li>
+      <li><a href="https://www.paengineeringsupplies.com.au/how-to-sharpen-drill-bits/" target="_blank" rel="noopener noreferrer">How to sharpen drill bits</a></li>
+    </ul>
+
+    <h2>Quiz Part A: Hand Tools Matching</h2>
+
+    <div class="qa-card">
+      <p class="qa-question">Table 1: Select the best code for each tool. Codes describe function, safety, and maintenance practices.</p>
+      <table class="match-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Q1 Features and applications</th>
+            <th>Q2 Safety measures and PPE</th>
+            <th>Q3 Maintenance requirements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hacksaw</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Creates starter indentation for drilling</option>
+                <option>2 - Cuts bar/section by hand with tensioned blade</option>
+                <option>3 - Drives/removes screws with matched tip</option>
+                <option>4 - Applies torque to nuts/bolts with correct fit</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Clamp work and use controlled full strokes</option>
+                <option>6 - Use correct wrench size and controlled torque</option>
+                <option>7 - Match screw tip exactly; do not pry</option>
+                <option>8 - Keep fingers clear when striking; wear eye protection</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Clean tips/blade surfaces; inspect handle</option>
+                <option>10 - Repoint/inspect punch tip for damage</option>
+                <option>11 - Check jaw wear and lubricate moving parts</option>
+                <option>12 - Set blade tension and replace worn blades</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Punch</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Creates starter indentation for drilling</option>
+                <option>2 - Cuts bar/section by hand with tensioned blade</option>
+                <option>3 - Drives/removes screws with matched tip</option>
+                <option>4 - Applies torque to nuts/bolts with correct fit</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Clamp work and use controlled full strokes</option>
+                <option>6 - Use correct wrench size and controlled torque</option>
+                <option>7 - Match screw tip exactly; do not pry</option>
+                <option>8 - Keep fingers clear when striking; wear eye protection</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Clean tips/blade surfaces; inspect handle</option>
+                <option>10 - Repoint/inspect punch tip for damage</option>
+                <option>11 - Check jaw wear and lubricate moving parts</option>
+                <option>12 - Set blade tension and replace worn blades</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Screwdriver</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Creates starter indentation for drilling</option>
+                <option>2 - Cuts bar/section by hand with tensioned blade</option>
+                <option>3 - Drives/removes screws with matched tip</option>
+                <option>4 - Applies torque to nuts/bolts with correct fit</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Clamp work and use controlled full strokes</option>
+                <option>6 - Use correct wrench size and controlled torque</option>
+                <option>7 - Match screw tip exactly; do not pry</option>
+                <option>8 - Keep fingers clear when striking; wear eye protection</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Clean tips/blade surfaces; inspect handle</option>
+                <option>10 - Repoint/inspect punch tip for damage</option>
+                <option>11 - Check jaw wear and lubricate moving parts</option>
+                <option>12 - Set blade tension and replace worn blades</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Wrenches</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Creates starter indentation for drilling</option>
+                <option>2 - Cuts bar/section by hand with tensioned blade</option>
+                <option>3 - Drives/removes screws with matched tip</option>
+                <option>4 - Applies torque to nuts/bolts with correct fit</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Clamp work and use controlled full strokes</option>
+                <option>6 - Use correct wrench size and controlled torque</option>
+                <option>7 - Match screw tip exactly; do not pry</option>
+                <option>8 - Keep fingers clear when striking; wear eye protection</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Clean tips/blade surfaces; inspect handle</option>
+                <option>10 - Repoint/inspect punch tip for damage</option>
+                <option>11 - Check jaw wear and lubricate moving parts</option>
+                <option>12 - Set blade tension and replace worn blades</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="reveal-btn" data-target="m3a1">Reveal answers</button>
+      <div class="answer" id="m3a1">
+        <strong>Answer key - Table 1</strong>
+        <ul>
+          <li>Hacksaw: Q1=2, Q2=5, Q3=12</li>
+          <li>Punch: Q1=1, Q2=8, Q3=10</li>
+          <li>Screwdriver: Q1=3, Q2=7, Q3=9</li>
+          <li>Wrenches: Q1=4, Q2=6, Q3=11</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="qa-card">
+      <p class="qa-question">Table 2: Select the best code for each tool. Codes describe function, safety, and maintenance practices.</p>
+      <table class="match-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Q4 Features and applications</th>
+            <th>Q5 Safety measures and PPE</th>
+            <th>Q6 Maintenance requirements</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vernier calipers</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Measures OD, ID and depth precisely</option>
+                <option>2 - Shears thin sheet metal to line</option>
+                <option>3 - Clamps work securely for cutting/drilling</option>
+                <option>4 - Deburrs and shapes edges for finish</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Keep support hand clear of cut path and offcuts</option>
+                <option>6 - Zero caliper and lock slider before read/transfer</option>
+                <option>7 - Position clamp square and avoid over-tightening</option>
+                <option>8 - Use file handle; pressure on forward stroke only</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Keep jaws clean, lightly oil slide, store protected</option>
+                <option>10 - Clean blades and lubricate pivot point</option>
+                <option>11 - Inspect frame/thread and lubricate clamp screw</option>
+                <option>12 - Clean teeth with file card; oil to prevent rust</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Tin snips</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Measures OD, ID and depth precisely</option>
+                <option>2 - Shears thin sheet metal to line</option>
+                <option>3 - Clamps work securely for cutting/drilling</option>
+                <option>4 - Deburrs and shapes edges for finish</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Keep support hand clear of cut path and offcuts</option>
+                <option>6 - Zero caliper and lock slider before read/transfer</option>
+                <option>7 - Position clamp square and avoid over-tightening</option>
+                <option>8 - Use file handle; pressure on forward stroke only</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Keep jaws clean, lightly oil slide, store protected</option>
+                <option>10 - Clean blades and lubricate pivot point</option>
+                <option>11 - Inspect frame/thread and lubricate clamp screw</option>
+                <option>12 - Clean teeth with file card; oil to prevent rust</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>G-clamp</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Measures OD, ID and depth precisely</option>
+                <option>2 - Shears thin sheet metal to line</option>
+                <option>3 - Clamps work securely for cutting/drilling</option>
+                <option>4 - Deburrs and shapes edges for finish</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Keep support hand clear of cut path and offcuts</option>
+                <option>6 - Zero caliper and lock slider before read/transfer</option>
+                <option>7 - Position clamp square and avoid over-tightening</option>
+                <option>8 - Use file handle; pressure on forward stroke only</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Keep jaws clean, lightly oil slide, store protected</option>
+                <option>10 - Clean blades and lubricate pivot point</option>
+                <option>11 - Inspect frame/thread and lubricate clamp screw</option>
+                <option>12 - Clean teeth with file card; oil to prevent rust</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Files</td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>1 - Measures OD, ID and depth precisely</option>
+                <option>2 - Shears thin sheet metal to line</option>
+                <option>3 - Clamps work securely for cutting/drilling</option>
+                <option>4 - Deburrs and shapes edges for finish</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>5 - Keep support hand clear of cut path and offcuts</option>
+                <option>6 - Zero caliper and lock slider before read/transfer</option>
+                <option>7 - Position clamp square and avoid over-tightening</option>
+                <option>8 - Use file handle; pressure on forward stroke only</option>
+              </select>
+            </td>
+            <td>
+              <select class="quiz-input">
+                <option value=""></option>
+                <option>9 - Keep jaws clean, lightly oil slide, store protected</option>
+                <option>10 - Clean blades and lubricate pivot point</option>
+                <option>11 - Inspect frame/thread and lubricate clamp screw</option>
+                <option>12 - Clean teeth with file card; oil to prevent rust</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="reveal-btn" data-target="m3a2">Reveal answers</button>
+      <div class="answer" id="m3a2">
+        <strong>Answer key - Table 2</strong>
+        <ul>
+          <li>Vernier calipers: Q4=1, Q5=6, Q6=9</li>
+          <li>Tin snips: Q4=2, Q5=5, Q6=10</li>
+          <li>G-clamp: Q4=3, Q5=7, Q6=11</li>
+          <li>Files: Q4=4, Q5=8, Q6=12</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: Which hand tool is best for trimming excess metal on an inside curve?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s1">Reveal example answer</button>
+      <div class="answer" id="m3s1">A half-round file.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: Why must a file always have a handle before use?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s2">Reveal example answer</button>
+      <div class="answer" id="m3s2">To prevent your hand slipping onto the tang and causing injury.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: Why do you apply pressure only on the forward stroke when filing?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s3">Reveal example answer</button>
+      <div class="answer" id="m3s3">Because the teeth cut only on the forward stroke; pushing back with pressure can damage the file.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 4: What is the purpose of using a file card?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s4">Reveal example answer</button>
+      <div class="answer" id="m3s4">To clean metal filings from the file teeth so it cuts effectively and safely.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 5: Why should files not be stored touching one another?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m3s5">Reveal example answer</button>
+      <div class="answer" id="m3s5">Because the teeth can rub together and become damaged.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module2.html">&larr; Previous Module</a>
+      <a href="module4.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Reveal answers' : 'Hide answers';
+    };
+
+    document.querySelectorAll('.qa-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      if (!button) return;
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>
+
+

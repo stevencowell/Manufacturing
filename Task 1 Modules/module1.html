@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Module 1: Workplace Communication, Roles and Planning" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 1: Workplace Communication, Roles and Planning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%);
+      color: #fff;
+      padding: 2.8rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+    header p {
+      margin: 0.4rem 0 0;
+      opacity: 0.95;
+    }
+    main {
+      max-width: 900px;
+      margin: -1.4rem auto 0;
+      padding: 1.8rem 1rem 3rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 10;
+    }
+    .back-link {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      color: #0f766e;
+      font-size: 1.6rem;
+      margin: 1.4rem 0 0.6rem;
+      border-bottom: 2px solid #ccfbf1;
+      padding-bottom: 0.45rem;
+    }
+    ul, ol { padding-left: 1.25rem; }
+    .callout {
+      background: #f0fdfa;
+      border-left: 4px solid #14b8a6;
+      padding: 0.9rem 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+    }
+    .qa-card {
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 0.85rem 0.95rem;
+      margin: 0.8rem 0;
+      background: #f8fffd;
+    }
+    .qa-question {
+      margin: 0 0 0.6rem;
+      font-weight: 500;
+    }
+    .reveal-btn {
+      border: none;
+      background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+      color: #fff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .reveal-btn:hover { filter: brightness(1.07); }
+    .reveal-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      filter: none;
+    }
+    .answer {
+      display: none;
+      margin-top: 0.65rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 6px;
+      background: #ecfeff;
+      border: 1px solid #bae6fd;
+    }
+    .mcq-options label {
+      display: block;
+      margin: 0.35rem 0;
+    }
+    .response {
+      width: 100%;
+      margin: 0.4rem 0 0.6rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 0.6rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .module-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+    .module-nav a {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .image-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #fff;
+      padding: 0.9rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .image-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background: #f8fafc;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+    }
+    .image-card h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      color: #0f766e;
+    }
+    .image-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8rem 0 1.4rem;
+      font-size: 0.95rem;
+    }
+    .info-table th,
+    .info-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.7rem 0.75rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .info-table th {
+      background: #f0fdfa;
+      color: #115e59;
+      font-weight: 600;
+    }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin: 0.8rem 0 1.4rem;
+    }
+    .focus-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.85rem 0.95rem;
+      background: #f8fffd;
+    }
+    .focus-card h3 {
+      margin: 0 0 0.35rem;
+      color: #0f766e;
+      font-size: 1.02rem;
+    }
+    .focus-card p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+    .step-flow {
+      display: grid;
+      gap: 0.7rem;
+      margin: 0.85rem 0 1.45rem;
+    }
+    .step-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      background: #f8fffd;
+    }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #fff;
+      font-weight: 600;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+    .step-item p {
+      margin: 0.15rem 0 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 1: Workplace Communication, Roles and Planning</h1>
+    <p>Task 1 - Welcome to the Industry (MEM13015, MEM16006, MEM11011)</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task1_index.html" class="back-link">&larr; Back to Task 1 Modules</a>
+
+    <h2>Module Intent</h2>
+    <p>This module builds the communication and planning habits required before practical work begins. The focus is on understanding instructions, confirming roles, and sequencing work so the practical task is safe, accurate, and on time.</p>
+
+    <div class="callout">
+      <strong>Core idea:</strong> Clear instructions, clear roles, and clear timing reduce rework and safety risks.
+    </div>
+
+    <h2>Assessment Focus (Task 1)</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Interpret workplace information</h3>
+        <p>Read job instructions, plans, and SOPs before selecting tools or starting work.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Communicate in a team</h3>
+        <p>Use clear language, ask when unsure, and report hazards or delays early.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Plan practical workflow</h3>
+        <p>Sequence the task using Gantt/production tally information and checkpoints.</p>
+      </div>
+    </div>
+
+    <h2>How Communication Is Used in the Workshop</h2>
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Use It For</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Verbal</td>
+          <td>Briefings, clarifications, handovers</td>
+          <td>Toolbox talk, supervisor instruction</td>
+        </tr>
+        <tr>
+          <td>Written</td>
+          <td>Specifications, sequence, standards</td>
+          <td>SOP, job card, production tally notes</td>
+        </tr>
+        <tr>
+          <td>Visual</td>
+          <td>Quick reference and hazard awareness</td>
+          <td>Signage, drawings, labelled material stacks</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Role Clarity Before Practical Work</h2>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <h3>Student responsibilities</h3>
+        <p>Follow instructions, confirm measurements, use required PPE, and report hazards or faults.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Supervisor/teacher responsibilities</h3>
+        <p>Provide clear instructions, verify controls, and support safe progress through the task.</p>
+      </div>
+      <div class="focus-card">
+        <h3>Team responsibilities</h3>
+        <p>Share updates, use consistent terminology, and confirm sequence before key steps.</p>
+      </div>
+    </div>
+
+    <h2>Planning Workflow for Task 1</h2>
+    <div class="step-flow">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>
+          <strong>Read the job requirements</strong>
+          <p>Review project plans, specifications, and SOP requirements.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>
+          <strong>Confirm resources and constraints</strong>
+          <p>Check tools, materials, dimensions, timing, and hazard controls.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>
+          <strong>Build the sequence</strong>
+          <p>Use Gantt/production tally information to order steps and checkpoints.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>
+          <strong>Run a team confirmation</strong>
+          <p>Clarify jargon, roles, and quality expectations before starting.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div>
+          <strong>Start and monitor</strong>
+          <p>Track progress against plan and report issues early.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Planning and Communication Visuals</h2>
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="../metal tools/vernier calipers.jpg" alt="Vernier calipers used for accurate planning and layout" />
+        <h3>Accurate Measurement</h3>
+        <p>Plan from precise measurements before marking or cutting.</p>
+      </div>
+      <div class="image-card">
+        <img src="../Construction Pictures/Danger sign.png" alt="Danger sign used for visual workplace communication" />
+        <h3>Safety Signage</h3>
+        <p>Clear visual cues reduce misunderstandings and improve safety.</p>
+      </div>
+      <div class="image-card">
+        <img src="../Construction Pictures/Lengths of metal.jpeg" alt="Lengths of metal prepared for a project" />
+        <h3>Materials Readiness</h3>
+        <p>Confirm material type and size before you begin the task.</p>
+      </div>
+    </div>
+
+    <h2>Practical Sequence (Gantt / Production Tally)</h2>
+    <ol>
+      <li>Contribute to the group plan and complete the JSA plus Gantt/production tally chart.</li>
+      <li>Confirm required materials from plans and production tally information.</li>
+      <li>Cut material to size with the nominated tool to specification.</li>
+      <li>Measure and mark out accurately before drilling or shaping.</li>
+      <li>Drill and tap required holes according to plan.</li>
+      <li>Cut required shapes and features as specified.</li>
+      <li>Mark tap diameters next to corresponding holes.</li>
+      <li>Deburr and finish all edges and tapped holes.</li>
+      <li>Complete final identification and inspection requirements.</li>
+    </ol>
+
+    <h2>Resource Links</h2>
+    <ul>
+      <li><a href="https://www.safeworkaustralia.gov.au/law-and-regulation/duties-under-whs-laws" target="_blank" rel="noopener noreferrer">WHS duties and responsibilities</a></li>
+      <li><a href="https://www.safework.nsw.gov.au/legal-obligations/worker-obligations" target="_blank" rel="noopener noreferrer">Worker obligations (NSW)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=nZ5fBP7U5-w" target="_blank" rel="noopener noreferrer">Effective communication in the workplace</a></li>
+      <li><a href="https://www.apm.org.uk/resources/find-a-resource/gantt-chart/" target="_blank" rel="noopener noreferrer">Gantt chart overview</a></li>
+      <li><a href="https://www.youtube.com/watch?v=g3ED2kLKXA8" target="_blank" rel="noopener noreferrer">JSA 101 practical overview</a></li>
+    </ul>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) Why must you clarify task requirements before starting practical work?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q1" /> To save time by starting immediately</label>
+        <label><input type="radio" name="m1q1" /> To confirm the required outcome, safety controls, and sequence</label>
+        <label><input type="radio" name="m1q1" /> To avoid completing the JSA</label>
+        <label><input type="radio" name="m1q1" /> To skip quality checks</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a1">Reveal answer</button>
+      <div class="answer" id="m1a1">To confirm the required outcome, standards, safety controls, and sequence. This prevents errors, unsafe actions, and wasted materials.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) Which set correctly matches verbal, written, and visual communication?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q2" /> Verbal: drawings, Written: hand signals, Visual: toolbox talk</label>
+        <label><input type="radio" name="m1q2" /> Verbal: toolbox talk, Written: SOP, Visual: signage</label>
+        <label><input type="radio" name="m1q2" /> Verbal: job list, Written: hand signals, Visual: briefing</label>
+        <label><input type="radio" name="m1q2" /> Verbal: emails, Written: radio call, Visual: phone call</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a2">Reveal answer</button>
+      <div class="answer" id="m1a2">Verbal: toolbox talk or supervisor briefing. Written: SOP or job list. Visual: signage, drawings, or hand signals.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) What is one reason a Gantt-style timeline is useful for practical tasks?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q3" /> It replaces SOPs</label>
+        <label><input type="radio" name="m1q3" /> It breaks tasks into steps with timing and checkpoints</label>
+        <label><input type="radio" name="m1q3" /> It removes the need for measurements</label>
+        <label><input type="radio" name="m1q3" /> It reduces the need to communicate with others</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a3">Reveal answer</button>
+      <div class="answer" id="m1a3">It breaks a task into steps with timing, helping students prioritise work, track progress, and identify delays early.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) Which statement best describes feedback?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q4" /> Vague and personal comments</label>
+        <label><input type="radio" name="m1q4" /> Specific, respectful, improvement-focused guidance</label>
+        <label><input type="radio" name="m1q4" /> Blame that discourages discussion</label>
+        <label><input type="radio" name="m1q4" /> Ignoring mistakes to avoid conflict</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a4">Reveal answer</button>
+      <div class="answer" id="m1a4">Feedback is specific, respectful, and improvement-focused. Criticism is often vague or personal and usually does not help performance.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">5) When should you ask a supervisor or teacher for assistance?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q5" /> Only after finishing the task</label>
+        <label><input type="radio" name="m1q5" /> When instructions are unclear, hazards appear, or quality is off</label>
+        <label><input type="radio" name="m1q5" /> Never, to avoid slowing down</label>
+        <label><input type="radio" name="m1q5" /> Only if the class is behind schedule</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a5">Reveal answer</button>
+      <div class="answer" id="m1a5">When instructions are unclear, a hazard appears, quality is not meeting standard, equipment is faulty, or progress is slipping from the plan.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">6) Which is a common communication barrier in a workshop?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q6" /> Clear and concise instructions</label>
+        <label><input type="radio" name="m1q6" /> Using language that is too technical or too basic</label>
+        <label><input type="radio" name="m1q6" /> Using standard workplace terms</label>
+        <label><input type="radio" name="m1q6" /> Confirming understanding</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a6">Reveal answer</button>
+      <div class="answer" id="m1a6">Examples: using language that is too technical or too basic, using uncommon or unclear terms, or giving non-concise directions.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">7) How would you gather information about procedures for a work task?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q7" /> Use only the SDS</label>
+        <label><input type="radio" name="m1q7" /> Ask a classmate and keep going</label>
+        <label><input type="radio" name="m1q7" /> Use SDS, JSA/SWMS, project plans/specs, and supervisor instructions</label>
+        <label><input type="radio" name="m1q7" /> Rely on memory from a previous task</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a7">Reveal answer</button>
+      <div class="answer" id="m1a7">Use all available sources: SDS/Safety Data Sheets, JSA/SWMS, project plans/specs, and supervisor instructions.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: You are unsure about a measurement on the drawing just before cutting. What do you do?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m1s1">Reveal example answer</button>
+      <div class="answer" id="m1s1">Stop and clarify with the supervisor/teacher. Re-check the drawing and project plan, confirm the measurement, then proceed once the requirement is clear.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: During a group plan, a teammate uses jargon you do not understand. How do you respond?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m1s2">Reveal example answer</button>
+      <div class="answer" id="m1s2">Ask for clarification using specific questions and confirm the steps back to the group so everyone has the same understanding.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: You receive a verbal instruction that conflicts with a written SOP. What should you do?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m1s3">Reveal example answer</button>
+      <div class="answer" id="m1s3">Pause the task, raise the conflict with the supervisor/teacher, and follow the approved SOP unless updated instruction is confirmed.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="task1_index.html">&larr; Task 1 Modules</a>
+      <a href="module2.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const targetId = button.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Reveal answer' : 'Hide answer';
+    };
+
+    document.querySelectorAll('.mcq-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+
+    document.querySelectorAll('.scenario-card').forEach((card) => {
+      const button = card.querySelector('.reveal-btn');
+      button.addEventListener('click', () => {
+        toggleAnswer(button);
+      });
+    });
+  </script>
+</body>
+</html>

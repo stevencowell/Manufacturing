@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 Observation Checklists - Manufacturing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color: #f0f9ff; }
+    .card { background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,.07); }
+    .option-label {
+      display: block;
+      padding: 1rem;
+      border: 2px solid #D1D5DB;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #fff;
+    }
+    .option-label:hover { border-color: #9CA3AF; }
+    .option-label.completed {
+      border-color: #10B981;
+      background-color: #ECFDF5;
+    }
+    .option-label.completed .criterion-title {
+      text-decoration: line-through;
+      color: #065F46;
+    }
+    .self-check {
+      margin-top: 0.85rem;
+      padding: 0.75rem;
+      border-radius: 0.6rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #374151;
+      font-size: 0.92rem;
+    }
+    .self-check input {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+    #completion-message { transition: opacity 0.5s ease-in-out; }
+
+    .copyright-footer {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-top: 3px solid #28a745;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+    .copyright-content { max-width: 1200px; margin: 0 auto; }
+    .copyright-notice {
+      text-align: left;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 8px;
+      border-left: 4px solid #dc3545;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .copyright-notice p { margin: 0.75rem 0; line-height: 1.6; color: #333; }
+    .copyright-warning {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem !important;
+      color: #856404 !important;
+    }
+    .footer-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #28a745, transparent);
+      margin: 1.5rem 0;
+    }
+    .footer-info { text-align: center; color: #6c757d; font-size: 0.85rem; }
+    .footer-info p { margin: 0; font-weight: 500; }
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="max-w-5xl mx-auto space-y-6">
+    <div class="card p-6 sm:p-8">
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Task 1 Observation Checklists</h1>
+      <p class="text-gray-600">These checklists mirror the Evidence Central observation checklists for Task 1. Tick each criterion as a self-assessment.</p>
+      <div class="mt-4">
+        <a href="task1_index.html" class="inline-block text-blue-700 font-medium">Back to Task 1 Modules</a>
+      </div>
+    </div>
+
+    <div id="checklists"></div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        id: "obs1",
+        heading: "Section 2 - Observation 1 Checklist - single demonstration to be observed",
+        task: "Scenario Simulations",
+        units: [
+          "MEM13015 - Work safely and effectively in manufacturing and engineering",
+          "MEM16006 - Organise and communicate information"
+        ],
+        procedures: [
+          {
+            title: "Procedure to be observed",
+            text: "Students MUST demonstrate following workplace procedures when responding to common workplace scenarios."
+          },
+          {
+            title: "Scenario 1 - Upon starting the cold saw, you notice it is making a strange noise and the blade seems to wobble.",
+            bulletsIntro: "Following Metal Manufacturing Company workplace procedures (Employee Expectations - Equipment Maintenance and Breakdowns):",
+            bullets: [
+              "Explain to your teacher what this may indicate about the cold saw.",
+              "Demonstrate how you would control the hazard.",
+              "Demonstrate the workplace reporting process for this scenario."
+            ]
+          },
+          {
+            title: "Scenario 2 - There is a fire in the workshop.",
+            bulletsIntro: "Following workplace procedures (Metal Manufacturing Company - Fire Emergency Plan Section or individual school procedures):",
+            bullets: [
+              "Demonstrate responding to a fire emergency."
+            ]
+          }
+        ],
+        criteria: [
+          {
+            pc: "1",
+            observation: "Identify, respond and report equipment breakdowns and safety hazards",
+            standardsIntro: "The student MUST:",
+            standards: [
+              "Explain to the teacher that the cold saw may be broken or damaged.",
+              "Demonstrate/simulate isolating, unplugging and tagging the machine \"Do not operate\".",
+              "Demonstrate/simulate informing other workers not to use it.",
+              "Demonstrate/simulate reporting to the teacher their concerns regarding the irregular functioning of the cold saw."
+            ]
+          },
+          {
+            pc: "2",
+            observation: "Recognise and follow procedures for responding to emergencies",
+            standardsIntro: "The student MUST participate in a full school (or individual class) Fire Evacuation Drill including:",
+            standards: [
+              "Reporting the alarm signal to the teacher.",
+              "Leaving the workshop through the designated emergency exit point.",
+              "Quickly and calmly travelling to the emergency assembly point.",
+              "Following teacher instruction for personnel attendance checks."
+            ]
+          }
+        ]
+      },
+      {
+        id: "obs2",
+        heading: "Section 3 - Observation 2 Checklist - single demonstration to be observed",
+        task: "Safety Meeting",
+        units: [
+          "MEM13015 - Work safely and effectively in manufacturing and engineering",
+          "MEM16006 - Organise and communicate information"
+        ],
+        procedures: [
+          {
+            title: "Procedure to be observed",
+            text: "Prior to undertaking the designated practical project/s, the student MUST participate in a safety meeting where they demonstrate they can use interpersonal skills while verbally explaining safe workplace procedures, including:",
+            bullets: [
+              "Applying effective interpersonal skills to interact with others and contribute to objectives.",
+              "Recognising and using workplace terminology correctly."
+            ]
+          }
+        ],
+        criteria: [
+          {
+            pc: "3",
+            observation: "Apply effective interpersonal skills to interact with others and contribute to objectives",
+            standardsIntro: "After completing the Section 2 Part C - Job Safety Analysis (JSA), the student MUST explain to the class 1 specific Work Activity within it. The explanation MUST include:",
+            standards: [
+              "Potential Hazards.",
+              "Hazard Controls.",
+              "Responsibility."
+            ]
+          },
+          {
+            pc: "4",
+            observation: "Recognise and use workplace terminology correctly",
+            standardsIntro: "While presenting the Job Safety Analysis (JSA) information to the class, the student MUST use correct workplace terminology when discussing:",
+            standards: [
+              "Equipment (e.g. cold saw, pedestal drill).",
+              "Workplace areas (e.g. metal/material storage area).",
+              "Worker's position/title (e.g. Labourer, Supervisor).",
+              "Processes and procedures (e.g. manual handling)."
+            ]
+          }
+        ]
+      },
+      {
+        id: "obs3",
+        heading: "Section 3 - Observation 3 Checklist - single demonstration to be observed",
+        task: "Manual Handling",
+        units: [
+          "MEM11011 - Undertake manual handling"
+        ],
+        procedures: [
+          {
+            title: "Procedure to be observed",
+            text: "The student MUST demonstrate they can safely follow WHS and workplace procedures when manually handling and transporting materials, including:",
+            bullets: [
+              "Identifying job requirements from work instructions.",
+              "Determining the weight of materials.",
+              "Selecting 2 appropriate pieces of equipment to move materials.",
+              "Undertaking Safe Work Australia recommended WHS lifting techniques.",
+              "Safely and securely placing, relocating and unloading 2 materials using moving equipment."
+            ]
+          }
+        ],
+        criteria: [
+          {
+            pc: "5",
+            observation: "Identify job requirements from work instructions",
+            standardsIntro: "Prior to undertaking the manual handling activity, the student MUST:",
+            standards: [
+              "Read the Observation 3 Checklist Student Instructions.",
+              "Listen to the teacher's instructions on lifting and transporting the material."
+            ]
+          },
+          {
+            pc: "6",
+            observation: "Determine and report the material weight correctly utilising most appropriate technique",
+            standardsIntro: "Prior to undertaking the manual handling activity, the student MUST correctly report the weight of material using either:",
+            standards: [
+              "Scales.",
+              "Signage/documentation."
+            ]
+          },
+          {
+            pc: "7",
+            observation: "Select 2 appropriate pieces of equipment to move materials",
+            standardsIntro: "Prior to undertaking the manual handling activity, the student MUST select 2 pieces of equipment to use during the material movement, which MAY include:",
+            standards: [
+              "Hand trolleys.",
+              "Wheelbarrows.",
+              "Hand pallet truck.",
+              "Spreader bars, cradles or similar."
+            ]
+          },
+          {
+            pc: "8",
+            observation: "Undertake WHS lifting techniques to Safe Work Australia recommended procedures",
+            standardsIntro: "While undertaking material lifting, the student MUST use Safe Work Australia manual handling control measures, which MAY include:",
+            standards: [
+              "Using mechanical aids/moving equipment (e.g. hand trolleys, wheelbarrows, hand pallet truck, spreader bars, cradles or similar).",
+              "Team lifting.",
+              "Wearing the correct PPE (gloves and steel capped boots).",
+              "Correct manual lifting techniques (e.g. not twisting, not working with both hands above shoulder height, not reaching more than 30cms away from the body, using a straight back, using bent knees)."
+            ]
+          },
+          {
+            pc: "9",
+            observation: "Place 2 materials safely and securely on moving equipment",
+            standardsIntro: "While undertaking the manual handling activity the student MUST:",
+            standards: [
+              "Place 2 material items on the moving equipment gently and without any jerky movements.",
+              "Balance and secure the material before moving (e.g. tie down straps or banding)."
+            ]
+          },
+          {
+            pc: "10",
+            observation: "Relocate material safely and securely",
+            standardsIntro: "While undertaking the manual handling activity the student MUST move the materials to the designated storage area in a safe manner, which MAY include:",
+            standards: [
+              "Checking the movement path is clear.",
+              "Establishing a movement path isolation zone.",
+              "Utilising team pushing/pulling."
+            ]
+          },
+          {
+            pc: "11",
+            observation: "Unload 2 materials in a safe and secure manner",
+            standardsIntro: "While undertaking the manual handling activity the student MUST unload the 2 materials to the designated storage area in a safe manner, which MAY include:",
+            standards: [
+              "Ensuring the shelving/storage system used is in working order and is adequate for the material load.",
+              "Using Safe Work Australia manual handling control measures.",
+              "Stacking materials so they cannot slide, fall or collapse."
+            ]
+          }
+        ]
+      },
+      {
+        id: "obs4",
+        heading: "Section 3 - Observation 4 Checklist - single demonstration to be observed",
+        task: "Working Safely",
+        units: [
+          "MEM13015 - Work safely and effectively in manufacturing and engineering",
+          "MEM16006 - Organise and communicate information",
+          "MEM11011 - Undertake manual handling"
+        ],
+        procedures: [
+          {
+            title: "Procedure to be observed",
+            text: "The student MUST demonstrate they can safely follow WHS and workplace procedures when undertaking their practical project/s, including:",
+            bullets: [
+              "Accessing and interpreting information.",
+              "Applying Hazard Controls from the Job Safety Analysis (JSA).",
+              "Selecting, fitting, cleaning and storing PPE."
+            ]
+          }
+        ],
+        criteria: [
+          {
+            pc: "12",
+            observation: "Access and interpret information from a range of sources to determine work requirements",
+            standardsIntro: "While undertaking practical project/s, the student MUST access and read the:",
+            standards: [
+              "Section 2 Part C - Job Safety Analysis (JSA).",
+              "Section 2 Part B - Production Tally/Gantt Chart.",
+              "Project plans.",
+              "Use this information to determine the project's processes and procedures."
+            ]
+          },
+          {
+            pc: "13",
+            observation: "Comply with WHS, SOP and quality work requirements to control identified hazards",
+            standardsIntro: "While undertaking practical project/s, the student MUST implement the Hazard Controls from Section 2 Part C - Job Safety Analysis (JSA) when operating machinery, which MAY include:",
+            standards: [
+              "Reading and following the SOP.",
+              "Reading and following the operator's manual.",
+              "Checking electrical cords for tags and damage.",
+              "Reporting any faults found to the teacher.",
+              "Keeping hands away from moving machinery parts.",
+              "Using correct manual handling techniques.",
+              "Using the extraction/waste systems."
+            ]
+          },
+          {
+            pc: "14",
+            observation: "Select, use and maintain relevant personal protective equipment (PPE)",
+            standardsIntro: "While operating machinery, including but not limited to the cold saw, the student MUST:",
+            standards: [
+              "Access, view and follow Mandatory Ear and Eye Protection signage.",
+              "Select earmuffs and safety glasses.",
+              "Fit earmuffs and safety glasses correctly.",
+              "After use, check for faults and place in storage area."
+            ]
+          }
+        ]
+      }
+    ];
+
+    const container = document.getElementById('checklists');
+
+    const renderSection = (section) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'card p-6 sm:p-8 space-y-6';
+
+      const header = document.createElement('div');
+      header.innerHTML = `
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-1">${section.heading}</h2>
+        <p class="text-gray-600"><span class="font-semibold">Workplace Task:</span> ${section.task}</p>
+      `;
+      wrapper.appendChild(header);
+
+      const meta = document.createElement('div');
+      meta.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700';
+      meta.innerHTML = `
+        <div><span class="font-semibold">Assessor/teacher name:</span> Insert assessor/teacher name here</div>
+        <div><span class="font-semibold">Date of Assessment:</span> Insert date</div>
+        <div><span class="font-semibold">Student name:</span> Insert student name here</div>
+        <div><span class="font-semibold">Location:</span> Insert location</div>
+        <div class="sm:col-span-2">
+          <span class="font-semibold">Unit/s of Competency:</span>
+          <div class="mt-1 space-y-1">
+            ${section.units.map((unit) => `<div>${unit}</div>`).join('')}
+          </div>
+        </div>
+        <div class="sm:col-span-2"><span class="font-semibold">Workplace Task:</span> ${section.task}</div>
+      `;
+      wrapper.appendChild(meta);
+
+      const procedures = document.createElement('div');
+      procedures.className = 'space-y-3';
+      section.procedures.forEach((block) => {
+        const b = document.createElement('div');
+        b.className = 'bg-slate-50 border border-slate-200 rounded-lg p-4';
+        b.innerHTML = `
+          <div class="font-semibold text-gray-800">${block.title}</div>
+          ${block.text ? `<p class="text-gray-700 mt-1">${block.text}</p>` : ''}
+          ${block.bulletsIntro ? `<p class="text-gray-700 mt-2">${block.bulletsIntro}</p>` : ''}
+          ${block.bullets ? `<ul class="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+            ${block.bullets.map((item) => `<li>${item}</li>`).join('')}
+          </ul>` : ''}
+        `;
+        procedures.appendChild(b);
+      });
+      wrapper.appendChild(procedures);
+
+      const list = document.createElement('div');
+      list.className = 'space-y-3';
+      section.criteria.forEach((item) => {
+        const label = document.createElement('label');
+        label.className = 'option-label';
+        label.innerHTML = `
+          <div class="flex gap-3 items-start">
+            <input type="checkbox" class="mt-1 h-5 w-5 accent-green-600" data-section="${section.id}">
+            <div>
+              <div class="text-xs font-semibold text-gray-500 uppercase">Observation of Performance</div>
+              <div class="criterion-title font-semibold text-gray-800">PC ${item.pc} - ${item.observation}</div>
+              <div class="text-xs font-semibold text-gray-500 uppercase mt-3">Standards for competent performance</div>
+              <div class="text-sm text-gray-500">During the activity did the student satisfactorily</div>
+              ${item.standardsIntro ? `<div class="text-sm font-semibold text-gray-700 mt-2">${item.standardsIntro}</div>` : ''}
+              <ul class="list-disc pl-5 text-gray-700 mt-2 space-y-1">
+                ${item.standards.map((detail) => `<li>${detail}</li>`).join('')}
+              </ul>
+              <label class="self-check">
+                <input type="checkbox" name="${section.id}-pc${item.pc}-self" />
+                I can demonstrate this performance criterion.
+              </label>
+            </div>
+          </div>
+        `;
+        list.appendChild(label);
+      });
+      wrapper.appendChild(list);
+
+      const done = document.createElement('div');
+      done.id = `${section.id}-done`;
+      done.className = 'mt-4 p-3 text-center bg-green-100 text-green-800 rounded-lg opacity-0';
+      done.innerHTML = '<p class="font-bold">All performance criteria checked for this observation.</p>';
+      wrapper.appendChild(done);
+
+      container.appendChild(wrapper);
+    };
+
+    sections.forEach(renderSection);
+
+    const updateCompletion = (sectionId) => {
+      const checkboxes = document.querySelectorAll(`input[data-section="${sectionId}"]`);
+      const done = Array.from(checkboxes).every((cb) => cb.checked);
+      const msg = document.getElementById(`${sectionId}-done`);
+      if (msg) {
+        msg.style.opacity = done ? '1' : '0';
+      }
+    };
+
+    document.addEventListener('change', (e) => {
+      if (e.target.matches('input[type="checkbox"][data-section]')) {
+        const label = e.target.closest('label');
+        if (label) label.classList.toggle('completed', e.target.checked);
+        updateCompletion(e.target.dataset.section);
+      }
+    });
+  </script>
+  <script src="../search.js"></script>
+
+  <footer class="copyright-footer">
+    <div class="copyright-content">
+      <div class="copyright-notice">
+        <p><strong>Notice:</strong> All images found throughout this site are provided solely for teaching and learning with our enrolled students.</p>
+        <p class="copyright-warning"><strong>WARNING:</strong> This material has been reproduced and communicated to you by or on behalf of Wagga Wagga High School pursuant to Part VB of the Copyright Act 1968 (Cth). This material may be subject to copyright. Any further copying or communication may be the subject of copyright protection under the Act.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-info">
+        <p>&copy; 2025 Wagga Wagga High School - Manufacturing VET Resources</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

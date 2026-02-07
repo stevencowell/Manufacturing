@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task 1 - Manufacturing Tutorial</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body { background:#f3f4f6; font-family:system-ui,Roboto,sans-serif; }
+  .card{ max-width:80rem; margin:auto; background:#fff; border-radius:12px;
+         box-shadow:0 8px 24px rgba(0,0,0,.07); overflow:hidden; }
+  .btn { padding:.45rem 1rem; font-weight:600; border-radius:6px; transition:.2s; }
+  .btn-blue { background:#2563eb; color:#fff; }
+  .btn-blue:hover { background:#1e40e9; }
+  .btn-grey { background:#6b7280; color:#fff; }
+  .btn-grey:hover { background:#4b5563; }
+  .btn[disabled] { background:#cbd5e1 !important; cursor:not-allowed; }
+  .progress-bg { height:6px; background:#e5e7eb; border-radius:3px; }
+  .progress-fill { height:100%; background:#2563eb; width:0; transition:width .3s; }
+  .teach li::marker  { content:"- "; }
+  .method li::marker { content:"- "; }
+
+  .copyright-footer {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-top: 3px solid #28a745;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  }
+  .copyright-content { max-width: 1200px; margin: 0 auto; }
+  .copyright-notice {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    border-left: 4px solid #dc3545;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .copyright-notice p { margin: 0.75rem 0; line-height: 1.6; color: #333; }
+  .copyright-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem !important;
+    color: #856404 !important;
+  }
+  .footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #28a745, transparent);
+    margin: 1.5rem 0;
+  }
+  .footer-info { text-align: center; color: #6c757d; font-size: 0.85rem; }
+  .footer-info p { margin: 0; font-weight: 500; }
+</style>
+</head>
+<body class="p-4">
+
+<div class="card">
+  <div class="p-8" id="panel"></div>
+
+  <div class="bg-slate-50 border-t px-8 py-4 flex flex-col gap-4">
+    <div class="flex justify-between items-center">
+      <button id="prev" class="btn btn-grey">Prev</button>
+      <div class="font-semibold text-blue-700">Topic <span id="now"></span>/<span id="tot"></span></div>
+      <button id="next" class="btn btn-blue">Next</button>
+    </div>
+    <div class="progress-bg"><div id="bar" class="progress-fill"></div></div>
+    <div class="flex justify-center gap-4 mt-2">
+      <button id="finishBtn" class="btn btn-blue hidden">Finish and Return to Modules</button>
+      <a href="task1_index.html" class="btn btn-grey">Back to Modules</a>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="data">
+[
+  {
+    "title": "Topic 1 - Know the Work Requirements",
+    "scenario": "<strong>Scenario:</strong> You are about to start a metal project and the plan looks different to what you expected.",
+    "teach": [
+      "Work requirements come from project plans, JSA, SOPs, and supervisor instructions.",
+      "SOPs define safe steps and required PPE for each machine.",
+      "Clarify information early to prevent rework and safety issues."
+    ],
+    "method": [
+      "Read the project plan and confirm measurements and tolerances.",
+      "Review the JSA and identify hazards and controls.",
+      "Check the SOP for each machine before use.",
+      "Ask the supervisor if anything is unclear."
+    ],
+    "tip": "Start every task by confirming the plan, the JSA, and the SOP.",
+    "qs": [
+      { "q": "Name two sources of work requirements.", "a": "Project plans and the JSA (also SOPs or supervisor instructions)." },
+      { "q": "Which document lists required PPE for a machine?", "a": "The SOP." }
+    ],
+    "stretch": { "q": "Why is clarifying early a quality issue as well as a safety issue?", "a": "It prevents incorrect work, rework, and waste." }
+  },
+  {
+    "title": "Topic 2 - Machine Safety and Pre-Operational Checks",
+    "scenario": "<strong>Scenario:</strong> A pedestal drill starts making a strange noise during use.",
+    "teach": [
+      "Pre-operational checks must be completed each time before a machine is used.",
+      "An Out of Service tag means the machine must not be used.",
+      "Faults must be reported immediately."
+    ],
+    "method": [
+      "Stop using the machine and isolate it if required by site procedure.",
+      "Tag the equipment and inform others not to use it.",
+      "Report the issue to the supervisor or teacher."
+    ],
+    "tip": "If a machine sounds wrong or feels unsafe, stop and report.",
+    "qs": [
+      { "q": "When do pre-operational checks happen?", "a": "Each time before the machine is used." },
+      { "q": "What does Out of Service mean?", "a": "Unsafe to operate and must not be used." }
+    ],
+    "stretch": { "q": "Why is continuing to use a noisy machine risky?", "a": "It may fail and cause injury or damage." }
+  },
+  {
+    "title": "Topic 3 - Manual Handling and Material Movement",
+    "scenario": "<strong>Scenario:</strong> You need to move heavy RHS from the storage area to the workbench.",
+    "teach": [
+      "The back is the most common injury area in manual handling.",
+      "Use mechanical aids where possible and keep the load close.",
+      "Safe stance: feet slightly apart, knees bent, neutral spine."
+    ],
+    "method": [
+      "Assess weight and use a trolley or team lift if needed.",
+      "Plan the path, keep it clear, and communicate with others.",
+      "Lift smoothly without twisting and keep the load close."
+    ],
+    "tip": "Use equipment first. Manual lifting is the last option.",
+    "qs": [
+      { "q": "Name two manual handling aids.", "a": "Hand trolley and pallet jack (wheelbarrow is also acceptable)." },
+      { "q": "What is the safest lifting stance?", "a": "Feet slightly apart, knees bent, load close." }
+    ],
+    "stretch": { "q": "Why should loads be kept close to the body?", "a": "It reduces strain on the back and improves control." }
+  },
+  {
+    "title": "Topic 4 - Quality Systems in Manufacturing",
+    "scenario": "<strong>Scenario:</strong> An in-process check shows a hole is out of tolerance.",
+    "teach": [
+      "QA sets the process to prevent defects, QC checks outputs, and QI improves the process.",
+      "In-process checks reduce rework and waste.",
+      "Non-conformance must be identified, contained, and reported."
+    ],
+    "method": [
+      "Stop and contain the issue so it does not progress.",
+      "Record the defect and the measured variance.",
+      "Report the issue to the supervisor and follow the corrective action."
+    ],
+    "tip": "Check early and often to avoid scrap and rework.",
+    "qs": [
+      { "q": "What is QC?", "a": "Checking outputs against the standard." },
+      { "q": "What should be recorded in a non-conformance?", "a": "Defect details, measurements, affected step, and actions taken." }
+    ],
+    "stretch": { "q": "Why is quality a WHS issue?", "a": "Rework increases time, tool use, and hazard exposure." }
+  },
+  {
+    "title": "Topic 5 - Communication and Safety Meetings",
+    "scenario": "<strong>Scenario:</strong> You must explain one JSA work activity to the class.",
+    "teach": [
+      "Use correct workplace terminology for equipment, areas, roles, and procedures.",
+      "Clear communication reduces errors and unsafe actions.",
+      "Barriers include unclear language, uncommon terms, and non-concise instructions."
+    ],
+    "method": [
+      "Explain the hazards, controls, and responsibility for one JSA activity.",
+      "Use correct terms such as cold saw, pedestal drill, and manual handling.",
+      "Confirm understanding by asking if anyone has questions."
+    ],
+    "tip": "Use short, clear statements and confirm understanding.",
+    "qs": [
+      { "q": "Give one example of workplace terminology.", "a": "SOP, JSA, cold saw, or manual handling." },
+      { "q": "What must be included in a JSA explanation?", "a": "Hazards, controls, and responsibility." }
+    ],
+    "stretch": { "q": "How does good communication support quality?", "a": "It ensures tasks follow the correct steps and standards." }
+  }
+]
+</script>
+
+<template id="tpl">
+<section>
+  <h2 class="text-3xl font-bold mb-3 title"></h2>
+  <p class="scenario bg-yellow-50 p-3 rounded mb-4"></p>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Why it matters</h3>
+  <ul class="teach list-disc pl-6 mb-4"></ul>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Method</h3>
+  <ol class="method list-disc pl-6 mb-4"></ol>
+
+  <p class="tip bg-blue-50 p-3 rounded mb-4"></p>
+
+  <h3 class="font-semibold text-blue-700 mb-1">Check-ins</h3>
+  <div class="checks space-y-3 mb-4"></div>
+
+  <details class="stretch hidden">
+    <summary class="cursor-pointer text-blue-700">Stretch activity</summary>
+    <p class="stretchQ mt-2"></p>
+    <button class="btn btn-grey mt-1 reveal">Reveal</button>
+    <p class="stretchA hidden mt-2 text-green-700 bg-green-100 p-2 rounded"></p>
+  </details>
+</section>
+</template>
+
+<template id="qtpl">
+<div class="bg-indigo-50 p-3 rounded">
+  <p class="q font-medium"></p>
+  <button class="btn btn-grey mt-1 reveal">Reveal</button>
+  <p class="a hidden mt-1 text-green-700"></p>
+</div>
+</template>
+
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const panel=document.getElementById('panel'),
+      prev=document.getElementById('prev'),
+      next=document.getElementById('next'),
+      bar =document.getElementById('bar'),
+      now =document.getElementById('now'),
+      tot =document.getElementById('tot'),
+      finishBtn = document.getElementById('finishBtn');
+
+let idx=0; tot.textContent=data.length;
+
+function render(){
+  const m=data[idx];
+  const f=document.importNode(document.getElementById('tpl').content,true);
+
+  f.querySelector('.title').textContent=m.title;
+  f.querySelector('.scenario').innerHTML=m.scenario;
+
+  const teach=f.querySelector('.teach');
+  m.teach.forEach(t=>{const li=document.createElement('li');li.innerHTML=t;teach.appendChild(li);});
+
+  const meth=f.querySelector('.method');
+  m.method.forEach(t=>{const li=document.createElement('li');li.textContent=t;meth.appendChild(li);});
+
+  f.querySelector('.tip').innerHTML=m.tip;
+
+  const checks=f.querySelector('.checks');
+  m.qs.forEach(o=>{
+    const q=document.importNode(document.getElementById('qtpl').content,true);
+    q.querySelector('.q').textContent=o.q;
+    q.querySelector('.a').textContent="Answer: "+o.a;
+    checks.appendChild(q);
+  });
+
+  if(m.stretch){
+    const st=f.querySelector('.stretch');
+    st.classList.remove('hidden');
+    st.querySelector('.stretchQ').textContent=m.stretch.q;
+    st.querySelector('.stretchA').textContent=m.stretch.a;
+  }
+
+  panel.innerHTML=''; panel.appendChild(f);
+  prev.disabled=idx===0;
+  next.disabled=idx===data.length-1;
+  next.textContent=idx===data.length-1?'Finish':'Next';
+
+  if(idx===data.length-1){
+    finishBtn.classList.remove('hidden');
+  } else {
+    finishBtn.classList.add('hidden');
+  }
+
+  now.textContent=idx+1;
+  bar.style.width=((idx+1)/data.length*100)+'%';
+}
+
+prev.onclick=()=>{if(idx>0){idx--;render();}};
+next.onclick=()=>{if(idx<data.length-1){idx++;render();}};
+finishBtn.onclick=()=>{window.location.href='task1_index.html';};
+
+render();
+
+panel.addEventListener('click', e=>{
+  if(e.target.classList.contains('reveal')){
+    const ans=e.target.nextElementSibling;
+    if(ans) ans.classList.toggle('hidden');
+  }
+});
+</script>
+<script src="../search.js"></script>
+
+<footer class="copyright-footer">
+  <div class="copyright-content">
+    <div class="copyright-notice">
+      <p><strong>Notice:</strong> All images found throughout this site are provided solely for teaching and learning with our enrolled students.</p>
+      <p class="copyright-warning"><strong>WARNING:</strong> This material has been reproduced and communicated to you by or on behalf of Wagga Wagga High School pursuant to Part VB of the Copyright Act 1968 (Cth). This material may be subject to copyright. Any further copying or communication may be the subject of copyright protection under the Act.</p>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-info">
+      <p>&copy; 2025 Wagga Wagga High School - Manufacturing VET Resources</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
