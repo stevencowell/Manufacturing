@@ -1,0 +1,714 @@
+﻿⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK  
+TABLE OF CONTENTS
+Section 1 – INTRODUCTION TO TOOLS, EQUIPMENT & WORKSHOP SAFETY
+Section 2 – WHS REQUIREMENTS FOR HAND & POWER TOOL USE
+Section 3 – HAND TOOLS: SELECTION, INSPECTION & SAFE USE.
+Section 4 – POWER TOOLS: OPERATION, SETUP, PRE-START CHECKS & CONTROLS.
+Section 5 – MAINTENANCE, TAG-OUT, FAULTS & REPLACEMENT OF CONSUMABLES
+Section 6 – STORING, SECURING & SHUTTING DOWN TOOLS & WORK AREAS
+Using This Guide
+This Guide includes:
+⭐subsections of information 
+📖 specific links to the Task 1 assessment activities❓embedded student questions
+🔗links to supporting information
+This structure allows you to highlight essential knowledge while giving students chances to practise explaining processes — preparing them for both written and practical assessments.
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 1 – INTRODUCTION TO TOOLS, EQUIPMENT & WORKSHOP SAFETY
+ 1.1 Understanding the Job Before Selecting Tools
+Before any tool is picked up, a worker must be able to explain:
+What the job is
+Which material is being worked on
+Which tool is suitable and WHY
+What safety risks exist
+What documentation applies (SOP, JSA, drawing, job card)
+This builds the “competent worker mindset”:
+Know the job → plan the job → choose the right tool → use the tool safely.
+📖 Task 2 – Section 2 practical observations require students to justify tool choice and explain “why this tool is best for this job”.
+❓STUDENT QUESTION ❓You need to cut a piece of 1.2 mm sheet metal. Which tool do you select and why?
+Your Answer:
+1.2 Reading & Interpreting Job Instructions
+Workers must demonstrate they can correctly interpret: 
+job sheets and Gantt charts
+workshop drawings and sketches
+specifications (material, dimensions, tolerances)
+supervisor verbal instructions
+SOPs
+digital instructions (where applicable)
+Key skills include:
+identifying dimensions
+understanding symbols
+finding notes on holes, bends, tolerances
+matching tools to required operations (cutting, marking, drilling, shaping)
+A worker should not begin work until they can clearly explain what the finished task must look like.
+🔗GLOSSARY: Steel
+📖 Task 2 – quiz questions include “identify correct document”, “interpret simple workshop drawing”, and “follow instructions in logical order”. 📖 Task 2 – Section 2 practical observations require students to read and follow job instructions.
+❓STUDENT QUESTION ❓The drawing shows a 10 mm hole must be drilled. What must you check before choosing a drill bit?
+Your Answer:
+1.3 Following Workplace SOPs and Workflow Documents
+Workers must be taught to follow documentation EXACTLY as it appears, matching the company SOPs used in industry.
+Typical SOP expectations include:
+correct tool retrieval and check-out procedures
+using tools only for approved tasks
+returning tools clean and stored correctly
+reporting missing, damaged or faulty tools
+recording work completed on a job sheet
+following sequencing (e.g., mark → clamp → cut → deburr → inspect)
+🔗https://www.une.edu.au/__data/assets/pdf_file/0004/198508/Safe-Operating-Procedures-12-Pedestal-Drill.pdf
+📖 Task 2 – Section 2 practical observations require evidence that the student follows correct workflow order. 📖 Task 2 – Section 2 practical observations require students to read and follow tool and equipment SOPs.
+❓STUDENT QUESTION ❓Why must you follow the tool SOP instead of “using your own method”?
+Your Answer:
+1.4 Version Control in Workshop Documents
+Version control helps workers ensure they are using:
+the most recent drawing 
+the correct job sheet
+updated procedures
+current tolerances and measurements
+Workers should consistently check:
+Version number
+Date of issue
+Who authorised the document
+Any revision notes
+Example:
+“JOB CARD – Revision C – Updated cutter size for hole.”
+🔗https://www.youtube.com/watch?v=RAF60pA3uqM&t=472s
+❓STUDENT QUESTION ❓Why could using an outdated document cause an unsafe situation?
+Your Answer:
+1.5 Using Workplace Communication to Confirm Requirements
+Before starting work, workers should communicate with: 
+supervisors
+peers they are working with
+WHS officers (if required)
+They must be able to:
+ask clarifying questions
+confirm measurements
+repeat instructions to show understanding
+report hazards or errors in documentation
+🔗The Cost of Bad Communication in Manufacturing Plants | Manufacturing Tomorrow
+📖 Task 2 – Section 2 practical observations require students to seek clarification and “confirm instructions before starting the task”.
+❓STUDENT QUESTION ❓If you are unsure about a dimension in the drawing, what should you do?
+Your Answer:
+1.6 Planning the Job Sequence
+Workers must plan the safest and most efficient order of operations, which mirror standard engineering industry workflows.Typical job sequence includes:
+Read and confirm instructions 
+Identify hazards
+Select correct tool and PPE
+Set up work area and clamp material
+Carry out the task
+Inspect work for accuracy
+Clean and store tools
+📖 Task 2 – quiz questions include “sequence of safe work steps” and “preparation before tool use”. Task 2 – Section 2 practical observations require students to use a sequence of operations to produce project to job specifications.
+❓STUDENT QUESTION ❓Why must clamping be done before cutting or drilling?
+Your Answer:
+1.7 Identifying Information Needed Before Selecting Tools
+Workers must gather the following information from job documents:
+material type (steel, aluminium, plastic, sheet metal)
+thickness / diameter
+finish and tolerances required
+type + size of cuts, holes, or shapes
+any special requirements (e.g., heat-sensitive material)
+📖 Task 2 – quiz questions require students to match tools to materials and tasks. 📖 Task 2 – Section 2 practical observations require students to read project plans to gain project information.
+❓STUDENT QUESTION ❓What two factors affect which file a worker should choose?
+Your Answer:
+1.8 Recognising When NOT to Start Work
+A worker must STOP and seek help if: 
+they don’t understand instructions
+they are unsure of the tool required
+the drawing doesn’t match the job card
+there are missing tolerances
+materials are defective
+hazards have not been controlled
+🔗https://www.safework.nsw.gov.au/safety-starts-here/easywhs/safe-working-environment/learn-more
+📖 Task 2 – quiz questions include “when to stop work” and “reporting uncertainty”. Task 2 – Section 2 practical observations require students to identify, mark for repair and fix an unsafe or faulty hand and power tool.
+❓STUDENT QUESTION ❓You notice the drawing shows a bend, but the job card does not. What should you do?
+Your Answer:
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 2 – WHS REQUIREMENTS FOR HAND & POWER TOOL USE
+Hand and power tools can only be safely used when students understand how WHS laws, site procedures and safe work practices apply in the workshop. This section supports the legal and procedural expectations found in standard engineering workshop settings.
+2.1 Personal Protective Equipment (PPE)
+Before ANY tool use, workers must wear the correct PPE. This protects against injury and reduces exposure to hazards such as noise, sharp edges, sparks, heat and debris.
+Essential PPE in manufacturing/engineering workshops includes:
+Safety glasses (ALWAYS required) 
+Enclosed leather shoes/safety boots
+Hearing protection (grinders, pedestal drills, cut-off saws)
+Gloves (only for material handling — not rotating tools)
+Dust masks/respirators (grinding, sanding, metal dust)
+Welding PPE (if applicable)
+🔗https://www.safeworkaustralia.gov.au/safety-topic/managing-health-and-safety/personal-protective-equipment-ppe/how-personal-protective-equipment-helps-manage-risks
+🔗https://spiresafety.com.au/the-importance-of-ppe-compliance-in-australia/
+📖 Task 2 – quiz questions ask “Which PPE is required for specific tools?” and Task 2 – Section 2 practical observations require PPE to be fitted correctly.
+❓STUDENT QUESTION ❓Why are gloves NOT worn when operating rotating tools?
+Your Answer:
+2.2 Identifying Hazards in the Work Area
+Before selecting a tool or beginning work, workers must identify hazards such as:
+loose materials or clutter 
+frayed leads 
+poor lighting
+missing guards
+damaged tools
+other workers working too close
+unstable benches
+unsecured materials
+incorrect PPE
+oil, swarf, metal filings on floor
+Hazard identification must be continuous, not just at the start.
+🔗https://www.safework.nsw.gov.au/__data/assets/pdf_file/0004/409531/Factory.pdf
+🔗https://www.safework.nsw.gov.au/hazards-a-z
+📖 Directly linked with Task 2 – quiz questions including “What is a hazard?” “What hazards must be reported?”. Task 2 – Section 2 practical observations require students to identify hazards before starting tasks.
+❓STUDENT QUESTION ❓You notice the grinder guard is missing. What do you do?
+Your Answer:
+2.3 Risk Controls Using the Hierarchy of Control
+Workers must understand how risk controls work in a workshop. Examples include:
+Elimination:
+Removing broken tools from the workshop
+Substitution:
+Use a safer tool (e.g., hand snips instead of angle grinder for thin sheet metal)
+Isolation:
+Barriers around grinding sparks 
+Keeping distance from rotating tools
+Engineering Controls:
+Guards, clamps, vices, tool rests
+Administrative Controls:
+JSA and SWMS
+Toolbox talks
+Signage
+Safe operating procedures
+PPE:
+Last line of defence
+📖 Several Task 2 – quiz questions cover “highest level of control” and application of the Hierarchy.
+❓STUDENT QUESTION ❓Why is PPE the lowest level of protection?
+Your Answer:
+2.4 WHS Consultation in the Workshop
+Consultation helps prevent injuries and ensures everyone understands risks. Workers should be encouraged to speak up about unclear instructions or unsafe behaviour.
+What consultation looks like in a training workshop:
+pre-start safety briefings 
+toolbox talks
+worker input about hazards
+WHS representatives
+speaking to the supervisor/teacher directly
+reporting through forms or verbal communication
+🔗https://www.youtube.com/watch?v=i7KFYE0Hu3I
+🔗https://www.safework.nsw.gov.au/safety-starts-here/consultation-at-work
+📖 Task 2 – quiz questions include “What is WHS consultation?”, and Task 2 – Section 2 practical observations require students to check in with teacher before using tools.
+❓STUDENT QUESTION ❓When should you speak to your supervisor during a job?
+Your Answer:
+2.5 Job Safety Analysis (JSA)
+Even though full industrial JSAs are not always required in classrooms, the principles apply:
+Workers must be able to:
+read the hazard controls for the task
+follow the safe sequence
+confirm PPE requirements
+identify risks associated with each step
+understand emergency actions
+JSA skills include:
+identifying the task steps
+thinking about the hazards of each step
+applying controls
+communicating findings into a JSA document
+Safe Work Method Statement (SWMS) is:
+similar to the JSA but used for high-risk manufacturing and engineering tasks
+🔗https://www.builderassist.com.au/the-purpose-of-a-jsa/
+🔗https://www.youtube.com/watch?v=DUXRvCeqhOU 
+🔗https://www.youtube.com/watch?v=oj0nhlSe2jw
+📖 Task 2 – quiz questions include “What is the purpose of a JSA and SWMS?” and Task 2 – Section 2 practical observations require students to follow a safe work sequence.
+❓STUDENT QUESTION ❓What information in a JSA and SWMS tells you how to stay safe?
+Your Answer:
+2.6 Pre-Start Checks for Hand & Power Tools
+Before using ANY tool, workers must complete pre-start checks including:
+Hand tools
+cracks, chips or wear 
+handles secure
+edges sharp and safe
+clean and free of oil/grease
+Power tools
+casing undamaged
+leads free of cuts and plug secure
+guards in place and switches functioning
+accessories fitted correctly
+tool labelled/tagged correctly
+📖 Task 2 – quiz questions include “identify a faulty tool” and Task 2 – Section 2 practical observations require students to correctly inspect tools.
+2.7 Isolation, Tag-Out & Reporting Faulty Tools
+Workers must NOT attempt to fix faulty tools. Correct procedure is:
+Stop using the tool and switch off and unplug (if applicable) 
+Attach a “Do Not Use” tag
+Report to teacher/supervisor
+Record in maintenance log if required
+🔗https://www.youtube.com/watch?v=o5CWnUFsevo
+🔗https://www.youtube.com/watch?v=Egam-t19zEM
+📖 Task 2 – quiz questions ask students to answer: “What is the purpose of a tag-out system?”. Task 2 – Section 2 practical observations checks that students isolate and tag tools correctly.
+❓STUDENT QUESTION ❓Why is tag-out important after finding a broken tool?
+Your Answer:
+2.8 Emergency Procedures
+Workers must know:
+who the designated first aid officer is 
+location of first-aid kits
+how to alert the teacher/supervisor
+emergency evacuation signals
+location of exits
+fire extinguisher types
+In many tasks, the priority is:
+Stop the tool
+Make the area safe
+Notify the supervisor
+Follow emergency procedures
+🔗https://www.safework.nsw.gov.au/safety-starts-here/safety-overview/emergency-plans
+📖 Task 2 – quiz questions include “What should you do in an emergency?”
+2.9 Environmental Safety & Housekeeping
+Workers must ensure the area remains safe throughout the task:
+clean swarf and filings
+keep power cords out of walkways
+dispose of waste correctly
+avoid creating slip hazards
+keep tools organised
+maintain clear emergency paths
+📖 Task 2 – quiz questions include “cleaning up the work area” and Task 2 – Section 2 practical observations include maintaining a hazard-free workspace.
+❓STUDENT QUESTION ❓Why must filings be removed regularly?
+Your Answer:
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 3 – HAND TOOLS: SELECTION, INSPECTION & SAFE USE.
+Hand tools are used in nearly every engineering task. Workers must be able to choose the right tool for the job, inspect it for faults, use it safely, and maintain it according to workshop standards. 
+3.1 Selecting the Correct Hand Tool
+Choosing the correct tool is essential for:
+preventing damage to the material
+avoiding injury
+improving accuracy
+working efficiently
+meeting job specifications
+Workers must consider:
+material type (steel, aluminium, plastic)
+task type (cutting, shaping, striking, gripping)
+required accuracy
+finish quality
+Examples:
+Ball pein hammer → metalwork striking tasks 
+Flat file → smoothing straight edges
+Half-round file → inside curves
+Scribe → marking metal surfaces
+Hacksaw → cutting metal sections
+Cold chisel → cutting or shearing metal
+📖 Task 2 – quiz questions contain multiple “which tool is correct for this job?” questions.
+❓STUDENT QUESTION ❓Which hand tool is best for trimming excess metal on an inside curve?
+Your Answer:
+3.2 Inspecting Hand Tools Before Use
+Workers must complete a pre-use inspection to identify unsafe conditions.
+Hammers:
+head firmly attached
+handle free from cracks
+correct weight for the task
+Files:
+handle attached tightly
+teeth free of clogging
+no cracks or bending
+no using files without a handle
+Screwdrivers:
+correct tip size
+no twisting or bending
+handle undamaged
+Metal tin snips/shears:
+pivot point secure
+blades sharp
+no cracks at handles
+smooth cutting action
+Chisels:
+mushroomed heads → remove from use
+cutting edge sharp and even
+handle intact
+🔗Hand Tool Inspection - Tips for Safety
+📖 Task 2 – Section 2 practical observations require identification of defects BEFORE using tools.
+❓STUDENT QUESTION ❓Why must a file always have a handle before use?
+Your Answer:
+3.3 Safe Use of Hand Tools
+Workers must follow safe operating practices including:
+For Cutting Tools:
+secure material using a vice or clamp
+cut using steady, controlled strokes
+maintain correct body position
+avoid excessive force
+keep hands clear of cutting path
+For Striking Tools: 
+strike squarely and avoid glancing blows
+keep eyes on the workpiece
+ensure other workers are clear
+For Filing:
+use full, smooth strokes
+apply pressure on forward stroke only
+lift on return stroke
+keep file clean with file card
+use correct file for task (coarse vs fine)
+For Marking Tools:
+use scribes lightly to avoid damaging material 
+double-check measurements before cutting
+🔗https://www.youtube.com/watch?v=CBxM489zDr4
+🔗How to use Basic Metal Hand Tools!
+🔗https://create.kahoot.it/details/metalwork-tools/db3ba552-4bfc-48c8-aa5f-9f667b18f3fc
+📖 Task 2 – quiz questions ask about “safe use of a file”, “how to secure work”, and “correct striking technique”. Task 2 – Section 2 practical observations require students to safely use hand tools.
+❓STUDENT QUESTION ❓Why do you apply pressure only on the forward stroke when filing?
+Your Answer:
+3.4 Maintaining Hand Tools
+Workers must maintain tools at a basic workshop level, including:
+cleaning files with a file card
+oiling metal surfaces to prevent rust
+sharpening chisels using correct grinding and honing technique
+tightening loose handles (or reporting if unable)
+storing tools in correct locations
+Most sharpening/maintenance is performed by trained staff, but all workers need to understand:
+what a sharp edge looks like
+when a tool is too dull to use
+how to maintain a clean cutting surface
+Refer to Section 5 for further Tool Maintenance information.
+🔗https://www.youtube.com/watch?v=yGuEWCrj7Cs
+🔗https://www.paengineeringsupplies.com.au/how-to-sharpen-drill-bits/
+📖 Task 2 – Section 2 practical observations require tools to be returned “clean and ready for the next user”.
+❓STUDENT QUESTION ❓What is the purpose of using a file card?
+Your Answer:
+3.5 Performing Simple Hand Tool Adjustments
+Workers must be able to perform basic adjustments to ensure hand tools operate correctly. These adjustments do not involve advanced repairs — they are simple, routine workshop tasks.
+Common hand tool adjustments include:
+Tightening loose file handles
+Adjusting pivot tension on tin snips
+Realigning jaws on pliers if slightly off
+Tightening screws on marking tools (square, compass)
+Oiling hinged joints for smooth movement
+Checking hacksaw blade tension
+Changing hacksaw blades (correct TPI) 
+3.6 Identifying Faulty Tools & Tag-Out Procedure
+Workers must know the signs of a faulty tool: 
+cracked handles
+bent shafts
+mushroomed chisel heads
+chips or fractures
+missing components (e.g., file handles)
+excessive wear
+loose rivets or joints
+If a tool is faulty:
+Follow procedures discussed in Sub-Section 2.7
+3.7 Correct Storage & Housekeeping for Hand Tools
+Tools must be stored correctly to:
+prevent damage
+avoid injuries
+maintain tool quality
+ensure quick retrieval next lesson
+Refer to Section 6 for specific Hand Tool Storage procedures.
+📖 Task 2 – Section 2 practical observations assess clean-up, correct tool return, and storage.
+❓STUDENT QUESTION ❓Why should files not be stored touching one another?
+Your Answer:
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 4 – POWER TOOLS: OPERATION, SETUP, PRE-START CHECKS & CONTROLS
+Power tools allow workers to complete tasks faster and with higher precision — but they also introduce greater risk. This section ensures students understand safe setup, correct operation, inspection requirements, and fault-reporting procedures.
+4.1 Types of Power Tools Used in Manufacturing & Engineering
+Common workshop power tools include:
+Bench/pedestal drill 
+Portable electric drill
+Angle grinder
+Cut-off/drop saw
+Nibbler or sheet metal shears
+Bench grinder
+Cordless tools
+Each tool has specific hazards and setup requirements.
+📖 Task 2 – quiz questions ask “Which power tool is used for this job?” and “What guard must be fitted?”.
+❓STUDENT QUESTION ❓What power tool is best for drilling precise, vertical holes?
+Your Answer:
+4.2 Pre-Start Checks for Power Tools
+Workers must NEVER operate a power tool until a full pre-start inspection is completed.
+Electrical Safety
+Check cord for cuts, frays or exposed wiring 
+Ensure plug is secure
+Confirm tool is test-and-tagged 
+RCD (safety switch) must be used if portable
+Mechanical Safety
+Guards fitted and secure
+Moving parts not loose
+Correct accessory installed
+No cracks in grinder discs
+Key or chuck removed before operation
+Workspace Safety
+Bench clear
+No obstructions
+Material secured properly
+Correct PPE worn
+📖 Task 2 – Section 2 practical observations assess a student’s ability to “complete pre-start safety checks”.
+❓STUDENT QUESTION ❓Why must you never use a grinder disc with a chip or crack in it?
+Your Answer:
+4.3 Safe Operation Techniques
+Workers must be able to demonstrate correct:
+Stance & Positioning 
+balanced stance
+firm grip
+avoid working above shoulder height
+keep others clear of the work area
+Using the Tool Correctly
+let the tool reach full speed
+apply steady pressure — don’t force
+allow tool to do the work
+never twist a cutting wheel
+keep hands behind cutting path
+Clamping Material
+Material must be secured before:
+drilling
+grinding
+cutting
+sanding
+🔗Working safely with power tools
+🔗https://www.safework.nsw.gov.au/hazards-a-z/machinery-and-equipment
+📖 Task 2 – Section 2 practical observations require correct technique and body positioning.
+❓STUDENT QUESTION ❓Why do you need two hands on the grinder?
+Your Answer:
+4.4 Guarding Requirements
+Guards MUST be in place on all rotating or blade tools.Workers must check:
+grinder guard covers correct section of disc 
+cut-off saw blade guard retracts smoothly
+pedestal drill chuck guard is lowered during drilling
+tool rests on bench grinders are set correctly
+spark deflectors aligned properly
+If a guard is missing → STOP, TAG OUT, REPORT.
+🔗https://safework.sa.gov.au/workplaces/plant-tools-and-vehicles/guarding
+📖 Task 2 – quiz questions include “What is the purpose of a guard?” and “When must you NOT use a tool?”.
+❓STUDENT QUESTION ❓Why must the grinder guard be positioned between you and the disc?
+Your Answer:
+4.5 Performing Simple Power Tool Adjustments
+Workers must be able to perform basic adjustments to ensure power tools operate correctly. These adjustments do not involve advanced repairs — they are simple, routine workshop tasks.
+Common power tool adjustments include:
+Adjusting tool rests on a bench grinder
+Positioning spark deflectors correctly
+Adjusting depth stop on a drill press
+Setting workpiece clamps and vices
+Adjusting angle/mitre settings on cut-off saws
+Repositioning guards (NOT removing them)
+❓STUDENT QUESTION ❓What adjustment can you safely make on a pedestal drill?
+Your Answer:
+4.6 Using Power Tools Safely
+Most introductory metal/engineering workshops allow only low-risk powered tools. Workers must follow strict SOPs. Examples include:
+Drill
+Secure the workpiece using a vice or clamp
+Select the correct drill bit for the material
+Hold the drill firmly with two hands
+Grinder
+Fit the correct disc (cutting or grinding) for the task and for cracks before use
+Ensure the guard is correctly positioned and keep sparks directed away from people
+Hold the grinder with two hands at all times 
+Nibbler
+Secure sheet material before cutting
+Keep hands clear of the cutting head
+Cut off saw
+Ensure the material is clamped securely 
+Allow the blade to reach full speed before cutting
+Keep hands outside the marked danger zone
+Pedestal drill
+Secure workpiece using a vice or clamp
+Select the correct drill bit and speed appropriate to material
+Remove the chuck key before starting
+🔗https://create.kahoot.it/details/8250bc94-459c-494b-a736-a71aa6acf287?drawer=
+🔗Working safely with power tools
+📖 Task 1 – quiz questions assess student knowledge on safe power tool/equipment use including PPE requirements, machine safety rules and permitted behaviours.
+❓STUDENT QUESTION ❓Why must the chuck key never be left in a drill chuck?
+Your Answer:
+4.7 Controlling Common Power Tool Hazards
+Workers must recognise hazards such as:
+flying sparks and hot workpieces
+tool kickback
+rotating parts
+noise exposure
+metal swarf
+vibration
+dust
+Risk controls include:
+wearing correct PPE
+avoiding sideways force on cutting discs
+using clamps
+letting tools cool down
+keeping cords clear of cutting paths
+ensuring ventilation or extraction is used
+If a tool is faulty:
+Follow procedures discussed in Sub-Section 2.7
+❓STUDENT QUESTION ❓What is “kickback” when using a grinder?
+Your Answer:
+4.8 Isolation & Emergency Procedures
+Workers must be able to:
+turn off tool immediately when unsafe behaviour occurs
+disconnect power before adjusting 
+follow emergency stop signals
+know location of emergency stop buttons
+notify supervisor of any incident
+apply SOP steps for isolation and tag-out
+4.9 Shutdown & Cleanup
+Workers must return all tools and equipment in a safe condition, including:
+turn power off
+unplug and wind cord neatly
+clean tool and bench
+remove swarf, sparks, dust
+store accessories safely
+return tools to correct location 
+Refer to Section 6 for specific Power Tool Storage and Cleaning procedures.
+📖 Task 2 – Section 2 practical observations require students to clean work area & return tools safely.
+❓STUDENT QUESTION ❓Why must a tool cool down before storing it?
+Your Answer:
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 5 – MAINTENANCE, TAG-OUT, FAULTS & REPLACEMENT OF CONSUMABLES
+Maintaining tools is a core skill in engineering workshops. Workers are expected to keep tools in safe working condition, identify faults early, and follow correct reporting and isolation procedures. 
+5.1 Why Maintenance Matters
+Good maintenance ensures:
+safe tool operation
+accurate and consistent work quality
+longer tool life
+reduced risk of injury
+compliance with SOPs
+Poor maintenance is one of the most common causes of tool failures, workshop injuries and damaged workpieces.
+📖 Task 2 – quiz questions ask about “maintenance responsibilities”, “fault identification” and “safe condition of tools”.
+❓STUDENT QUESTION ❓Why is regular maintenance important in a workshop?
+Your Answer:
+5.2 Basic Engineering Principles Behind Maintenance
+Workers must understand the simple engineering reasons why maintenance tasks matter. This helps them make safer decisions and avoid damaging tools.
+Key Principles
+Friction
+Occurs when moving parts rub
+Creates heat
+Causes wear
+Reduced by cleaning and lubrication
+Heat Build-Up
+Power tools generate heat when overloaded
+Dull bits/discs cause heat because they don't cut properly
+Heat weakens metals (loss of temper)
+Mechanical Advantage
+Correct tools require less effort
+Incorrect tools lead to slipping, poor control and injury
+Material Strength & Fatigue
+Cracks, chips or wear reduce strength
+Faults grow quickly at high speeds (grinders, drills)
+Regular inspection stops equipment failure
+Clearances & Alignment
+Tool rests, guards and vice jaws must be correctly aligned
+Incorrect alignment → poor accuracy or tool kickback
+❓STUDENT QUESTION ❓Why does a dull drill bit cause overheating?
+Your Answer:
+5.3 Basic Tool Care: Cleaning, Lubrication & Adjustment
+Workers must demonstrate correct care methods for both hand and power tools.
+Cleaning
+Remove swarf, dust and debris
+Wipe metal surfaces to prevent rust
+Keep ventilation slots clear
+Clean guards and tool rests
+Lubrication
+Light oil for moving metal parts
+Lubricate chucks, slides, hinges
+Do not over-oil
+Use correct lubricants (no WD40 on electrics)
+Adjustment
+Tighten loose screws/handles (if allowed) 
+Adjust tool rests on bench grinders
+Check alignment of drill tables
+Maintain correct belt tension on sanders
+📖 Task 2 – quiz questions cover cleaning, maintenance, and safe condition of tools.
+❓STUDENT QUESTION ❓Why should ventilation slots on a power tool be kept clean?
+Your Answer:
+5.4 Replacing Consumables (Bits, Discs, Wheels, Belts)
+Workers must learn how to safely replace consumable parts used in workshop tools:
+Drill Bits
+match shank size to chuck 
+secure tightly
+remove chuck key
+choose correct bit for material
+Grinder Discs / Cut-Off Wheels 
+unplug tool before changing
+check for cracks
+ensure disc is correct type (cutting or grinding)
+match disc RPM rating to tool
+tighten correctly
+position guard BEFORE starting
+Abrasive Belts & Sanding Attachments
+correct size belt
+centred on rollers
+tracking aligned
+Rules include:
+disconnect power before changing accessories
+ensure arrow direction matches grinder rotation
+use only approved accessories
+tighten securely
+check maximum RPM rating
+📖 Task 2 – quiz questions ask “Which disc is used for cutting metal?”, “What must match between the grinder and the disc?” and “Why remove the chuck key before drilling?”
+❓STUDENT QUESTION ❓What must you check before fitting a new grinder disc?
+Your Answer:
+5.5 Recording & Reporting Maintenance
+To meet workshop standards and general SOP expectations, workers must:
+record tool issues
+sign out replacement consumables
+document when discs, bits or belts are changed
+notify supervisor/teacher when stock is low
+update maintenance log (if used)
+Examples of documentation: 
+Tool Fault Report
+Tag-Out Log
+Maintenance Checklist
+Consumable Replacement Sheet
+📖 Task 2 – quiz questions on “reporting problems with tools or equipment”.
+❓STUDENT QUESTION ❓Why must changes to consumables (like discs or bits) be recorded?
+Your Answer:
+⭐ MANUFACTURING and ENGINEERING “TASK 2 – RIGHT TOOL, RIGHT JOB” WORKBOOK
+SECTION 6 – STORING, SECURING & SHUTTING DOWN TOOLS & WORK AREAS
+Correct shutdown and storage procedures reduce accidents, prevent damage to tools, and support a professional workshop culture. 
+6.1 Why Proper Shutdown & Storage Matters
+A clean, organised workspace prevents:
+accidental injuries including tripping hazards
+tools becoming damaged
+fire risks from dust/swarf build-up
+tool loss or theft
+A workshop must always be left in a ready for next user condition.
+📖 Task 2 – quiz questions ask “Why is good housekeeping important?”. Task 2 – Section 2 practical observations assessment assess a student’s ability to leave the work area clean, and tools stored correctly.
+❓STUDENT QUESTION ❓Why must tools be cleaned and put away immediately after use?
+Your Answer:
+6.2 Shutting Down Power Tools Safely
+Workers must be able to demonstrate step-by-step safe shutdown:
+Turn off the tool using the switch
+Wait for moving parts to stop completely
+Isolate power — unplug or switch off at isolator
+Clean tool — remove swarf, dust, debris
+Check tool condition (no new faults)
+Coil cords carefully
+Return tool to correct storage location
+📖 Multiple Task 2 – quiz questions ask “What should you do before leaving a machine unattended?”. In Task 2 – Section 2 practical observations students must shut down pedestal drills, grinders and hand-held tools correctly.
+6.3 Storing Hand Tools Correctly
+Hand tools must be:
+cleaned
+wiped free of moisture
+placed in correct labelled storage locations
+blades retracted or covered
+stored to prevent falls or damage
+Storage systems may include: 
+tool boards or shadow boards
+toolboxes
+shelves or cabinets
+lockable storage for specialised tools
+📖 Task 2 – quiz questions ask “Where should tools be stored after use?”. Task 2 – Section 2 practical observations require students to return tools neatly to the designated area.
+6.4 Correct Storage of Power Tools
+Power tools require additional care, including: 
+cords loosely coiled
+blades removed or protected
+dust bags emptied
+batteries removed from cordless tools
+accessories stored with the tool
+Do NOT:
+hang tools by the cord
+wrap cords tightly around the tool
+store tools in wet or dirty areas
+📖 Links to Task 2 – quiz questions on tool care, power cable damage and safe handling.
+❓STUDENT QUESTION ❓Why should cords not be wrapped tightly around a drill or grinder?
+Your Answer:
+6.5 Storing Consumables & Accessories
+Workers must store these in:
+dry, labelled containers
+separated by type and size
+areas protected from moisture, oil and impact
+Damaged consumables (e.g., cracked discs) must be discarded immediately.
+📖 Task 2 – quiz questions reference correct use and storage of grinder discs, drill bits, and attachments.
+6.6 Cleaning & Waste Disposal
+Refer to Sub-Section 2.9 and 5.3 for Cleaning and Waste Disposal information
+6.7 End-of-Shift Workshop Standards 
+Workers must leave their area meeting SOP expectations:
+tool bench wiped down
+machines cleaned and left safe
+tools stored in correct locations
+faults reported and tagged
+floors clear
+waste disposed of
+PPE stored correctly
+job card updated if required
+❓STUDENT QUESTION ❓Name three tasks’ students must complete before leaving the workshop at the end of the lesson.
+Your Answer:
