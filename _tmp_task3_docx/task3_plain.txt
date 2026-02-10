@@ -1,0 +1,1533 @@
+RTO NSW Department of Education 90333
+Assessor Package
+NOT TO BE ISSUED TO STUDENTS
+MEM10119 Certificate I in Engineering & Statement of Attainment towards MEM20422 Certificate II in Engineering Pathways
+Task 3– Engineering in Practice
+Units of competency assessed:
+MEM12024 Perform computations & MEM16008 Interact with computer technology & MEM07032 Use workshop machines for basic operations
+List any pre-requisite or co-requisite units of competency: 
+MEM13015 Work safely and effectively in manufacturing and engineering & MEM16006 Organise and communicate information & MEM11011 Undertake manual handling & MEM18001 Use hand tools
+Training Package Title (release #)
+MEM - Manufacturing and EngineeringRelease 4.0
+Qualification Code and Title (release #)
+MEM10119 Certificate I in Engineering & Statement of Attainment towards MEM20422 Certificate II in Engineering Pathways
+School name 
+Insert school name and if applicable the school logo
+Location (if different to school)
+Insert location
+Assessor name
+Insert assessor name
+Assessment date of issue
+Insert date
+Assessment due date
+Insert date
+Context for assessment
+The student is to be assessed on their ability to demonstrate that they can:
+Determine job requirements
+Perform calculations
+Produce charts and graphs from given information
+Access information/data
+Input information/data
+Store information/data
+Access assistance, if required
+Set up a machine
+Operate a machine
+
+
+The sections are broken down into the following: 
+Section 1: Written Questioning
+Part A – Machine Operations
+Part B – Calculation Operations
+Part C – Computer Operations
+Section 2: Product Based Methods
+Part A– Drill Speed Graph
+Part B – Computer Aided Drawing (CAD)
+Part C – Material List
+Section 3: Direct Observation
+Part A – Observation Checklist – Planning 
+Part B – Observation Checklist – Working Safely
+Each section will be reported as Satisfactory (S) or Not Yet Satisfactory (NYS). When all components of a task are completed satisfactorily the student outcome for the unit will be Competent.
+These can be performed either in an industry workplace or a simulated industry environment. 
+
+The school will provide safe and well-maintained facilities, equipment, tools and materials as required for each individual unit of competency in order to allow the assessment to be undertaken
+Reasonable adjustments allowed
+All students must be provided the opportunity to access and participate in the learning and assessment process. Reasonable adjustment must be discussed with individual students prior to assessment. Reasonable adjustments are implemented to provide equitable access for students while maintaining the integrity of the qualification and industry outcome. All reasonable adjustments must be documented on the student assessment copy
+
+
+Assessment Package Outline
+Students must complete all components of the assessment to a satisfactory level to be deemed as competent for a unit of competency.
+Assessment Method 
+Units of Competency
+Duration (indicated hours)
+Section 1: 
+Written questioning
+
+MEM12024 Perform computations
+MEM16008 Interact with computer technology
+MEM07032 Use workshop machines for basic operations 
+2 hours
+Section 2: 
+Product based methods 
+MEM12024 Perform computations
+MEM16008 Interact with computer technology
+2 hours
+Section 3: 
+Direct observation
+
+MEM12024 Perform computations
+MEM16008 Interact with computer technology
+MEM07032 Use workshop machines for basic operations
+8 hours
+
+
+
+Section 1: Written Questioning
+
+Time
+Each student has 2 hours to complete this section.
+Assessment Instructions
+Each student must complete Section 1 – Written Questioning.
+
+Prior to Assessment:
+The teacher ensures the student has access to the written questions.
+Ensure the student is ready and willing to undertake the assessment.
+Ensure the student has access to any relevant resources listed.
+
+During Assessment:
+If the student does not answer a question in full, the teacher may ask the student to provide more information to be deemed satisfactory. If this is required, the teacher must document the question they ask the student and document the response against the question requiring further information.
+Ensure all responses are a student’s own work.
+
+After the Assessment:
+The teacher will mark completed student work.
+After completion, the teacher will hold a debrief (feedback) session with the student. The student will share any insights or lessons they have gained and discuss any takeaways that could be applied to real-life situations.
+Student must demonstrate 
+Knowledge as required by the unit of competence through all written activities.
+safe work practices and procedures and use of personal protective equipment (PPE)
+cutting tool sharpening methods and techniques
+safe operation of tool sharpening equipment and consequences of incorrect sharpening
+machine set-up and consequences of incorrect speeds and feeds
+procedures for operating workshop machines
+reasons for poor surface finish
+units of measurement, tool geometry & numerical operations required for basic machining operations
+formulae applicable to perimeter, area & volume of simple geometric shapes & the reasons for using dimensions with the same units
+techniques & procedures for rounding off figures when estimating approximate answers
+features and use of mixed numbers, decimals, fractions and whole numbers
+procedures for carrying out calculations involving fractions and using each of the four basic rules of addition, subtraction, multiplication and division
+concept of percentage and procedures to be followed in converting a decimal and fraction to a percentage
+concepts and calculations of ratio and proportion
+scales applicable to the axes of the graphs or charts
+types of charts and/or graphs used in the individual’s field of work
+upper and lower limits of acceptability applicable to data entered on a graph or chart
+trends indicated by the graphs or charts drawn
+trends indicated by the slope or gradient of a graph
+action to be taken when given trends occur or set limits are approached on graphs or charts
+procedures for drawing ‘lines of best fit’
+functions and capabilities of computing technology used in the workplace
+functions of software applications
+use and features of data outputs.
+Student to submit
+Each student must submit the following evidence:
+Section 1 – Written Questioning.
+Resources
+Each student will be provided with the following resources to complete the assessment task. 
+Section 1 – Written Questioning.
+
+
+Section 1 Part A – Machine Operations
+What should you do if you identify a hazard in your work area?
+Report it to the appropriate work safe authority in your region after isolating it in order to meet legislative requirements
+Assess the level of risk, control what can be controlled immediately and report to the appropriate person in the business for further action
+Report it to the supervisor and leave it to them to manage
+
+Identify 4 safe work practices.
+Reading and following Safe Operating Procedures (SOP) of each machine 
+Using only hand tools
+Using designated machine guards
+Using only the hand tools that are in your work area
+Tying back loose hair and clothing
+Lodging payslips weekly
+Keeping a time sheet
+Using Personal Protective Equipment (PPE)
+
+What PPE is commonly used when machining?
+Safety glasses
+Earmuffs
+Apron
+Gloves
+
+How could Metal Chips be safely removed from a lathe or mill?
+Flick away quickly whilst machine is running.
+Stop machine and brush chips away
+Brush chips whilst machine is slowing down
+Blow chips away with an air compressor 
+
+Identify the correct procedure order for sharpening a high-speed steel lathe bit.
+Procedure
+Order
+Grind the side relief                   
+2
+Round the nose                         
+4
+Grind the top rake                     
+3
+Grind the front relief                  
+1
+
+When sharpening a lathe tool on a pedestal grinder, how would you prevent overheating and discoloration to the end of the tool?
+Use a coarse wheel for grinding
+Gently press the tool against the wheel rather than forcing it against the wheel
+Dip the tool in coolant regularly when grinding
+Grind in short fast bursts to allow the tool to cool down
+
+Units of measurement most often used when machining are:
+metres
+millimetres
+cms
+kms
+
+Numerical operations required when machining include:
+addition
+subtraction
+multiplication
+division
+All of these are numerical operations required when machining
+
+Insert words from the word bank to correctly label the lathe cutting tool.
+Word bank
+Turning tool
+Fixing screw
+Carbide cutting insert
+Shim
+
+
+Insert words from the word bank to correctly label the milling machine.
+Word bank
+Spindle
+Table
+Digital read out
+Table feed handwheel
+Cross feed handwheel
+Saddle
+
+Insert words from the word bank to correctly label the lathe.
+Word bank
+Tailstock
+Handwheel
+Chuck
+Headstock
+Tool post
+Gear levers
+
+Consequences of incorrect tool sharpening include
+Damage to the work material
+Creates a perfect cutting tool
+Cutting tool won't cut accurately
+If cutting edge is machined above centreline it will not contact material.
+Grinding the bevel of a tool at the wrong angle risks making the edge too thin and delicate
+
+
+Identify the correct procedure order for safely using a pedestal grinder to sharpen a high speed steel lathe tool.
+Procedure
+Order
+Adjust tool rest if required (within 1.5-2mm of wheel)
+4
+Identify and select PPE
+2
+Position tool and start the grinder
+5
+Check grinding wheel and make sure guards are in place
+3
+Place in coolant and inspect
+10
+Grind the top rake
+8
+Grind the left side relief
+7
+Round the nose
+9
+Grind the front relief
+6
+Locate and read the SOP
+1
+
+Identify the correct procedure order for setting up a lathe to face a steel rod.
+Procedure
+Order
+Insert the work piece into chuck and tighten chuck jaws
+2
+Check clearance
+
+
+5
+Identify and select the correct tool required for the job
+1
+Adjust the tool position, tool height and secure in tool post
+4
+Identify the correct speed and feed settings for the task you are undertaking
+3
+Ensure the Chuck Key is removed and step out of the line of the spinning chuck before turning the lathe on
+6
+Identify the correct procedure order for setting up a milling machine to cut a slot.
+Procedure
+Order
+Secure work piece in milling machine vice.
+2
+Identify and choose the correct milling cutter for task and install
+1
+Identify and adjust to correct cutting depth
+4
+Identify the correct speed and feed settings for the task you are undertaking
+3
+Move and align material with cutter
+5
+Check for clearances
+6
+
+What would happen if a drill bit is used with excessive RPM or feed speed?
+Overheat the drill bit and work harden work piece 
+Cut material faster
+Decrease the cost of production 
+Produces a polished surface on work piece
+
+Some round bar (stock) has been correctly secured in a lathe chuck, identify the procedure order of operations to face off the stock.
+Procedure
+Order
+Clamp the cutting tool in the tool post and use shims to adjust until the cutting tip is horizontally level to the centre of the round bar
+1
+Turn on the lathe andmove the cutting tool with the saddle handwheel until your RDO or handwheel dial indicates 1mm will be removed
+5
+Turn the toolpost so that the tip of the cutting tool will meet the end of the round bar at a slight angle (10 to 15 degrees)
+2
+When the cutting tool reaches the centre of the round bar, turn the cross feed handwheel in the opposite direction and away from the round bar
+7
+Slowly advance the cross feed handwheel to move the tool across the round bar, taking off the end of the round bar as you go
+6
+While the lathe is off, use the handwheelsto move the cutting tool tip until it touches the face of the round bar
+3
+Zero longitudinally on the RDOor saddle handwheel and then remove the cutting tip from the round bar face before starting the lathe
+4
+
+
+A piece of steel has been correctly secured in a milling machine vice, identify the procedure order of operations to cut a slot.
+Procedure
+Order
+Start the milling machine and use the handwheel or autofeed to gradually move the cutter into the workpiece
+5
+Zero the axis’ on your RDOor handwheel dials. Adjust the milling machine's depth to the correct cut position.
+3
+Position the cutter at the starting point of the slot. Use the milling machine's controls to align the cutter with the workpiece accurately.
+4
+Choose an appropriate slotting cutter for cutting the desired slot size and depth in the steel. Insert the cutter into the chuck and tighten.
+1
+Set the recommended speed (RPM) and feed ratesafter consulting the machining guide or cutting chart
+2
+Depending on the slot's depth and width, you may need to cut in multiple passes. Incrementally lower the cutter after each pass until you achieve the desired slot dimensions.
+6
+
+Square material is best held in which chuck:
+Self-centring 3 jaw chuck
+Independent 4 jaw chuck
+Jacobs Chuck
+Multi chuck
+
+What is the purpose of the slots that are machined into the table of a mill?
+To allow chip to fall through
+To allow vices and other clamping devises to be bolted to the table
+To allow drill bits to pass through after it goes through the material
+To keep it cool by allowing air to pass through it during operations
+
+What determines the speed of the machine when selecting the max rpm for a milling operation?
+Material being machined, size of the cutter, what the cutter is made of
+What the cutter is made of, The size of the machine, Machine SOP’s
+Capability of machine, Materials being machined, Size of cutter
+Operator training, Materials being machined, Type of cutter
+
+Which of the following statements are NOT correct in relation to cutting fluid?
+Cutting fluid cools the cutter 
+Lubricates the chip
+Improves finish
+Does not need replacing
+
+Poor finish on materials when using the lathe or milling machine may be a result of:
+Not using cutting fluid
+Incorrect feed rates
+Machine calibrated and aligned correctly
+Incorrect spindle speeds (RPM)
+Blunt or incorrectly sharpened cutters
+Identifying and selecting the correct cutter for the task
+Section 1 Part B –Calculation Operations
+Note – calculation questions and values on Evidence Central will be dynamic, therefore answers will differ to the example answers provided below.
+During calculations, why it is important to use dimensions with the same units?
+Using different units will result in calculation errors
+It keeps working out tidy on the page
+Using units relevant to industry will assist with reading plans and ordering materials
+The code of conduct requires worker to do this
+You have been asked to measure and conduct various tasks on a round steel pipe with the following dimensions – internal diameter = 150mm and length = 10m. Use this scenario to answer Question 2 to 3.
+Calculate the internal circumference (in mm) of the round steel pipe. (Use 3.14 for Pi)
+Diameter x Pi. (150 x 3.14 )= 471mm
+
+Calculate the volume (in ) of the round steel pipe (to 2 decimal places). (Use 3.14 for Pi)
+Pi xx 10 (3.14 x x10) = 0.18 
+
+You have been asked to conduct various tasks on a shipping container with the following dimensions – length = 10m, width = 5m and height = 4m. Use this scenario to answer Question 4 to 7.
+Calculate the total length (in metres) of steel angle required to cover all external edges of the shipping container.
+Length x 4 + width x 4 + height x 4 (10 x 4 + 5 x 4 + 4 x 4) = 76m
+
+Calculate the total (in)of Colourbond sheeting required to line all sides of the shipping container.
+Length x width x 2 + length x height x 2 + width x height x 2 (10 x 5 x 2 + 10 x 5 x 2 + 5 x 4 x 2) = 220 
+
+Calculate the total volume (in ) of the shipping container.
+Length x width x height (10 x 5 x 4) = 200 
+
+What percentage of the shipping container would be filled if 100 of material is in it?
+Filled material ÷ total volume x 100 (100 ÷ 200 x 100) = 50%
+
+A metal fabricator must cut a section of 5.22m RHS into 5 even parts. Use this scenario to answer Question 8 to 9.
+Estimate the length of each part to the nearest metre
+Total length÷ 5 (5.22 ÷ 5) = 1.044 = nearest metre = 1
+
+Rounding to 2 decimal places, what is the length of each part?
+Total length ÷ 5 (5.22 ÷ 5) = 1.04m
+
+When machining we use decimals, fractions and whole numbers. Match the number type to its features and purpose when machining, using an arrowed line.
+
+Number Type
+
+Feature and machining purpose
+
+Decimals
+
+
+Are essential in metal machining for material quantities, machine parameters and gearing
+Fractions
+
+Provides precise measurements, dimensions, tolerances. Vernier callipers and machine DRO use this number type to improve accuracy and efficiency when machining.
+Whole
+
+Imperial type of measurement that measures parts of a whole number. Can be used to determine thread cutting settings on a lathe.
+
+Complete the table on fractions, decimals, equivalent fractions and percentage.
+
+Reduced Fraction
+Decimal
+Equivalent Fraction/100
+Percentage
+1/2
+0.50
+50/100
+50%
+3/10
+0.30
+30/100
+30%
+7/20
+0.35
+35/100
+35%
+21/25
+0.84
+84/100
+84%
+3/4
+0.75
+75/100
+75%
+
+The term ratio means
+The repeated addition of groups of equal value
+A relationship between two numbers, that expresses one number as a fraction of the other
+When you take one number away from another
+An equation in which two ratios are set to equal each other
+
+The term proportion means
+The repeated addition of groups of equal value
+A relationship between two numbers, that expresses one number as a fraction of the other
+When you take one number away from another
+An equation in which two ratios are set to equal each other
+A metal fabricator has been asked to fillet weld on 160mm of a 200mm section of steel. 
+What fraction of the steel section will they be welding on?
+4/5
+
+If y = 10, use this equation (    ) to identify what x equals.
+x = 4
+
+If x = 12, use this equation () to identify what y equals.
+y = 16
+
+Section 1 Part C – Computer Operations
+Computing technology and software provides us with many functions and capabilities that are helpful when machining. 
+Match the computing technology or software to its purpose when machining, using an arrowed line.
+
+Computing Technology or Software
+
+Machining purpose
+Lathe and milling machine digital read out
+
+Controls CNC operated machines, automates machining operations, achieves precision and efficiency, supports complex geometries, optimises cutting strategies, integrates with CAD/CAM systems and enable customisation
+Personal computer
+
+Helps guide and position cutting tools to creates more accurate products and increases efficiency by reducing manual measurement
+Microsoft Excel
+
+It provides a versatile and powerful platform for data organisation, analysis, calculation, reporting. Can be used to chart data.  
+CNC computer software
+
+Provides users with a versatile platform for communication, information access and production. Required to use software such as Microsoft Excel.
+
+Computing technology and software provides us with important data outputs that are helpful when machining. 
+Match the data output to its features and purpose when machining, using an arrowed line.
+
+Data output
+
+Feature and machining purpose
+Line graphs
+
+Estimates trend identification, correlation assessment, prediction, modelling relationships, data interpretation and visual communication of data patterns
+Digital read out (DRO)
+
+In machining it is to enhance precision, accuracy, efficiency and control by reducing manual measurement
+Lines of best fit
+
+Is a versatile tool for data visualisation and analysis, providing a clear to understand trends, relationships, changes and patterns in machining data
+
+Types of charts and/or graphs are used when machining metal. Match the graph or chart and to its purpose during machining, using an arrowed line.
+
+Graph or chart
+
+Purpose during machining
+Drill speed chart
+
+Visually represents the relationship between two things, for example, drill speeds and drill bit diameters
+
+Drill speed graph
+
+
+Simple way of decoding sheet metal thickness and weight which influences machine settings and operations
+Sheet metal gauge chart
+
+Provides information & guidance for selecting, using and using thread cutting taps, drill sizes and thread specifications
+Tap drill chart
+
+Table of numbers that indicates speed and feed rates for different drill bits and metal material types
+
+The x and y axes scales, within graphs, we may use when machining could include
+Drill bit size
+Tool sharpness level
+Spindle speed (RPM)
+Material hardness
+Tool feed rate
+Material size
+Chipping size
+Cleanup rate
+
+Useful graph trends, we may use when machining could include
+Smaller or larger drill bit diameter
+Faster or slower spindle speed (RPM)
+When to sharpen tool cutter
+How aesthetically pleasing the job will look when it’s completed.
+Faster or slower tool feed rate
+Smaller or larger material size
+Use this graph information to answer question 6 to 10. 
+
+
+
+The trends indicated by the slope/gradient of this line graph would be 
+Spindle speed RPM must increase when using a smaller drill bit diameter
+Spindle speed RPM must decrease when using a smaller drill bit diameter
+Spindle speed RPM must decrease when using a larger drill bit diameter
+Spindle speed RPM must increase when using a larger drill bit diameter
+
+What spindle speed RPM should be used for a drill bit 6mm in diameter
+2300
+1500
+1000
+800
+
+Estimate the spindle speed RPM used for a drill bit 14mm in diameter
+800
+500
+200
+100
+
+If a drill bit 14mm in diameter is required for the task you should
+Use the estimate spindle speed RPM you established via sight
+Produce an entirely new graph with the 14mm data
+Use the “lines of best fit” method
+Discuss with the supervisor the job requirements outside of the information you have been provided
+
+Data within a chart has upper and lower limits. Match the chart limit statement to an explanation of why it is occurring, using an arrowed line.
+
+Chart Limit Statement
+
+Explanation
+Line does not go lower than 4 (mm) on the x axis (diameter (mm) of drill bit)
+
+The data entered for this graph did not include spindle speeds below 500 RPM. This machine may not produce spindle speeds below 500RPM.   
+Line does not go higher than 2500 RPM on the y axis (spindle speed RPM)
+
+The data entered for this graph did not include spindle speeds above 2500 RPM. This machine may not produce spindle speeds above 2500RPM.   
+Line does not go higher than 12 (mm) on the x axis (diameter (mm) of drill bit)
+
+The data entered for this graph did not include drill bits less then 4mm in diameter. Drill bits less then 4mm in diameter may not suit the task.
+Line does not go lower than 500 RPM on the y axis (spindle speed RPM)
+
+The data entered for this graph did not include drill bits more then 12mm in diameter. Drill bits more then 12mm in diameter may not suit the task.
+
+The “Lines of best fit” procedure can be used to estimate the relationship between 2 variables. Match the ‘lines of best fit” picture to its procedure order number and description, using an arrowed line.
+
+Picture
+
+Procedure number and description
+
+
+2. Mark out a set of points on the chart that reflect your data
+
+
+4. Draw a line through the shape you have drawn, that divides it evenly
+
+
+1. Develop a blank chart with x and y axis
+
+
+3. Draw a shape (usually an oval) that
+encloses all of the data points
+
+Section 2: Product Based Methods
+
+Time
+Each student has 2 hours to complete this section.
+Assessment Instructions
+Each student must complete the assigned workplace documents. 
+
+Prior to Assessment:
+The teacher designates at least 1 chosen tasks/projects that will allow each student to complete and submit the required assessment activities.
+Ensure the student has access to the assigned workplace documents.
+Ensure the student is ready and willing to undertake the assessment.
+
+During Assessment:
+The teacher can lead class discussions about the assigned workplace documents.
+Ensure all responses are a student’s own work.
+
+After the Assessment:
+The teacher will mark completed student work.
+After completion, the teacher will hold a debrief (feedback) session with the student. The student will share any insights or lessons they have gained and discuss any takeaways that could be applied to real-life situations.
+Students must demonstrate:
+Determining job requirements
+Producing charts and graphs from given information
+Access information/data
+Input information/data
+Store information/data
+Student to submit
+Each student must submit the following evidence:
+Part A– Drill Speed Graph
+Part B – Computer Aided Drawing (CAD)
+Part C – Material List
+Resources
+Each student will be provided with the following resources to complete the assessment task. 
+Drill speed data
+Computer/laptop with sheeting software such as Microsoft Excel
+CAD program such as Fusion, Autodesk Inventor, Google Sketchup or similar
+Copy of the AS1100 Australian Standards 
+https://archive.org/details/AS1100.1011992TechnicalDwgs
+Project related templates:
+Part A– Drill Speed Graph
+Part B – Computer Aided Drawing (CAD)
+Part C – Material List
+Reattempts 
+For students deemed Not Yet Satisfactory for a task, an opportunity will be provided by the assessor to reattempt the task where possible.
+Due to the cost of material and assessment restraints, students can have a maximum of 3 attempts for this assessment.
+
+Section 2 Part A – Drill speed graph
+
+Student Instructions: 
+Enter the drill speed data into a spread-sheeting program such as Microsoft Excel
+Generate a line graph showing Drill Diameter vs Speed
+Take a screenshot of the graph
+Paste your completed work below where indicated
+Answer associated questions
+Drill Speed Data
+Paste your line graph HERE
+What do you notice about the speed as the diameter increases?
+The speed must decrease
+Estimate the speed used for a 20mm drill bit
+Answers will differ but should be around 450
+Calculate the Drill Speed RPM used for a 20mm drill bit using the following formulawhere:     x = drill bit size and y = Drill Speed RPM
+x=9000
+y
+20 = 9000 
+ y
+20y = 9000
+y = 9000 
+         20
+y = 450
+Drill Speed RPM for a 20mm Drill Bit = 450
+What was the difference between the estimate and actual speed (if there is any)?
+Answers will differ 
+
+Section 2 Part B – Computer Aided Drawing (CAD)
+
+Student Instructions: 
+Your teacher will provide you with a set of project plans
+Develop a 3D model of ONE project (identified by your trainer) using an appropriate CAD program such as Fusion, Autodesk Inventor or Google Sketchup.
+Produce a pictorial view of the project and 3 orthographic views showing overall dimensions of the project and laid out according to AS1100 standards. The pictorial view may be rendered by the software. Ensure your title block is completed. 
+Identify/locate the help menu or CAD program tutorial and follow as required
+Ensure the item is drawn using the appropriate dimensions and units 
+Save the file and capture a screen shot of the 3D model 
+Submit to your assessor via email
+Paste your completed work below where indicated
+Log off and shut down the computer
+
+Note: Consult with your teacher and/or use information sources for assistance when required
+Paste your CAD HERE
+
+
+
+
+
+
+
+
+
+Section 2 Part C – Material List
+
+Student Instructions: Develop a computer-generated material list using a spread-sheeting program such as Microsoft Excel for ONE project (identified by your trainer). The material list must include the following and look like the example below.
+Each part of the project listed and the dimensions of the material used
+A formula to calculate the total length of material for each part (Length x Quantity)
+Include a pie or column graph showing the total cost of producing each item.
+Paste into the blank page below
+Project material list example for Soft Face Hammer (other project may be used)
+Item #
+Component Description
+Stock Material
+Size
+Length (mm)
+Quantity
+Total (mm)
+Cost/m $
+Total Cost $
+ 1
+Fixed Jaw
+Mild Steel
+50x12
+80
+1
+
+80
+4.20
+2
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+
+
+4
+
+
+
+
+
+
+
+
+5
+
+
+
+
+
+
+
+
+6
+
+
+
+
+
+
+
+
+7
+
+
+
+
+
+
+
+
+8
+
+
+
+
+
+
+
+
+9
+
+
+
+
+
+
+
+
+
+
+Paste your computer-generated material list using a spread-sheeting program 
+
+
+
+HERE.
+
+
+
+
+
+Paste your pie graph showing the total cost of producing each item 
+
+
+
+HERE
+
+
+
+
+
+
+
+Section 3: Direct Observation
+
+Time
+Each student has 4 hours to complete this section.
+Assessment Instructions
+Each student must be directly observed performing the criteria on the Observation Checklist. 
+
+Prior to Assessment:
+Familiarise yourself with the observable criteria.
+Familiarise yourself with the Assessment Resource– Metal Manufacturing Company Handbook.
+The teacher designates at least 1 chosen tasks/projects that will allow each student to complete and submit the required assessment activities.
+Ensure the student is ready and willing to undertake the assessment.
+Ensure the student has access to any relevant resources listed.
+
+During Assessment:
+The teacher can lead class discussions and ask for clarification during the tasks.
+The teacher observes and records student performance in the Checklists.
+
+After the Assessment:
+The teacher will provide feedback on the student performance.
+After completion, the teacher will hold a debrief (feedback) session with the student. The student will share any insights or lessons they have gained and discuss any takeaways that could be applied to real-life situations.
+Students must demonstrate
+Determining job requirements
+Setting up a machine
+Operating a machine
+Resources
+Each student will be provided with the following resources to complete the assessment task. 
+Personal Protective Equipment (PPE) and relevant mandatory signage
+Selected machinery (eg lathe and/or milling machine) and consumables
+Selected machinery tools and equipment (eg cutters, drill bits knurling tool)
+Selected machinery Safe Operating Procedure (SOP)
+Selected machinery Operators Manual
+Assessment Resource– Metal Manufacturing Company Handbook
+Section 2 Part B – Computer Aided Drawing (CAD) or other project plans
+Instructions on the Performance Criteria that need to be achieved and observed by the assessor
+Reattempts 
+For students deemed Not Yet Satisfactory for a task, an opportunity will be provided by the assessor to reattempt the task where possible.
+Due to the cost of material and assessment restraints, students can have a maximum of 3 attempts for this assessment.
+
+Section 3 – Part A – Observation Checklist– Planning
+
+Unit of competency
+MEM07032 Use workshop machines for basic operations
+Assessment Instructions
+Prior to undertaking project machining activities, the student must follow workplace and manufacturer procedures to demonstrate planning and preparing, including:   
+Identifying and interpreting projects and specifications
+Sharpening cutting tools, as required
+Selecting appropriate machine and tools to meet work requirements
+Installing tools in the selected machines
+Setting and adjusting the machine guards
+Mounting and securing materials using clamping device appropriate to the material
+ASSESSOR OBSERVATION CHECKLIST
+During the associated task, if the student was viewed undertaking the Observable Criteria, record the date they were Satisfactory (S) or Not Yet Satisfactory (NYS) in the boxes provided. (Records from this page to be transferred to individual Student Task Packages for compliance)
+PC #
+Performance Criteria
+Observable Attributes
+Attempt
+Smith
+Jones
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+1
+Identify and interpreting project plans and specifications
+Prior to undertaking the practical project, the student must:
+Access, read and review project plans and specifications, which may come from:
+Project plan drawings
+CAD drawings
+Verbally repeat to the teacher project plan information and requirements, which may include:
+Project to be made
+Machines required
+Tools and equipment required
+Machinery processes required
+Materials required
+Allowable tolerances
+Date S or NYS
+S 10/3/24
+NYS 10/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+S 15/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2
+Sharpen cutting tools, as required
+
+
+
+
+Prior to undertaking the practical project, the student must:
+Check the sharpness of machine cutting tools, which may include a:
+Drill bit
+High speed steel cutting tool
+Milling cutting tool
+
+If sharp and in good condition no action is required
+Only if sharpening is required, the student mustfollow workplace and manufacturer procedures to sharpen cutting tools
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PC #
+Performance Criteria
+Observable Attributes
+Attempt
+Smith
+Jones
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+3
+Select appropriate machine and tools to meet work requirements
+Prior to undertaking the practical project, the student must:
+Verbally identify to the teacher which machine they are planning to setup for the work activities within their designated project plan 
+Verbally identify to the teacher which tools they are planning to setup on the identified machine for the work activities within their designated project plan 
+Date S or NYS
+S 10/3/24
+NYS 10/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+S 15/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4
+Install tools on the selected machines
+Prior to undertaking the practical project machining activities, the student must:
+Follow workplace and manufacturer procedures to install cutting tools on the identified machines, which may include:
+High speed steel cutting tool in a lathe tool post
+Drill bit in a lathe tail stock or milling machine chuck
+Milling cutting tool in the milling machine chuck
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5
+Set and adjust the machine guards
+Prior to undertaking the practical project machining activities, the student must:
+Set and adjust the guards on identified machines, which may include:
+Engaging the spindle guard on the lathe
+Engaging the spindle guard on the milling machine
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6
+Mount and secure materials using clamping device appropriate to the material
+Prior to undertaking the practical project machining activities, the student must:
+Secure the project materials within the identified machines, which may include:
+Tightening materials within a 3 or 4 jaw chuck on the lathe
+Tightening materials within a milling machine vice
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Section 3 – Part B – Observation Checklist – Working Safely 
+
+Unit of competency
+MEM12024 Perform computations
+MEM16008 Interact with computer technology
+MEM07032 Use workshop machines for basic operations
+Assessment Instructions
+While undertaking the project machining activities, the student must demonstrate they can safely follow WHS, manufacturer and workplace procedures, including:
+Following standard operating procedures (SOPs) when operating machine
+Complying with work health and safety (WHS) when operating machines, including PPE use
+Checking machined components against project plan specifications and adjusting, if required
+ASSESSOR OBSERVATION CHECKLIST
+During the associated task, if the student was viewed undertaking the Observable Criteria, record the date they were Satisfactory (S) or Not Yet Satisfactory (NYS) in the boxes provided. (Records from this page to be transferred to individual Student Task Packages for compliance)
+PC #
+Performance Criteria
+Observable Attributes
+Attempt
+Smith
+Jones
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+7
+Follow standard operating procedures (SOPs) when operating machine
+
+While undertaking the practical project machining activities, the student must:
+Access and review operator SOPs for the identified machines, which may include:
+The lathe
+The milling machine
+Verbally repeat to the teacher, the operator SOPs, for using the identified machines
+Follow the operator SOPs when using the identified machines
+Date S or NYS
+S 10/3/24
+NYS 10/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+S 15/3/24
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PC #
+Performance Criteria
+Observable Attributes
+Attempt
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+Surname
+8
+
+Comply with work health and safety (WHS) when operating machines, including PPE use
+
+While undertaking the practical project machining activities, the student must:
+Listen to teacher instructions and follow the instructions on safely using the identified machines, which may include:
+Using guards
+Wearing the correct PPE
+Keeping body parts away from moving machinery parts
+Securing materials with clamps, chucks and/or vices
+Securing tools with tool holders and/or chucks
+Review the mandatory PPE signage and use this identified PPE when undertaking machining activities, which may include:
+Safety glasses
+Work apron
+Work boots 
+Earmuffs 
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9
+Check machined components against project plan specifications and adjust, if required
+After completing the practical project machining activities, the student must:
+Check the machined material against the project plan specifications, which may include material:
+Length 
+Width 
+Thickness
+If the machined materials meet the project plan specifications, no action is required
+Only If the machined materials do not meet the project plan specifications, adjustments (eg re machining) must be made until project plan specifications are met
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Date S or NYS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
