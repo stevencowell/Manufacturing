@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Task 3 Module 4 - Product Methods: Drill Speed Graph" />
+  <title>Module 4: Product Methods - Drill Speed Graph</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.65; }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%); color: #fff; padding: 2.8rem 1rem; text-align: center; }
+    main { max-width: 900px; margin: -1.4rem auto 0; padding: 1.8rem 1rem 3rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.1); }
+    .back-link { display: inline-block; margin-right: 1rem; margin-bottom: 1rem; font-weight: 500; }
+    h2 { color: #0f766e; font-size: 1.6rem; margin: 1.4rem 0 .6rem; border-bottom: 2px solid #ccfbf1; padding-bottom: .45rem; }
+    .callout { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: .9rem 1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+    .stepper { display: grid; gap: .7rem; margin: .8rem 0 1.4rem; }
+    .step { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; padding: .75rem .9rem; border: 1px solid #e5e7eb; border-radius: 10px; background: #f8fffd; }
+    .step-num { width: 32px; height: 32px; border-radius: 50%; background: #0f766e; color: #fff; display: grid; place-items: center; font-weight: 600; font-size: .95rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: .9rem; margin: .8rem 0 1.4rem; }
+    .card { border: 1px solid #e5e7eb; border-radius: 10px; padding: .85rem 1rem; background: #f8fffd; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .card h3 { margin: 0 0 .35rem; font-size: 1.05rem; color: #0f766e; }
+    .card p { margin: 0; color: #4b5563; font-size: .95rem; }
+    .qa-card { border: 1px solid #d1fae5; border-radius: 8px; padding: .85rem .95rem; margin: .8rem 0; background: #f8fffd; }
+    .qa-question { margin: 0 0 .6rem; font-weight: 500; }
+    .micro-list { margin: .25rem 0; padding-left: 1.2rem; }
+    .micro-list li { margin: .2rem 0; }
+    .checklist { display: grid; gap: .5rem; margin-top: .5rem; }
+    .checklist label { display: flex; gap: .55rem; align-items: start; border: 1px solid #e5e7eb; border-radius: 8px; padding: .5rem .65rem; background: #fff; }
+    .checklist input { margin-top: .2rem; }
+    table { width: 100%; border-collapse: collapse; margin: .55rem 0 .9rem; font-size: .94rem; }
+    th, td { border: 1px solid #e5e7eb; padding: .55rem; text-align: left; vertical-align: top; }
+    th { background: #f0fdfa; color: #115e59; }
+    .mcq-options label { display: block; margin: .35rem 0; }
+    .reveal-btn { border: none; background: linear-gradient(135deg,#0f766e 0%,#115e59 100%); color: #fff; padding: .5rem .85rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
+    .answer { display: none; margin-top: .65rem; padding: .7rem .8rem; border-radius: 6px; background: #ecfeff; border: 1px solid #bae6fd; }
+    .response { width: 100%; margin: .4rem 0 .6rem; border: 1px solid #d1d5db; border-radius: 6px; padding: .6rem; font-family: inherit; resize: vertical; }
+    .module-nav { display: flex; justify-content: space-between; gap: .8rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+    .module-nav a { background: linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); color: #fff; padding: .65rem 1rem; border-radius: 8px; font-weight: 500; }
+  
+    figure.visual { margin: .8rem 0 1.1rem; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #fff; }
+    figure.visual img { width: 100%; height: auto; display: block; }
+    figure.visual figcaption { padding: .7rem .9rem; font-size: .95rem; color: #334155; background: #f8fafc; border-top: 1px solid #e5e7eb; }
+    .download-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .7rem 0 .2rem; }
+    .pill { display: inline-block; padding: .45rem .75rem; border-radius: 999px; border: 1px solid #99f6e4; background: #f0fdfa; color: #0f766e; font-weight: 600; font-size: .9rem; }
+    .pill:hover { text-decoration: none; filter: brightness(0.98); }
+
+  /* Collapsible PDF previews */
+details.pdf-preview { border: 1px solid #e5e7eb; border-radius: 10px; padding: .6rem .8rem; background: #f8fafc; margin: 1rem 0; }
+details.pdf-preview summary { cursor: pointer; font-weight: 600; color: #0f766e; list-style: none; }
+details.pdf-preview summary::-webkit-details-marker { display: none; }
+details.pdf-preview[open] { background: #ffffff; }
+.pdf-icon { display: inline-block; margin-right: .4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 4: Product Methods - Drill Speed Graph</h1>
+    <p>Task 3 - Engineering in Practice</p>
+  </header>
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task3_index.html" class="back-link">&larr; Back to Task 3 Modules</a>
+
+    <h2>What This Module Teaches</h2>
+    <p>This module trains students to complete Section 2 Part A correctly without overload: enter data, create graph, interpret trend, and submit clear evidence.</p>
+    <ul class="micro-list">
+      <li>Input provided drill-speed data into a spreadsheet.</li>
+      <li>Generate a line graph for Drill Diameter vs Speed.</li>
+      <li>Read slope/trend and chart limits safely before use.</li>
+      <li>Capture a clear screenshot for submission evidence.</li>
+    </ul>
+    <div class="callout"><strong>Assessment alignment:</strong> Section 2 Part A - Drill Speed Graph, supported by Section 1 Part C graph interpretation requirements.</div>
+
+    <h2>Assessment Anchors (Student Package)</h2>
+    <div class="callout"><strong>Use this like a rehearsal:</strong> These extracts show the exact layout and wording students will face in Section 2 Part A. No hidden answers.</div>
+
+<details class="pdf-preview">
+  <summary><span class="pdf-icon" aria-hidden="true">📄</span> Preview the official Task Sheet (Section 2 Part A)</summary>
+
+  <figure class="visual">
+    <img src="assets/student_p22_drill_task.png" alt="Student Package: Section 2 Part A – Drill speed graph instructions (page 22)" loading="lazy" />
+    <figcaption><strong>What you’re being assessed on:</strong> enter the provided data, generate the line graph, take a screenshot, paste it in, then answer the questions.</figcaption>
+  </figure>
+
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p22_DrillSpeedTask.pdf" target="_blank" rel="noopener">Open p22 task sheet (PDF)</a>
+  </p>
+</details>
+
+<details class="pdf-preview">
+  <summary><span class="pdf-icon" aria-hidden="true">📄</span> Preview the Graph + Question Wording (p17–18)</summary>
+
+  <figure class="visual">
+    <img src="assets/student_p17_drill_graph_page.png" alt="Student Package: Drill speed graph context (page 17)" loading="lazy" />
+    <figcaption><strong>Graph context:</strong> drill speed vs drill diameter — this is the style of graph used in the written section.</figcaption>
+  </figure>
+
+  <figure class="visual">
+    <img src="assets/student_p18_drill_questions.png" alt="Student Package: Drill speed graph questions (page 18)" loading="lazy" />
+    <figcaption><strong>How questions are phrased:</strong> slope/gradient, reading off a value, estimating beyond the plotted range, and dealing with upper/lower limits.</figcaption>
+  </figure>
+
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p17_18_DrillGraph_Questions.pdf" target="_blank" rel="noopener">Open p17–18 graph & questions (PDF)</a>
+    <a class="pill" href="extracts/student_Task3_Module4_visual_pack.pdf" target="_blank" rel="noopener">Open full Module 4 visual pack (PDF)</a>
+  </p>
+</details>
+
+<h2>Before You Start</h2>
+    <div class="qa-card">
+      <div class="checklist">
+        <label><input type="checkbox" /> I can enter data into a spreadsheet without changing provided values.</label>
+        <label><input type="checkbox" /> I can place Drill Diameter on X-axis and Speed (RPM) on Y-axis.</label>
+        <label><input type="checkbox" /> I can save and capture a clear screenshot for evidence.</label>
+      </div>
+    </div>
+
+    <h2>Step 1: Build the Graph Exactly as Required</h2>
+    <div class="qa-card">
+      <p class="qa-question">Resource anchor: use the provided drill-speed table from the Task 3 delivery resource</p>
+      <p>Do not invent or smooth data points. Enter values exactly as supplied in the resource, then build the line graph from that raw table.</p>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Required Action</th><th>What Good Work Looks Like</th><th>Common Error to Avoid</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Enter drill-speed data in spreadsheet</td><td>All values entered exactly as provided</td><td>Editing numbers to make a smoother graph</td></tr>
+        <tr><td>Generate line graph</td><td>X-axis is Drill Diameter, Y-axis is Speed (RPM)</td><td>Axes reversed</td></tr>
+        <tr><td>Label chart</td><td>Clear title, axis labels, and units</td><td>Missing labels or unclear units</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Step 2: Interpret Trend and Limits</h2>
+    <table>
+      <thead>
+        <tr><th>If the graph shows...</th><th>Student interpretation</th><th>Safe decision</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Downward slope as diameter increases</td><td>Larger drills generally need lower RPM</td><td>Select speeds in the validated range</td></tr>
+        <tr><td>Value outside plotted data range</td><td>Upper/lower limits have been exceeded</td><td>Do not assume accuracy; verify by calculation</td></tr>
+        <tr><td>Estimate differs from calculated result</td><td>Graph estimate is approximate only</td><td>Use checked/calculated value for final answer</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Step 3: Submit Evidence That Can Be Assessed Quickly</h2>
+    <table>
+      <thead>
+        <tr><th>Evidence Item</th><th>Assessor Should Be Able to See</th><th>Final Check</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Line graph screenshot</td><td>Full chart area, readable labels, readable scales</td><td>No cropped axes, no blurry text</td></tr>
+        <tr><td>Spreadsheet file</td><td>Original entered data and chart source</td><td>File saved with clear student/task name</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) In the drill-speed chart, what should happen to RPM as drill diameter increases?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q1" /> RPM must increase</label>
+        <label><input type="radio" name="m4q1" /> RPM must decrease</label>
+        <label><input type="radio" name="m4q1" /> RPM stays fixed always</label>
+        <label><input type="radio" name="m4q1" /> RPM is unrelated to diameter</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a1">Reveal answer</button>
+      <div class="answer" id="m4a1">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) Why is a screenshot required in this assessment part?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q2" /> To replace all calculations</label>
+        <label><input type="radio" name="m4q2" /> To provide visual evidence of graph output</label>
+        <label><input type="radio" name="m4q2" /> To avoid labeling axes</label>
+        <label><input type="radio" name="m4q2" /> To reduce file size only</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a2">Reveal answer</button>
+      <div class="answer" id="m4a2">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) If estimated RPM differs from calculated RPM, best action is to:</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q3" /> Ignore the difference</label>
+        <label><input type="radio" name="m4q3" /> Check formula inputs and axis scale, then report both values</label>
+        <label><input type="radio" name="m4q3" /> Edit source data to match estimate</label>
+        <label><input type="radio" name="m4q3" /> Delete the graph</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a3">Reveal answer</button>
+      <div class="answer" id="m4a3">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) Which chart issue most directly weakens assessor confidence?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m4q4" /> Missing axis labels and units</label>
+        <label><input type="radio" name="m4q4" /> Using light background color</label>
+        <label><input type="radio" name="m4q4" /> Gridline visibility preference</label>
+        <label><input type="radio" name="m4q4" /> Font style choice</label>
+      </div>
+      <button class="reveal-btn" data-target="m4a4">Reveal answer</button>
+      <div class="answer" id="m4a4">Answer to be discussed in class.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: A classmate used spindle speed on the x-axis and diameter on the y-axis. What should be corrected?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s1">Reveal example answer</button>
+      <div class="answer" id="m4s1">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: Your chart estimate for a 20 mm bit is 500 RPM, but formula gives 450 RPM. How do you document this?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s2">Reveal example answer</button>
+      <div class="answer" id="m4s2">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: What does the gradient/slope tell you in this drill-speed relationship?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m4s3">Reveal example answer</button>
+      <div class="answer" id="m4s3">Answer to be discussed in class.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module3.html">&larr; Previous Module</a>
+      <a href="module5.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const answer = document.getElementById(button.getAttribute('data-target'));
+      if (!answer) return;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? button.dataset.revealText : 'Hide answer';
+    };
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.dataset.revealText = button.textContent;
+      button.addEventListener('click', () => toggleAnswer(button));
+    });
+  </script>
+</body>
+</html>

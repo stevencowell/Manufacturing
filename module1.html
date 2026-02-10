@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Task 3 Module 1 - Job Requirements and Specifications" />
+  <title>Module 1: Job Requirements and Specifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.65; }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%); color: #fff; padding: 2.8rem 1rem; text-align: center; }
+    main { max-width: 920px; margin: -1.4rem auto 0; padding: 1.8rem 1rem 3rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.1); }
+    .back-link { display: inline-block; margin-right: 1rem; margin-bottom: 1rem; font-weight: 500; }
+    h2 { color: #0f766e; font-size: 1.5rem; margin: 1.4rem 0 .6rem; border-bottom: 2px solid #ccfbf1; padding-bottom: .45rem; }
+    h3 { color: #0f766e; margin: 1rem 0 .4rem; }
+    p, li { font-size: .98rem; }
+    .callout { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: .9rem 1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+    .lesson-flow { background: #f8fffd; border: 1px solid #e5e7eb; border-radius: 10px; padding: .9rem 1rem; margin-bottom: 1rem; }
+    .lesson-flow strong { color: #0f766e; }
+    .chunk { border: 1px solid #e5e7eb; border-radius: 10px; padding: 1rem; margin: .8rem 0 1.2rem; background: #fbfeff; }
+    .chunk-title { font-weight: 700; color: #0f766e; margin-bottom: .35rem; }
+    .micro-list { margin: .25rem 0; padding-left: 1.2rem; }
+    .micro-list li { margin: .2rem 0; }
+    .checklist { display: grid; gap: .5rem; margin-top: .5rem; }
+    .checklist label { display: flex; gap: .55rem; align-items: start; border: 1px solid #e5e7eb; border-radius: 8px; padding: .5rem .65rem; background: #fff; }
+    .checklist input { margin-top: .2rem; }
+    details { border: 1px solid #e5e7eb; border-radius: 8px; padding: .55rem .7rem; background: #fff; margin-top: .5rem; }
+    summary { cursor: pointer; font-weight: 600; color: #0f766e; }
+    table { width: 100%; border-collapse: collapse; margin: .55rem 0 .9rem; font-size: .94rem; }
+    th, td { border: 1px solid #e5e7eb; padding: .55rem; text-align: left; vertical-align: top; }
+    th { background: #f0fdfa; color: #115e59; }
+    .qa-card { border: 1px solid #d1fae5; border-radius: 8px; padding: .85rem .95rem; margin: .8rem 0; background: #f8fffd; }
+    .qa-question { margin: 0 0 .55rem; font-weight: 500; }
+    .response { width: 100%; margin: .4rem 0 .6rem; border: 1px solid #d1d5db; border-radius: 6px; padding: .6rem; font-family: inherit; resize: vertical; }
+    .mcq-options label { display: block; margin: .3rem 0; }
+    .reveal-btn { border: none; background: linear-gradient(135deg,#0f766e 0%,#115e59 100%); color: #fff; padding: .5rem .85rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
+    .answer { display: none; margin-top: .6rem; padding: .65rem .75rem; border-radius: 6px; background: #ecfeff; border: 1px solid #bae6fd; }
+    .module-nav { display: flex; justify-content: space-between; gap: .8rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+    .module-nav a { background: linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); color: #fff; padding: .65rem 1rem; border-radius: 8px; font-weight: 500; }
+    .project-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: .8rem; margin-top: .5rem; }
+    .project-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: .7rem .75rem; background: #fff; }
+    .project-card strong { color: #0f766e; }
+    .project-card { transition: border-color .2s ease, box-shadow .2s ease; }
+    .project-card:hover { border-color: #14b8a6; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+    .project-title { margin-bottom: .45rem; }
+    .project-actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+    .project-btn { display: inline-block; padding: .28rem .55rem; border-radius: 6px; border: 1px solid #99f6e4; background: #fff; color: #0f766e; font-weight: 500; text-decoration: none; font-size: .88rem; }
+    .project-btn:hover { text-decoration: none; background: #ecfeff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 1: Job Requirements and Specifications</h1>
+    <p>Task 3 - Engineering in Practice</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task3_index.html" class="back-link">&larr; Back to Task 3 Modules</a>
+
+    <h2>What This Module Teaches</h2>
+    <p>By the end of this module, students should be able to:</p>
+    <ul class="micro-list">
+      <li>Read a plan and identify key work requirements.</li>
+      <li>Select a suitable machine and tool set for the required job.</li>
+      <li>Explain the plan and setup choices clearly before practical work begins.</li>
+    </ul>
+
+    <div class="callout"><strong>Assessment alignment:</strong> Section 3 Part A planning criteria, mainly <strong>PC1</strong> (interpret project requirements) and <strong>PC3</strong> (select appropriate machine/tools).</div>
+
+    <div class="lesson-flow">
+      <strong>Lesson Flow (30-40 mins):</strong>
+      <p>1) Understand what to extract from plans. 2) Work through one guided example. 3) Complete one short practice task. 4) Check understanding with low-pressure questions.</p>
+    </div>
+
+    <h2>Before You Start</h2>
+    <div class="chunk">
+      <div class="chunk-title">Quick readiness check</div>
+      <div class="checklist">
+        <label><input type="checkbox" /> I can identify the project output from a drawing/specification.</label>
+        <label><input type="checkbox" /> I can find key dimensions and tolerance notes.</label>
+        <label><input type="checkbox" /> I can explain why machine/tool selection must match the plan.</label>
+      </div>
+    </div>
+
+    <h2>Delivery Resource Project Pack (Use Before Setup)</h2>
+    <div class="chunk">
+      <div class="chunk-title">Project options found in the delivery resource</div>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-title"><strong>Project 1:</strong> Soft Faced Hammer</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_1_Soft_Faced_Hammer%20(1).pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_1_Soft_Faced_Hammer%20(1).pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 2:</strong> Ball Pein Hammer 1</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_2_Ball_Pein_Hammer_1.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_2_Ball_Pein_Hammer_1.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 3:</strong> Ball Pein Hammer 2</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_3_Ball_Pein_Hammer_2.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_3_Ball_Pein_Hammer_2.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 4:</strong> Plumb Bob 1</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_4_Plumb_Bob_1_FIXED.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_4_Plumb_Bob_1_FIXED.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 5:</strong> Plumb Bob 2</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_5_Plumb_Bob_2.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_5_Plumb_Bob_2.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 6:</strong> Tack Hammer 1</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_6_Tack_Hammer_1_FIXED.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_6_Tack_Hammer_1_FIXED.pdf" download>Download</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-title"><strong>Project 7:</strong> Tack Hammer 2</div>
+          <div class="project-actions">
+            <a class="project-btn" href="Plans/Project_7_Tack_Hammer_2.pdf" target="_blank" rel="noopener noreferrer">Open</a>
+            <a class="project-btn" href="Plans/Project_7_Tack_Hammer_2.pdf" download>Download</a>
+          </div>
+        </div>
+      </div>
+      <p>Before choosing machine/tooling, students must identify the selected project, drawing number, sheet number, and scale from the project pack title block.</p>
+      <table>
+        <thead>
+          <tr><th>Title Block Field</th><th>Example from Delivery Resource</th><th>How It Helps PC1/PC3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Drawing number</td><td>DWG NO: 100-20-1 / 100-20-2</td><td>Confirms exactly which component drawing is being interpreted</td></tr>
+          <tr><td>Sheet number</td><td>SHT 1 OF 2 / SHT 2 OF 2</td><td>Prevents missing features when planning sequence</td></tr>
+          <tr><td>Scale</td><td>SCALE: HALF / FULL</td><td>Prevents direct measurement mistakes from printed views</td></tr>
+          <tr><td>Revision</td><td>REV NO: D</td><td>Ensures students are not using outdated dimensions</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Step 1: Read the Plan for Decision-Making Information</h2>
+    <div class="chunk">
+      <div class="chunk-title">What to extract (every time)</div>
+      <table>
+        <thead>
+          <tr><th>Plan Element</th><th>Why It Matters</th><th>What Students Should Say</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Project/component to be made</td><td>Defines operation sequence</td><td>"We are producing [component name] in this task."</td></tr>
+          <tr><td>Dimensions and tolerances</td><td>Sets quality target and checking method</td><td>"Critical dimensions are __ with tolerance __."</td></tr>
+          <tr><td>Material type/size</td><td>Affects machine and tool choice</td><td>"Material is __ so we need __ setup."</td></tr>
+          <tr><td>Required process steps</td><td>Prevents wrong setup order</td><td>"Sequence is setup, machine, verify, adjust if needed."</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary>Need help reading plans?</summary>
+        <p>Ask students to highlight only three items first: final part name, one critical dimension, and one tolerance note. Add detail after that.</p>
+      </details>
+    </div>
+
+    <div class="chunk">
+      <div class="chunk-title">Assessor-language alignment (PC1)</div>
+      <p>Use this exact prompt set before practical work:</p>
+      <ul class="micro-list">
+        <li>Source reviewed: <strong>project plan drawings</strong> and/or <strong>CAD drawings</strong>.</li>
+        <li>Project plan information identified:
+          <ul class="micro-list">
+            <li>project to be made</li>
+            <li>machines required</li>
+            <li>tools and equipment required</li>
+            <li>machinery processes required</li>
+            <li>materials required</li>
+            <li>allowable tolerances</li>
+          </ul>
+        </li>
+        <li>Verbally repeat the above to teacher before setup.</li>
+      </ul>
+    </div>
+
+    <h2>Step 2: Match Machine and Tools to the Requirement</h2>
+    <div class="chunk">
+      <div class="chunk-title">Decision rule students can remember</div>
+      <p><strong>Operation needed</strong> -> <strong>Machine suited</strong> -> <strong>Tooling suited</strong> -> <strong>Safety controls checked</strong>.</p>
+      <table>
+        <thead>
+          <tr><th>If the task requires...</th><th>Likely machine decision</th><th>Likely tool/setup decision</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Precision rotational cutting</td><td>Lathe</td><td>Correct cutting tool, secure workholding, guard setup</td></tr>
+          <tr><td>Flat-face milling operations</td><td>Milling machine</td><td>Appropriate cutter, vice setup, guard engagement</td></tr>
+          <tr><td>Hole operations to specified size</td><td>Drill/milling setup</td><td>Correct bit, secure clamping, speed check</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary>Common student error</summary>
+        <p>Choosing tooling based on convenience instead of plan requirement. Re-anchor decisions to drawing notes and tolerance demands.</p>
+      </details>
+    </div>
+
+    <div class="chunk">
+      <div class="chunk-title">Assessor-language alignment (PC3)</div>
+      <p>Before setup, students should state:</p>
+      <ul class="micro-list">
+        <li>which <strong>machine</strong> they are planning to set up for designated work activities</li>
+        <li>which <strong>tools</strong> they are planning to set up on the identified machine</li>
+      </ul>
+    </div>
+
+    <h2>Worked Example (Teacher-Led)</h2>
+    <div class="chunk">
+      <div class="chunk-title">Scenario</div>
+      <p>A student is assigned a project with tight dimensional tolerance on a machined feature and must explain setup choices before starting.</p>
+      <div class="qa-card">
+        <p class="qa-question">Model response students should aim for:</p>
+        <button class="reveal-btn" data-target="m1model">Reveal model answer</button>
+        <div class="answer" id="m1model">"The project requires [feature] at [dimension] with tolerance [value]. I selected [machine] because it gives control for this operation. Tooling is [tool], workholding is [method], and I will check dimensions after the first pass before final machining."</div>
+      </div>
+    </div>
+
+    <h2>Guided Practice (Student)</h2>
+    <div class="qa-card">
+      <p class="qa-question">Practice prompt: Write a short pre-start statement for a teacher that covers project, machine, tooling, and one tolerance/check point.</p>
+      <textarea class="response" rows="5" placeholder="Write your pre-start statement here."></textarea>
+      <button class="reveal-btn" data-target="m1practice">Reveal example structure</button>
+      <div class="answer" id="m1practice">1) Project output, 2) key dimension/tolerance, 3) selected machine/tooling, 4) safety control, 5) how you will verify spec before completion.</div>
+    </div>
+
+    <h2>Low-Load Check-in Questions</h2>
+
+    <div class="qa-card">
+      <p class="qa-question">1) What is the first source for job requirements?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q1" /> A classmate's setup</label>
+        <label><input type="radio" name="m1q1" /> Project plan/specification</label>
+        <label><input type="radio" name="m1q1" /> Last term notes only</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a1">Reveal answer</button>
+      <div class="answer" id="m1a1">Project plan/specification.</div>
+    </div>
+
+    <div class="qa-card">
+      <p class="qa-question">2) Why do students confirm requirements verbally before practical work?</p>
+      <textarea class="response" rows="3" placeholder="Short answer"></textarea>
+      <button class="reveal-btn" data-target="m1a2">Reveal example answer</button>
+      <div class="answer" id="m1a2">It proves understanding, catches errors early, and supports safe/accurate setup decisions.</div>
+    </div>
+
+    <div class="qa-card">
+      <p class="qa-question">3) If a tolerance is tighter than expected, what should change first?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m1q3" /> Nothing - keep same setup</label>
+        <label><input type="radio" name="m1q3" /> Setup/check strategy and machine-tool choice</label>
+        <label><input type="radio" name="m1q3" /> Only worksheet formatting</label>
+      </div>
+      <button class="reveal-btn" data-target="m1a3">Reveal answer</button>
+      <div class="answer" id="m1a3">Setup/check strategy and machine-tool choice.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="task3_index.html">&larr; Task 3 Home</a>
+      <a href="module2.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const answer = document.getElementById(button.getAttribute('data-target'));
+      if (!answer) return;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? button.dataset.revealText : 'Hide answer';
+    };
+
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.dataset.revealText = button.textContent;
+      button.addEventListener('click', () => toggleAnswer(button));
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Task 3 Module 3 - Computer Operations and Data Outputs" />
+  <title>Module 3: Computer Operations and Data Outputs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.65; }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%); color: #fff; padding: 2.8rem 1rem; text-align: center; }
+    main { max-width: 920px; margin: -1.4rem auto 0; padding: 1.8rem 1rem 3rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.1); }
+    .back-link { display: inline-block; margin-right: 1rem; margin-bottom: 1rem; font-weight: 500; }
+    h2 { color: #0f766e; font-size: 1.5rem; margin: 1.4rem 0 .6rem; border-bottom: 2px solid #ccfbf1; padding-bottom: .45rem; }
+    .callout { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: .9rem 1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+    .lesson-flow { background: #f8fffd; border: 1px solid #e5e7eb; border-radius: 10px; padding: .9rem 1rem; margin-bottom: 1rem; }
+    .chunk { border: 1px solid #e5e7eb; border-radius: 10px; padding: 1rem; margin: .8rem 0 1.2rem; background: #fbfeff; }
+    .chunk-title { font-weight: 700; color: #0f766e; margin-bottom: .35rem; }
+    .micro-list { margin: .25rem 0; padding-left: 1.2rem; }
+    .micro-list li { margin: .2rem 0; }
+    .checklist { display: grid; gap: .5rem; margin-top: .5rem; }
+    .checklist label { display: flex; gap: .55rem; align-items: start; border: 1px solid #e5e7eb; border-radius: 8px; padding: .5rem .65rem; background: #fff; }
+    .checklist input { margin-top: .2rem; }
+    details { border: 1px solid #e5e7eb; border-radius: 8px; padding: .55rem .7rem; background: #fff; margin-top: .5rem; }
+    summary { cursor: pointer; font-weight: 600; color: #0f766e; }
+    details.pdf-preview { border: 1px solid #e5e7eb; border-radius: 10px; padding: .6rem .8rem; background: #f8fafc; margin-top: .6rem; }
+    details.pdf-preview[open] { background: #ffffff; }
+    details.pdf-preview summary { cursor: pointer; font-weight: 600; color: #0f766e; }
+    details.pdf-preview summary::marker { content: ""; }
+
+    table { width: 100%; border-collapse: collapse; margin: .55rem 0 .9rem; font-size: .94rem; }
+    th, td { border: 1px solid #e5e7eb; padding: .55rem; text-align: left; vertical-align: top; }
+    th { background: #f0fdfa; color: #115e59; }
+    .qa-card { border: 1px solid #d1fae5; border-radius: 8px; padding: .85rem .95rem; margin: .8rem 0; background: #f8fffd; }
+    .qa-question { margin: 0 0 .55rem; font-weight: 500; }
+    .response { width: 100%; margin: .4rem 0 .6rem; border: 1px solid #d1d5db; border-radius: 6px; padding: .6rem; font-family: inherit; resize: vertical; }
+    .mcq-options label { display: block; margin: .3rem 0; }
+    .reveal-btn { border: none; background: linear-gradient(135deg,#0f766e 0%,#115e59 100%); color: #fff; padding: .5rem .85rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
+    .answer { display: none; margin-top: .6rem; padding: .65rem .75rem; border-radius: 6px; background: #ecfeff; border: 1px solid #bae6fd; }
+    .module-nav { display: flex; justify-content: space-between; gap: .8rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+    .module-nav a { background: linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); color: #fff; padding: .65rem 1rem; border-radius: 8px; font-weight: 500; }
+    .tag { display: inline-block; border: 1px solid #99f6e4; background: #f0fdfa; color: #0f766e; border-radius: 999px; padding: .2rem .55rem; font-size: .82rem; margin-right: .35rem; }
+  
+    figure.visual { margin: .8rem 0 1.1rem; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; background: #fff; }
+    figure.visual img { width: 100%; height: auto; display: block; }
+    figure.visual figcaption { padding: .7rem .9rem; font-size: .95rem; color: #334155; background: #f8fafc; border-top: 1px solid #e5e7eb; }
+    .download-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: .7rem 0 .2rem; }
+    .pill { display: inline-block; padding: .45rem .75rem; border-radius: 999px; border: 1px solid #99f6e4; background: #f0fdfa; color: #0f766e; font-weight: 600; font-size: .9rem; }
+    .pill:hover { text-decoration: none; filter: brightness(0.98); }
+    
+</style>
+</head>
+<body>
+  <header>
+    <h1>Module 3: Computer Operations and Data Outputs</h1>
+    <p>Task 3 - Engineering in Practice</p>
+  </header>
+
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task3_index.html" class="back-link">&larr; Back to Task 3 Modules</a>
+
+    <h2>What This Module Teaches</h2>
+    <p>This module trains students to complete Task 3 computer operations in a controlled, step-by-step way.</p>
+    <ul class="micro-list">
+      <li>Use workplace computing technology and software for machining tasks.</li>
+      <li>Interpret graph/chart scales, trends, limits, gradients, and lines of best fit.</li>
+      <li>Produce submission-ready digital evidence for Section 2 Part A, B, and C.</li>
+    </ul>
+
+    <div class="callout"><strong>Assessment alignment:</strong> Section 1 Part C (Computer Operations), plus Section 2 outputs: Part A Drill Speed Graph, Part B CAD, Part C Material List.</div>
+
+    <div class="lesson-flow">
+      <strong>Lesson Flow (35-45 mins):</strong>
+      <p>1) Confirm required computer skills. 2) Learn graph interpretation rules. 3) Build a clean digital evidence pack. 4) Complete short check-ins.</p>
+    </div>
+
+    <h2>Before You Start</h2>
+    <div class="chunk">
+      <div class="chunk-title">Quick readiness check</div>
+      <div class="checklist">
+        <label><input type="checkbox" /> I can access, input, and store data using a computer.</label>
+        <label><input type="checkbox" /> I can explain what a graph trend and slope means in machining context.</label>
+        <label><input type="checkbox" /> I can create and save evidence files for spreadsheet and CAD tasks.</label>
+      </div>
+    </div>
+
+    <h2>Step 1: Use the Right Computing Tools for the Right Job</h2>
+    <div class="chunk">
+      <div class="chunk-title">Assessor-language focus (Section 1 Part C)</div>
+      <p>Students must show knowledge of:</p>
+      <ul class="micro-list">
+        <li>functions and capabilities of computing technology used in the workplace</li>
+        <li>functions of software applications</li>
+        <li>use and features of data outputs</li>
+      </ul>
+      <table>
+        <thead>
+          <tr><th>Technology / Software</th><th>Task 3 Use</th><th>Assessed In</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Spreadsheet (Excel or equivalent)</td><td>Enter drill-speed data, generate line graph, build material list and cost graph</td><td>Section 2 Part A and Part C</td></tr>
+          <tr><td>CAD software</td><td>Create 3D model, pictorial view, 3 orthographic views, dimensioned output</td><td>Section 2 Part B</td></tr>
+          <tr><td>General computer workflow</td><td>Access data, input data, store files, capture screenshots, submit evidence</td><td>Section 1 Part C and all Section 2 parts</td></tr>
+        </tbody>
+      </table>
+      <details>
+        <summary>Teacher prompt for low-load coaching</summary>
+        <p>Ask: "What program are you using, what file are you producing, and where are you saving it?" before students begin each digital task.</p>
+      </details>
+    </div>
+
+    <h2>Assessment Visual Anchors (Student Version)</h2>
+<div class="callout"><strong>Purpose:</strong> These are extracts from the official <em>Student Package</em> so you can see exactly how the assessment will appear (no answers shown).</div>
+
+
+<div class="chunk">
+  <div class="chunk-title">Section 1 Part C – Computer Operations</div>
+  <details class="pdf-preview">
+    <summary>📄 Preview assessment extract</summary>
+    <figure class="visual">
+    <img src="assets/student_p16_computer_ops.png" alt="Student Package - Section 1 Part C Computer Operations (page 16)" loading="lazy" />
+    <figcaption>Match computing technology and data outputs to their purpose in machining.</figcaption>
+  </figure>
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p16_ComputerOperations.pdf" target="_blank" rel="noopener">Open page 16 (PDF)</a>
+  </p>
+  </details>
+</div>
+
+<div class="chunk">
+  <div class="chunk-title">Drill Speed Graph – Trend, slope, and limits</div>
+  <details class="pdf-preview">
+    <summary>📄 Preview assessment extract</summary>
+    <figure class="visual">
+    <img src="assets/student_p17_drill_graph.png" alt="Student Package - Drill Speed graph (page 17)" loading="lazy" />
+    <figcaption>Students interpret the slope/gradient and estimate speeds from this exact graph.</figcaption>
+  </figure>
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p17_18_DrillGraph.pdf" target="_blank" rel="noopener">Open pages 17–18 (PDF)</a>
+  </p>
+  </details>
+</div>
+
+<div class="chunk">
+  <div class="chunk-title">Lines of Best Fit – Visual procedure</div>
+  <details class="pdf-preview">
+    <summary>📄 Preview assessment extract</summary>
+    <figure class="visual">
+    <img src="assets/student_p19_best_fit.png" alt="Student Package - Lines of best fit procedure (page 19)" loading="lazy" />
+    <figcaption>Blank chart → plot points → draw oval → draw the best-fit line through the middle.</figcaption>
+  </figure>
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p19_BestFit.pdf" target="_blank" rel="noopener">Open page 19 (PDF)</a>
+  </p>
+  </details>
+</div>
+
+<div class="chunk">
+  <div class="chunk-title">Section 2 Part A – Drill Speed task instructions</div>
+  <details class="pdf-preview">
+    <summary>📄 Preview assessment extract</summary>
+    <figure class="visual">
+    <img src="assets/student_p22_drill_task.png" alt="Student Package - Section 2 Part A Drill speed task instructions (page 22)" loading="lazy" />
+    <figcaption>Spreadsheet entry → generate line graph → screenshot → answer questions.</figcaption>
+  </figure>
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p22_DrillTask.pdf" target="_blank" rel="noopener">Open page 22 (PDF)</a>
+  </p>
+  </details>
+</div>
+
+<div class="chunk">
+  <div class="chunk-title">Section 2 Part C – Material List template</div>
+  <details class="pdf-preview">
+    <summary>📄 Preview assessment extract</summary>
+    <figure class="visual">
+    <img src="assets/student_p24_material_list.png" alt="Student Package - Section 2 Part C Material list template (page 24)" loading="lazy" />
+    <figcaption>Students build a computer-generated material list and a pie/column graph of total cost per item.</figcaption>
+  </figure>
+  <p class="download-row">
+    <a class="pill" href="extracts/student_Task3_p24_25_MaterialList.pdf" target="_blank" rel="noopener">Open pages 24–25 (PDF)</a>
+    <a class="pill" href="extracts/student_Task3_Module3_visual_extract_pack.pdf" target="_blank" rel="noopener">Open full visual pack (PDF)</a>
+  </p>
+  </details>
+</div>
+
+<h2>Step 2: Interpret Graphs and Charts Correctly</h2>
+    <div class="chunk">
+      <div class="chunk-title">Required interpretation skills (Section 1 Part C)</div>
+      <ul class="micro-list">
+        <li>scales applicable to graph/chart axes</li>
+        <li>types of charts/graphs used in machining work</li>
+        <li>upper and lower limits of acceptability for chart data</li>
+        <li>trends shown by graphs/charts and by slope/gradient</li>
+        <li>action to take when trends occur or limits are approached</li>
+        <li>procedures for drawing a line of best fit</li>
+      </ul>
+      <table>
+        <thead>
+          <tr><th>If the data output shows...</th><th>Student conclusion</th><th>Correct next action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Downward line trend for drill diameter vs speed</td><td>Larger diameter generally requires lower speed</td><td>Use value in safe range and verify against machine capability</td></tr>
+          <tr><td>Data point outside upper/lower chart limits</td><td>Graph may not support valid interpretation there</td><td>Use validated calculation/additional data before machining</td></tr>
+          <tr><td>Scattered points with no clear line</td><td>Potential issue with data quality or method</td><td>Check entries, units, and redraw best-fit line</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Step 3: Build Section 2 Digital Evidence Correctly</h2>
+    <div class="chunk">
+      <div class="chunk-title">Submission checklist (Part A, B, C)</div>
+      <table>
+        <thead>
+          <tr><th>Task 3 Part</th><th>Required Evidence</th><th>Quality Check Before Submission</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Section 2 Part A - Drill Speed Graph</td><td>Spreadsheet data entry + generated line graph + screenshot</td><td>Axes labelled correctly, trend readable, screenshot clear</td></tr>
+          <tr><td>Section 2 Part B - CAD</td><td>3D model + pictorial view + 3 orthographic views with dimensions and title block + screenshot</td><td>Views complete, dimensions visible, layout follows AS1100 requirement</td></tr>
+          <tr><td>Section 2 Part C - Material List</td><td>Computer-generated material list + pie or column graph of total cost per item</td><td>Values are accurate, item totals match graph, file is readable</td></tr>
+        </tbody>
+      </table>
+      <p><span class="tag">From delivery resource drawings</span>Use drawing metadata (for example: <strong>DWG NO</strong>, <strong>SHT</strong>, <strong>SCALE</strong>, <strong>REV</strong>) in filenames and screenshot captions so assessors can trace evidence to the selected project quickly.</p>
+      <table>
+        <thead>
+          <tr><th>Evidence File</th><th>Recommended Naming Pattern</th><th>Reason</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Part A Drill Graph screenshot</td><td>`[Student]_[Project]_PartA_DrillGraph_[REV].png`</td><td>Ties chart evidence to the correct project revision</td></tr>
+          <tr><td>Part B CAD output</td><td>`[Student]_[DWGNO]_SHT[No]_PartB_CAD.pdf`</td><td>Aligns CAD evidence with drawing number and sheet</td></tr>
+          <tr><td>Part C Material list</td><td>`[Student]_[Project]_PartC_MaterialList.xlsx`</td><td>Keeps cost/formula evidence linked to project choice</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Worked Example (Assessor-style trend question)</h2>
+    <div class="chunk">
+      <div class="chunk-title">Scenario</div>
+      <p>A line graph shows drill diameter on the X-axis and spindle speed RPM on the Y-axis. The line slopes down as diameter increases.</p>
+      <div class="qa-card">
+        <button class="reveal-btn" data-target="m3ex1">Reveal model answer</button>
+        <div class="answer" id="m3ex1">The trend indicates speed should decrease as drill diameter increases. Before applying the value, check it is within chart limits and machine operating range.</div>
+      </div>
+    </div>
+
+    <h2>Guided Practice (Student)</h2>
+    <div class="qa-card">
+      <p class="qa-question">Practice prompt: Write a 4-step "digital evidence routine" you will follow for Part A, Part B, and Part C before submitting Task 3 files.</p>
+      <textarea class="response" rows="5" placeholder="Write your routine here."></textarea>
+      <button class="reveal-btn" data-target="m3prac">Reveal example structure</button>
+      <div class="answer" id="m3prac">1) Build output in correct software. 2) Verify labels/dimensions/values. 3) Save with clear file name and location. 4) Capture clear screenshot and check readability.</div>
+    </div>
+
+    <h2>Low-Load Check-in Questions</h2>
+
+    <div class="qa-card">
+      <p class="qa-question">1) Which software type is used for Task 3 Part A and Part C?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q1" /> Spreadsheet software</label>
+        <label><input type="radio" name="m3q1" /> Video editing software</label>
+        <label><input type="radio" name="m3q1" /> PDF reader only</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a1">Reveal answer</button>
+      <div class="answer" id="m3a1">Spreadsheet software.</div>
+    </div>
+
+    <div class="qa-card">
+      <p class="qa-question">2) What is the purpose of a line of best fit when data points are spread?</p>
+      <textarea class="response" rows="3" placeholder="Short answer"></textarea>
+      <button class="reveal-btn" data-target="m3a2">Reveal example answer</button>
+      <div class="answer" id="m3a2">It shows the overall trend direction so students can make more reliable estimates between known points.</div>
+    </div>
+
+    <div class="qa-card">
+      <p class="qa-question">3) What should a student do if a required value is outside graph limits?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m3q3" /> Guess and continue machining</label>
+        <label><input type="radio" name="m3q3" /> Stop and verify using additional calculation or valid data</label>
+        <label><input type="radio" name="m3q3" /> Ignore the limits because they are optional</label>
+      </div>
+      <button class="reveal-btn" data-target="m3a3">Reveal answer</button>
+      <div class="answer" id="m3a3">Stop and verify using additional calculation or valid data.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module2.html">&larr; Previous Module</a>
+      <a href="module4.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const answer = document.getElementById(button.getAttribute('data-target'));
+      if (!answer) return;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? button.dataset.revealText : 'Hide answer';
+    };
+
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.dataset.revealText = button.textContent;
+      button.addEventListener('click', () => toggleAnswer(button));
+    });
+  </script>
+</body>
+</html>

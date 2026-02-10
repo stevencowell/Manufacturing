@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Task 3 Module 5 - Product Methods: CAD and Material List" />
+  <title>Module 5: Product Methods - CAD and Material List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Roboto', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.65; }
+    a { color: #0f766e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%); color: #fff; padding: 2.8rem 1rem; text-align: center; }
+    main { max-width: 900px; margin: -1.4rem auto 0; padding: 1.8rem 1rem 3rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.1); }
+    .back-link { display: inline-block; margin-right: 1rem; margin-bottom: 1rem; font-weight: 500; }
+    h2 { color: #0f766e; font-size: 1.6rem; margin: 1.4rem 0 .6rem; border-bottom: 2px solid #ccfbf1; padding-bottom: .45rem; }
+    .callout { background: #f0fdfa; border-left: 4px solid #14b8a6; padding: .9rem 1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: .9rem; margin: .8rem 0 1.4rem; }
+    .card { border: 1px solid #e5e7eb; border-radius: 10px; padding: .85rem 1rem; background: #f8fffd; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .card h3 { margin: 0 0 .35rem; font-size: 1.05rem; color: #0f766e; }
+    .card p { margin: 0; color: #4b5563; font-size: .95rem; }
+    .stepper { display: grid; gap: .7rem; margin: .8rem 0 1.4rem; }
+    .step { display: grid; grid-template-columns: auto 1fr; gap: .8rem; align-items: start; padding: .75rem .9rem; border: 1px solid #e5e7eb; border-radius: 10px; background: #f8fffd; }
+    .step-num { width: 32px; height: 32px; border-radius: 50%; background: #0f766e; color: #fff; display: grid; place-items: center; font-weight: 600; font-size: .95rem; }
+    .qa-card { border: 1px solid #d1fae5; border-radius: 8px; padding: .85rem .95rem; margin: .8rem 0; background: #f8fffd; }
+    .qa-question { margin: 0 0 .6rem; font-weight: 500; }
+    .micro-list { margin: .25rem 0; padding-left: 1.2rem; }
+    .micro-list li { margin: .2rem 0; }
+    .checklist { display: grid; gap: .5rem; margin-top: .5rem; }
+    .checklist label { display: flex; gap: .55rem; align-items: start; border: 1px solid #e5e7eb; border-radius: 8px; padding: .5rem .65rem; background: #fff; }
+    .checklist input { margin-top: .2rem; }
+    table { width: 100%; border-collapse: collapse; margin: .55rem 0 .9rem; font-size: .94rem; }
+    th, td { border: 1px solid #e5e7eb; padding: .55rem; text-align: left; vertical-align: top; }
+    th { background: #f0fdfa; color: #115e59; }
+    .mcq-options label { display: block; margin: .35rem 0; }
+    .reveal-btn { border: none; background: linear-gradient(135deg,#0f766e 0%,#115e59 100%); color: #fff; padding: .5rem .85rem; border-radius: 6px; font-weight: 500; cursor: pointer; }
+    .answer { display: none; margin-top: .65rem; padding: .7rem .8rem; border-radius: 6px; background: #ecfeff; border: 1px solid #bae6fd; }
+    .response { width: 100%; margin: .4rem 0 .6rem; border: 1px solid #d1d5db; border-radius: 6px; padding: .6rem; font-family: inherit; resize: vertical; }
+    .module-nav { display: flex; justify-content: space-between; gap: .8rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+    .module-nav a { background: linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); color: #fff; padding: .65rem 1rem; border-radius: 8px; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Module 5: Product Methods - CAD and Material List</h1>
+    <p>Task 3 - Engineering in Practice</p>
+  </header>
+  <main>
+    <a href="../index.html" class="back-link">&larr; Manufacturing Home</a>
+    <a href="task3_index.html" class="back-link">&larr; Back to Task 3 Modules</a>
+
+    <h2>What This Module Teaches</h2>
+    <p>This module breaks Section 2 into two clear production lanes: CAD evidence (Part B) and spreadsheet material evidence (Part C).</p>
+    <ul class="micro-list">
+      <li>Create CAD outputs that match drawing and standards requirements.</li>
+      <li>Create a computer-generated material list with cost totals.</li>
+      <li>Produce a pie or column chart showing total cost per item.</li>
+      <li>Submit screenshots/files that are easy for assessors to mark.</li>
+    </ul>
+    <div class="callout"><strong>Assessment alignment:</strong> Section 2 Part B - Computer Aided Drawing (CAD), and Section 2 Part C - Material List.</div>
+
+    <h2>Before You Start</h2>
+    <div class="qa-card">
+      <div class="checklist">
+        <label><input type="checkbox" /> I know which trainer-selected project I am producing evidence for.</label>
+        <label><input type="checkbox" /> I can access CAD software and spreadsheet software.</label>
+        <label><input type="checkbox" /> I can save files and screenshots in a clear folder structure.</label>
+      </div>
+    </div>
+
+    <h2>Step 1: Complete Section 2 Part B (CAD)</h2>
+    <table>
+      <thead>
+        <tr><th>Required CAD Output</th><th>What Must Be Included</th><th>Quality Check</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3D model</td><td>One complete model of the trainer-selected project</td><td>Model geometry matches project plan</td></tr>
+        <tr><td>Drawing views</td><td>One pictorial view and three orthographic views</td><td>All views readable and consistent</td></tr>
+        <tr><td>Dimensions and format</td><td>Overall dimensions, AS1100-style layout, completed title block</td><td>Dimensions visible and title block complete</td></tr>
+        <tr><td>Evidence capture</td><td>Save file and capture screenshot of the 3D model/output</td><td>Screenshot is clear and not cropped</td></tr>
+        </tbody>
+      </table>
+    <div class="qa-card">
+      <p class="qa-question">Use delivery-resource references as your CAD fidelity checks</p>
+      <ul class="micro-list">
+        <li>Project 1 reference form: compare your model proportions, transitions, and handle profile.</li>
+        <li>Angle view A check: confirm shoulder transitions and knurl zone placement.</li>
+        <li>Angle view B check: verify taper continuity and head-to-handle join geometry.</li>
+      </ul>
+      <p>Do not model by guesswork. Work from the selected project drawing and use reference photos only to validate geometry quality and finish intent.</p>
+    </div>
+
+    <h2>Step 2: Complete Section 2 Part C (Material List)</h2>
+    <table>
+      <thead>
+        <tr><th>Required Spreadsheet Output</th><th>What Must Be Included</th><th>Quality Check</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Computer-generated material list</td><td>Item description, dimensions, quantity, totals and cost fields</td><td>Units and quantities are consistent</td></tr>
+        <tr><td>Formula usage</td><td>Use formula calculations (including Length x Quantity where required)</td><td>Cell references are correct, no manual overrides</td></tr>
+        <tr><td>Cost graph</td><td>Pie or column graph showing total cost of each item</td><td>Graph values match list totals exactly</td></tr>
+        </tbody>
+      </table>
+    <div class="qa-card">
+      <p class="qa-question">Project-to-material traceability step (from delivery resource)</p>
+      <p>Drawing snippet example: extract dimensions first, then build itemized material rows.</p>
+      <table>
+        <thead>
+          <tr><th>Material List Field</th><th>Source in Plan</th><th>Check Before Submit</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Part name/code</td><td>Drawing title block + feature callouts</td><td>Matches selected project and sheet</td></tr>
+          <tr><td>Dimensions</td><td>Dimension strings and section views</td><td>Units are consistent (mm vs m)</td></tr>
+          <tr><td>Quantity</td><td>Feature repeats and assembly requirement</td><td>Formula reflects total required pieces</td></tr>
+          <tr><td>Total length/cost</td><td>Computed in spreadsheet</td><td>Graph values exactly match computed totals</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Step 3: Final Evidence Pack Check</h2>
+    <table>
+      <thead>
+        <tr><th>Submission Item</th><th>Assessor Should See Quickly</th><th>Final Student Check</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CAD file + screenshot</td><td>3D model and required views/dimensions for the selected project</td><td>File opens correctly; screenshot is legible</td></tr>
+        <tr><td>Material list file</td><td>Computer-generated calculations and complete item data</td><td>Totals and formulas verified</td></tr>
+        <tr><td>Cost graph image/output</td><td>Total cost by item shown as pie or column graph</td><td>Graph labels and values are readable</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Knowledge Check: Multiple Choice</h2>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">1) Which output set is required for CAD evidence in Task 3?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q1" /> 3D model only</label>
+        <label><input type="radio" name="m5q1" /> One pictorial plus three orthographic views with dimensions</label>
+        <label><input type="radio" name="m5q1" /> Hand sketch only</label>
+        <label><input type="radio" name="m5q1" /> Photo of machine only</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a1">Reveal answer</button>
+      <div class="answer" id="m5a1">One pictorial plus three orthographic views with dimensions.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">2) In the material list, which formula is explicitly required?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q2" /> Cost + Quantity</label>
+        <label><input type="radio" name="m5q2" /> Length x Quantity</label>
+        <label><input type="radio" name="m5q2" /> Width x Height x Density</label>
+        <label><input type="radio" name="m5q2" /> Diameter divided by feed</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a2">Reveal answer</button>
+      <div class="answer" id="m5a2">Length x Quantity.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">3) Which chart type is acceptable for the material-list cost output?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q3" /> Radar chart only</label>
+        <label><input type="radio" name="m5q3" /> Pie or column chart</label>
+        <label><input type="radio" name="m5q3" /> Scatter chart only</label>
+        <label><input type="radio" name="m5q3" /> None required</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a3">Reveal answer</button>
+      <div class="answer" id="m5a3">Pie or column chart.</div>
+    </div>
+
+    <div class="qa-card mcq-card">
+      <p class="qa-question">4) Why is title block completion important in CAD submission?</p>
+      <div class="mcq-options">
+        <label><input type="radio" name="m5q4" /> It is optional decoration</label>
+        <label><input type="radio" name="m5q4" /> It provides document identity and traceability</label>
+        <label><input type="radio" name="m5q4" /> It increases rendering speed</label>
+        <label><input type="radio" name="m5q4" /> It replaces dimensions</label>
+      </div>
+      <button class="reveal-btn" data-target="m5a4">Reveal answer</button>
+      <div class="answer" id="m5a4">It provides document identity and traceability.</div>
+    </div>
+
+    <h2>Knowledge Check: Scenario Responses</h2>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 1: Your CAD model is complete but orthographic views are missing. Can this be submitted as complete evidence?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s1">Reveal example answer</button>
+      <div class="answer" id="m5s1">No. The required evidence includes the full view set; add orthographic views with dimensions before submission.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 2: The material list totals look high. What should you check first?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s2">Reveal example answer</button>
+      <div class="answer" id="m5s2">Verify units, quantity entries, and formula cell references before changing any source values.</div>
+    </div>
+
+    <div class="qa-card scenario-card">
+      <p class="qa-question">Scenario 3: Why should CAD dimensions and material list values be cross-checked together?</p>
+      <textarea class="response" rows="4" placeholder="Write your response before revealing the example answer."></textarea>
+      <button class="reveal-btn" data-target="m5s3">Reveal example answer</button>
+      <div class="answer" id="m5s3">It confirms consistency between design intent and procurement/output evidence, reducing assessor queries and rework.</div>
+    </div>
+
+    <div class="module-nav">
+      <a href="module4.html">&larr; Previous Module</a>
+      <a href="module6.html">Next Module &rarr;</a>
+    </div>
+  </main>
+
+  <script>
+    const toggleAnswer = (button) => {
+      const answer = document.getElementById(button.getAttribute('data-target'));
+      if (!answer) return;
+      const isVisible = answer.style.display === 'block';
+      answer.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? button.dataset.revealText : 'Hide answer';
+    };
+    document.querySelectorAll('.reveal-btn').forEach((button) => {
+      button.dataset.revealText = button.textContent;
+      button.addEventListener('click', () => toggleAnswer(button));
+    });
+  </script>
+</body>
+</html>
