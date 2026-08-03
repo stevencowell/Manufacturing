@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Manufacturing and Engineering – Introduction Stage 6 End-of-Year Digital Knowledge Check">
+  <title>Manufacturing and Engineering – Introduction | Stage 6 End-of-Year Digital Knowledge Check</title>
+  <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+  <div class="password-gate" id="passwordGate">
+    <form class="gate-card" id="gateForm">
+      <p class="exam-kicker" style="color:var(--brand)">Teacher-controlled access</p>
+      <h1>Unlock exam</h1>
+      <p>Enter the password supplied by your teacher. Your answers will save only in this browser on this device.</p>
+      <label for="gatePassword"><strong>Exam password</strong></label>
+      <input id="gatePassword" type="password" inputmode="numeric" autocomplete="off" required>
+      <button class="btn" type="submit">Open exam</button>
+      <p class="gate-error" id="gateError" role="alert"></p>
+    </form>
+  </div>
+  <div id="examPage" hidden>
+    <header class="exam-header">
+      <div class="exam-shell">
+        <p><a id="backLink" href="../index.html">Back to course home</a></p>
+        <p class="exam-kicker" id="courseName"></p>
+        <h1 id="examTitle"></h1>
+        <p id="examSubtitle"></p>
+      </div>
+    </header>
+    <main class="exam-main">
+      <div class="exam-shell">
+        <section class="exam-card">
+          <h2>Exam information</h2>
+          <div class="notice-grid">
+            <div class="notice-item"><span>Course stage</span><strong id="metaStage"></strong></div>
+            <div class="notice-item"><span>Recommended time</span><strong id="metaTime"></strong></div>
+            <div class="notice-item"><span>Total marks</span><strong id="metaMarks"></strong></div>
+            <div class="notice-item"><span>Assessment status</span><strong id="metaStatus"></strong></div>
+            <div class="notice-item"><span>Task</span><strong id="metaTask"></strong></div>
+            <div class="notice-item"><span>Scheduled date</span><strong id="metaDate"></strong></div>
+            <div class="notice-item notice-wide"><span>Assessed outcomes</span><strong id="metaOutcomes"></strong></div>
+          </div>
+          <p class="exam-note" id="examDirections"></p>
+          <p><strong>PDF submission:</strong> When finished, use <em>Print / Save PDF</em>, choose <em>Save as PDF</em>, and name the file <strong id="pdfFilename"></strong>. Check the saved PDF before turning it in.</p>
+        </section>
+        <form id="examForm" novalidate>
+          <section class="exam-card">
+            <h2>Student details</h2>
+            <div class="student-grid">
+              <label>Student name<input data-student id="studentName" name="studentName" autocomplete="name"></label>
+              <label>Class<input data-student name="studentClass" autocomplete="off"></label>
+              <label>Teacher<input data-student name="teacherName" autocomplete="off"></label>
+              <label>Date completed<input data-student name="completedDate" type="date"></label>
+            </div>
+          </section>
+          <div class="exam-toolbar screen-only">
+            <div class="exam-progress">
+              <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+              <span class="progress-label" id="progressLabel"></span>
+            </div>
+            <button class="btn secondary" id="saveBtn" type="button">Save now</button>
+            <button class="btn" id="printBtn" type="button">Print / Save PDF</button>
+            <button class="btn secondary" id="lockBtn" type="button">Lock exam</button>
+            <button class="btn danger" id="clearBtn" type="button">Clear saved work</button>
+            <div class="save-status" id="saveStatus">Answers autosave on this device.</div>
+          </div>
+          <div id="examSections"></div>
+        </form>
+        <p class="exam-footer">This page stores work locally in this browser and device. Saving a PDF is the submission copy; local autosave is not a cloud submission.</p>
+      </div>
+    </main>
+  </div>
+  <script>window.EXAM_CONFIG = {"id":"wwhs-stage6-manufacturing-eoy-2026","course":"Manufacturing and Engineering – Introduction","title":"Stage 6 End-of-Year Digital Knowledge Check","subtitle":"MEM10119 and pathway units · revision and supporting knowledge evidence","stage":"Stage 6 · VET","time":"60 minutes","status":"Formative/revision evidence only · not an HSC exam or competency determination","backLabel":"Manufacturing Hub","pdfFilename":"Surname_Firstname_Manufacturing_Knowledge_Check.pdf","directions":"Answer every question using workplace and workshop terminology. This knowledge check supports revision and may contribute supporting evidence only. Competency still requires the authorised assessor package, practical performance and direct observation. No sketches are required.","sections":[{"label":"Section A","title":"Workplace knowledge","instructions":"Select the best answer.","questions":[{"kind":"choice","marks":1,"prompt":"What should happen first when job requirements are unclear?","options":["Select a convenient dimension","Stop and clarify the specification with the authorised supervisor or assessor","Begin machining and adjust later","Copy another project"]},{"kind":"choice","marks":1,"prompt":"Why must a drawing scale be checked before dimensions are interpreted?","options":["Scale changes the material","It determines PPE","It replaces written dimensions","Printed views may not be full size and direct measurement can be misleading"]},{"kind":"choice","marks":1,"prompt":"Which action is required before using a workshop machine?","options":["Confirm authorisation, guards, setup, workholding and emergency controls","Remove the guard for visibility","Hold the material by hand","Assume the previous user\u0027s setup is correct"]},{"kind":"choice","marks":1,"prompt":"What is the best response to an out-of-tolerance component?","options":["Hide the measurement","Force it into the assembly","Stop, identify the cause, report it and follow the approved corrective process","Change the drawing"]},{"kind":"choice","marks":1,"prompt":"Why is the correct hand or power tool selected for a task?","options":["All tools produce the same result","Suitability affects safety, quality, efficiency and damage risk","Only speed matters","Tool condition does not matter"]},{"kind":"choice","marks":1,"prompt":"What is the main purpose of a material list?","options":["Replace a risk assessment","Record attendance","Set machine speed automatically","Record item descriptions, sizes, quantities and other required supply information"]},{"kind":"choice","marks":1,"prompt":"A drill-speed graph is most useful for showing:","options":["How recommended speed changes with variables such as drill diameter or material","The physical layout of a workshop","A worker\u0027s attendance","A weld symbol"]},{"kind":"choice","marks":1,"prompt":"Why are units written with calculations and measurements?","options":["They are optional decoration","They replace checking","They communicate the quantity correctly and help prevent conversion errors","They determine tool colour"]},{"kind":"choice","marks":1,"prompt":"Which digital evidence is strongest?","options":["An unrelated screenshot","A readable labelled file or screenshot that directly proves the required operation or output","A photograph with no context","A verbal claim only"]},{"kind":"choice","marks":1,"prompt":"When must an operator stop a machine?","options":["Only after the component is finished","When the machine is running normally","Whenever a measurement is correct","When an abnormal sound, vibration, guarding problem or work movement occurs"]}]},{"label":"Section B","title":"Short workplace responses","instructions":"Respond as you would in a safe, quality-focused workplace.","questions":[{"kind":"short","marks":3,"prompt":"Explain how you would extract material, dimensions, tolerance and finish information from a job drawing or specification."},{"kind":"short","marks":3,"prompt":"Describe three pre-start checks for a drill press, lathe, milling machine or other authorised workshop machine."},{"kind":"short","marks":3,"prompt":"Explain the difference between a hazard, a risk and a control using one manufacturing example."},{"kind":"short","marks":3,"prompt":"A calculation gives 2.5 metres but the material list uses millimetres. Explain the conversion and the checking process."},{"kind":"short","marks":3,"prompt":"Explain how you would choose between two tools capable of completing the same operation."},{"kind":"short","marks":3,"prompt":"Describe the information required in a clear material list for a basic engineering project."},{"kind":"short","marks":3,"prompt":"Explain why file names, units, labels and readable screenshots matter in digital assessment evidence."},{"kind":"short","marks":3,"prompt":"Describe how an operator should respond when a measured feature is outside the specified tolerance."}]},{"label":"Section C","title":"Integrated job scenarios","instructions":"Give a clear sequence of actions and reasons.","questions":[{"kind":"long","marks":8,"prompt":"You are preparing to machine a component, but the drawing has two similar views, the printed scale is unclear and the available stock is close to the required finished size. Explain how you would clarify requirements, verify dimensions and allowances, select equipment, plan safe workholding and obtain approval before starting."},{"kind":"long","marks":8,"prompt":"During a supervised machine operation, the component begins to vibrate and the measured feature is trending towards the tolerance limit. Explain the immediate safety response, communication, inspection, likely setup/process checks, corrective action boundaries and evidence that should be recorded before work resumes."}]}]};</script>
+  <script>Object.assign(window.EXAM_CONFIG, {"taskLabel":"End-of-year class test / knowledge check","scheduledDate":"Teacher to confirm","outcomes":"Supporting knowledge across MEM10119 units; competency mapping remains in the authorised assessor package","status":"Informal class test · no weighting · not an HSC exam or competency determination","title":"Stage 6 End-of-Year Digital Class Test"});</script>
+  <script src="exam.js"></script>
+</body>
+</html>
