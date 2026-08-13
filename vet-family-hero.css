@@ -1,0 +1,42 @@
+/* Shared homepage hero geometry for Steve's VET hub family. */
+.vet-family-hero {
+  align-items: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-height: 420px !important;
+  padding: 52px 32px !important;
+  position: relative !important;
+  text-align: center !important;
+}
+
+.vet-family-hero h1 {
+  color: #fff !important;
+  font-size: clamp(3rem, 5vw, 4rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1 !important;
+  margin: 22px auto 12px !important;
+  max-width: 920px;
+}
+
+.vet-family-hero > p {
+  color: rgba(255, 255, 255, 0.94) !important;
+  font-size: 1.15rem !important;
+  line-height: 1.5 !important;
+  margin: 4px auto !important;
+  max-width: 780px;
+}
+
+@media (max-width: 760px) {
+  .vet-family-hero {
+    height: 720px !important;
+    max-height: 720px !important;
+    min-height: 720px !important;
+    padding: 170px 18px 48px !important;
+  }
+
+  .vet-family-hero h1 {
+    font-size: clamp(2.4rem, 12vw, 3.3rem) !important;
+  }
+}
