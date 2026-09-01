@@ -28,6 +28,33 @@
   max-width: 780px;
 }
 
+#teacher-resources-link {
+  align-items: center;
+  background: #f4c46d;
+  border-radius: 6px;
+  color: #12384a;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  position: absolute;
+  right: 24px;
+  text-decoration: none;
+  top: 24px;
+  z-index: 10;
+}
+
+#teacher-resources-link:hover {
+  background: #ffd88f;
+  text-decoration: underline;
+}
+
+#teacher-resources-link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
 @media (max-width: 760px) {
   .vet-family-hero {
     height: 720px !important;
@@ -38,5 +65,11 @@
 
   .vet-family-hero h1 {
     font-size: clamp(2.4rem, 12vw, 3.3rem) !important;
+  }
+
+  #teacher-resources-link {
+    left: 18px;
+    right: 18px;
+    top: 24px;
   }
 }
